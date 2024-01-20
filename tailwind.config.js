@@ -4,14 +4,12 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        'primary': ['Josefin Sans', 'sans-serif'],
-        'secondary': ['Poppins', 'sans-serif']
+        'figtree': ["Figtree", "sans-serif"],
       },
       screens: {
-        '1mbr': '340px',
-        '2mbr': '400px',
-        '3mbr': '512px',
-        '4mbr': '640px',
+        'xxxs': '320px',
+        'xxs': '390px',
+        'xs': '512px',
       },
     },
   },

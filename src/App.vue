@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <header class="container h-[64px] mx-auto px-4 lg:px-8 xl:px-10 2xl:px-11 py-2 outline flex items-center justify-between relative">
+  <header class="container h-[64px] mx-auto py-2 px-4 xs:px-6 outline flex items-center justify-between relative">
     <!-- ICON -->
     <a href="#" >
       <img
@@ -68,52 +68,25 @@
   </header>
 
   <!-- HERO -->
-  <div class="container mx-auto pt-12 xl:pt-16 pb-4 outline h-[75vh] flex items-center
-  2xl:h-[85vh]
-  2xl:pt-20
-  2xl:pr-6
-  ">
+  <div class="container mx-auto py-4 px-4 xs:px-6 outline h-[75vh] flex items-center">
 
     <!-- HEADING 1 (default)-->
-    <h1 class="text-9xl text-gray-900 flex flex-col font-primary uppercase tracking-[-0.09em] leading-none font-black
-    sm:hidden">
-        <span class="">hi</span>
-        <span class="">i'm</span>
-        <span class="">paul</span>
-    </h1>
-
-
-    <!-- HEADING 2 (sm) -->
-    <h1 class="hidden text-9xl text-gray-900  font-primary uppercase tracking-[-0.09em] leading-none font-black w-full pr-6
-    sm:flex 
-    sm:flex-col
-    
-    md:text-[9rem]
-    lg:text-[12rem]
-    xl:text-[15rem]
-    2xl:text-[18rem]
-    lg:pr-8
-
+    <h1 class="text-gray-900 w-full flex flex-col uppercase tracking-[-0.08em] leading-none font-bold
+    text-[4.8rem]
+    xxs:text-[6.8rem]
+    xs:text-[8.8rem]
     ">
-        <div class="flex justify-between">
-          <span class="block">hey</span>
-          <span class="block">yow</span>
-        </div>
-
-        <div class="flex justify-between">
-          <span class="block">i am</span>
-          <span class="block">paul</span>
-        </div>
+        <span>hi</span>
+        <span>i am</span>
+        <span>paul</span>
     </h1>
-
-
 
   </div>
 
   <!-- SCROLL BUTTON -->
-  <div class="container mx-auto pl-4 lg:px-8 xl:px-10 2xl:px-11 outline sm:text-center">
-    <div class="  h-16 inline-block hover:cursor-pointer" role="button" >
-      <span class="uppercase text-sm font-primary font-bold text-gray-500">scroll</span>
+  <div class="container mx-auto outline px-4 xs:px-6">
+    <div class="h-16 inline-block hover:cursor-pointer" role="button" >
+      <span class="uppercase text-sm  font-bold text-gray-500">scroll</span>
       
       <div class="relative down-fade">
         <div class="absolute left-1/2 translate-x-[-50%] fill-gray-900 bottom-0 translate-y-[80%]">
@@ -146,27 +119,35 @@
   </div>
 
   <!-- BRIEF INTRO -->
-  <section class="px-4 lg:px-8 xl:px-10 2xl:px-11 py-10 outline container mx-auto">
-    <h2 class="text-4xl tracking-tighter text-gray-400 container mx-auto">
+  <section class="px-4 xs:px-6 py-8 outline container mx-auto sm:grid sm:grid-cols-2 sm:gap-4">
+    <h2 class=" tracking-tighter text-gray-400 container mx-auto
+    text-4xl
+    xs:text-[2.6rem]
+    ">
       I create <span class="text-gray-900">innovative solutions</span> for the evolving <span class="text-gray-900">digital landscape</span>
     </h2>
+    <div class="bg-red-400 hidden sm:block"></div>
   </section>
 
   <!-- HEADING PER SECTION (ABOUT) -->
-  <section class="px-4 lg:px-8 xl:px-10 2xl:px-11 text-gray-900 pt-10 pb-6 outline container mx-auto">
-    <h3 class="container mx-auto text-[3.4rem] 1mbr:bg-red-200 font-bold tracking-tighter flex items-center justify-between leading-3">
-      <span class="font-primary ">ABOUT</span>
-      <div class="h-4 w-4 heading__icon-container icon-pos-a">
-        <svg class="h-full w-full heading__icon">
+  <section class="px-4 xs:px-6 text-gray-900 outline container mx-auto">
+    <h3 class="leading-none font-medium  flex items-center justify-between
+    text-[3.2rem]
+    xxs:text-[4.2rem]
+    xs:text-[5.5rem]
+    ">
+      <span class=" ">ABOUT</span>
+      <div class="h-4 w-4 xs:h-6 xs:w-6 heading__icon-container ">
+        <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
       </div>
-      <span class="font-primary italic">ME</span>
+      <span class="italic">ME</span>
     </h3>
   </section>
 
   <!-- ABOUT -->
-  <section class="outline px-4 lg:px-8 xl:px-10 2xl:px-11 py-10 container mx-auto flex flex-col gap-4">
+  <section class="outline px-4 xs:px-6  py-8 container mx-auto flex flex-col gap-4">
     
     <div class="flex flex-col gap-4">
       <img class="self-center " src="https://i.pinimg.com/236x/43/ec/fe/43ecfe755d1430ca63ba9e6a974dd983.jpg">
@@ -176,13 +157,13 @@
       <p class="container">In the words of <strong class="text-gray-900 font-medium">Steve Jobs, "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."</strong> This philosophy resonates deeply with my approach to web development, driving me to deliver <strong class="text-gray-900 font-medium">excellence in every project.</strong> Join me on this exciting journey, and let's create <strong class="text-gray-900 font-medium">digital wonders together!</strong></p>
 
 
-      <h5 class="font-primary text-2xl italic font-bold mt-4 text-gray-900">SKILLS</h5>
+      <h5 class=" text-2xl italic font-bold mt-4 text-gray-900">SKILLS</h5>
 
       <!-- SKILLS ICON -->
       <ul class="flex flex-wrap gap-2">
         
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">HTML</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">HTML</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-html5"
@@ -191,7 +172,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">CSS</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">CSS</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-css3"
@@ -200,7 +181,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">JavaScript</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">JavaScript</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-javascript"
@@ -209,7 +190,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">TypeScript</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">TypeScript</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-typescript"
@@ -218,7 +199,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Vue.js</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Vue.js</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-vue-dot-js"
@@ -227,7 +208,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">PHP</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">PHP</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-php"
@@ -236,7 +217,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Laravel</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Laravel</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-laravel"
@@ -245,7 +226,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Python</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Python</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-python"
@@ -254,7 +235,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Bootstrap</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Bootstrap</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-bootstrap"
@@ -263,7 +244,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Sass</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Sass</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-sass"
@@ -272,7 +253,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">TailwindCSS</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">TailwindCSS</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-tailwindcss"
@@ -281,7 +262,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">MySQL</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">MySQL</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-mysql"
@@ -290,7 +271,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40]  uppercase">PostgreSQL</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40]  uppercase">PostgreSQL</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-postgresql"
@@ -299,7 +280,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">GitHub</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">GitHub</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-github"
@@ -308,7 +289,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Netlify</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Netlify</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-netlify"
@@ -317,7 +298,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Photoshop</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Photoshop</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-adobephotoshop"
@@ -326,7 +307,7 @@
         </li>
 
         <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold font-primary pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Illustrator</span>
+          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Illustrator</span>
           <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
             <use
             xlink:href="/icons/sprite.svg#icon-adobeillustrator"
@@ -340,7 +321,7 @@
       
     </div>
 
-    <h5 class="mt-4 font-primary text-2xl italic font-bold text-gray-900">EXPERIENCE</h5>
+    <h5 class="mt-4  text-2xl italic font-bold text-gray-900">EXPERIENCE</h5>
     <!-- TIMELINE -->
     <div class="container pl-8  relative before:content-[''] before:bg-gray-400 before:absolute before:w-0.5 before:h-full before:left-0">
 
@@ -528,20 +509,24 @@
   </section>
 
   <!-- HEADING PER SECTION (PROJECTS) -->
-  <section class="px-4 lg:px-8 xl:px-10 2xl:px-11 pt-10 text-gray-900 pb-6 outline container mx-auto">
-    <h3 class="container mx-auto text-[2.6rem] font-bold tracking-tighter flex items-center justify-between">
-      <span class="font-primary ">MY</span>
-      <div class="h-4 w-4 heading__icon-container icon-pos-b">
-        <svg class="h-full w-full heading__icon">
+  <section class="px-4 xs:px-6 text-gray-900 outline container mx-auto">
+    <h3 class="uppercase leading-none font-medium  flex items-center justify-between
+    text-[2.4rem]
+    xxs:text-[3.1rem]
+    xs:text-[4.1rem]
+    ">
+      <span class=" ">my</span>
+      <div class="h-4 w-4 xs:h-6 xs:w-6 heading__icon-container ">
+        <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
       </div>
-      <span class="font-primary italic">PROJECTS</span>
+      <span class="italic">projects</span>
     </h3>
   </section>
 
   <!-- PROJECT -->
-  <section class="px-4 lg:px-8 xl:px-10 2xl:px-11 py-10 container mx-auto outline">
+  <section class="px-4 xs:px-6  py-8 container mx-auto outline">
 
     <!-- PROJECTS CONTAINER -->
     <div class="container mx-auto">
@@ -837,20 +822,24 @@
   </section>
 
   <!-- HEADING PER SECTION (CONTACTS) -->
-  <section class="px-4 lg:px-8 xl:px-10 2xl:px-11 text-gray-900 pt-10 pb-6 outline container mx-auto">
-    <h3 class="container mx-auto text-[2.7rem] font-bold tracking-tighter flex items-center justify-between">
-      <span class="font-primary ">CONTACT</span>
-      <div class="h-4 w-4 heading__icon-container icon-pos-b">
-        <svg class="h-full w-full heading__icon">
+  <section class="px-4 xs:px-6 text-gray-900 outline container mx-auto">
+    <h3 class="uppercase leading-none font-medium  flex items-center justify-between
+    text-[2.6rem]
+    xxs:text-[3.3rem]
+    xs:text-[4.3rem]
+    ">
+      <span class=" ">contact</span>
+      <div class="h-4 w-4 xs:h-6 xs:w-6 heading__icon-container ">
+        <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
       </div>
-      <span class="font-primary italic">ME</span>
+      <span class="italic">me</span>
     </h3>
   </section>
 
   <!-- CONTACT -->
-  <section class="px-4 lg:px-8 xl:px-10 2xl:px-11 py-10 container mx-auto outline flex flex-col gap-8">
+  <section class="px-4 xs:px-6  py-8 container mx-auto outline flex flex-col gap-8">
 
 
     <!-- FORM INPUT (LEFT)-->
@@ -892,7 +881,7 @@
       
       <!-- CONTACTS -->
       <div class="flex flex-col items-start gap-2">
-        <h5 class="font-primary text-2xl italic font-bold text-gray-900">CONTACTS</h5>
+        <h5 class=" text-2xl italic font-bold text-gray-900">CONTACTS</h5>
 
         <!-- link -->
         <a href="#" class="inline-block">
@@ -921,7 +910,7 @@
 
       <!-- SOCIALS -->
       <div class="flex flex-col gap-2">
-        <h5 class="font-primary text-2xl italic font-bold text-gray-900">SOCIALS</h5>
+        <h5 class=" text-2xl italic font-bold text-gray-900">SOCIALS</h5>
         <div class="flex items-center gap-4">
           <a href="#" class="">
             <svg class="h-9 w-9 fill-gray-600">
@@ -957,7 +946,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="px-4 lg:px-8 xl:px-10 2xl:px-11 py-10 container mx-auto outline">
+  <footer class="px-4 xs:px-6 py-8 container mx-auto outline">
 
     <!-- logo -->
     <div class="text-center">Paul Iverson Cortez</div>
@@ -965,19 +954,23 @@
     <!-- credits -->
     <div class="flex flex-col items-center">
       <span class="font-secondary font-medium">&copy; 2014 &#x2022; Paul Iverson Cortez</span>
-      <span class="font-primary text-gray-500 font-medium text-sm">All RIGHTS RESERVED</span>
+      <span class=" text-gray-500 font-medium text-sm">All RIGHTS RESERVED</span>
     </div>
 
     <!-- THANK YOU -->
-  <section class="text-gray-900 pt-10 pb-6 outline ">
-    <h3 class="container mx-auto text-[2.8rem] leading-4 font-bold tracking-tighter flex items-center justify-between">
-      <span class="font-primary ">SALAMAT</span>
-      <div class="h-4 w-4 heading__icon-container icon-pos-b">
-        <svg class="h-full w-full heading__icon">
+  <section class="text-gray-900 outline container mx-auto">
+    <h3 class="uppercase leading-none font-medium  flex items-center justify-between
+    text-[2.6rem]
+    xxs:text-[3.4rem]
+    xs:text-[4.4rem]
+    ">
+      <span class=" ">salamat</span>
+      <div class="h-4 w-4 xs:h-6 xs:w-6 heading__icon-container ">
+        <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
       </div>
-      <span class="font-primary italic">PO</span>
+      <span class="italic">po</span>
     </h3>
   </section>
 
@@ -1038,7 +1031,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    animation: rotating 2s linear infinite;
   }
 
   .icon-pos-a {
@@ -1053,6 +1046,14 @@ export default {
 
   }
 
+  @keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
 
 
   @keyframes rotating-a {
