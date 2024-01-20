@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <header class="container h-[64px] mx-auto py-2 px-4 xs:px-6 outline flex items-center justify-between relative">
+  <header class="container h-[64px] mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 outline flex items-center justify-between relative">
     <!-- ICON -->
     <a href="#" >
       <img
@@ -68,23 +68,40 @@
   </header>
 
   <!-- HERO -->
-  <div class="container mx-auto py-4 px-4 xs:px-6 outline h-[75vh] flex items-center">
+  <div class="container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 outline h-[75vh] md:h-[80vh] lg:h-[75vh] md:bg-red-200 flex items-center">
 
     <!-- HEADING 1 (default)-->
     <h1 class="text-gray-900 w-full flex flex-col uppercase tracking-[-0.08em] leading-none font-bold
     text-[4.8rem]
-    xxs:text-[6.8rem]
-    xs:text-[8.8rem]
+    xxs:text-[6.8rem] xxs:text-red-600
+    xs:text-[8.8rem] xs:text-green-600
+    sm:text-[9.8rem] sm:text-blue-600
+    sm:leading-[.8]
+
+    lg:flex-row
+    lg:gap-8
+    lg:justify-center
+    lg:text-[12.2rem]
+    
+    
+    
+    
+
+    
+   
     ">
-        <span>hi</span>
-        <span>i am</span>
-        <span>paul</span>
+        <span class="lg:hidden">hi</span>
+        <span class="sm:hidden">iam</span>
+        <span class="sm:hidden">paul</span>
+        <span class="hidden sm:block lg:hidden">i'm paul</span>
+
+        <span class="hidden  lg:block">hi i'm paul</span>
     </h1>
 
   </div>
 
   <!-- SCROLL BUTTON -->
-  <div class="container mx-auto outline px-4 xs:px-6">
+  <div class="container mx-auto outline px-4 xs:px-6 md:px-8 lg:px-10 lg:text-center">
     <div class="h-16 inline-block hover:cursor-pointer" role="button" >
       <span class="uppercase text-sm  font-bold text-gray-500">scroll</span>
       
@@ -119,10 +136,11 @@
   </div>
 
   <!-- BRIEF INTRO -->
-  <section class="px-4 xs:px-6 py-8 outline container mx-auto sm:grid sm:grid-cols-2 sm:gap-4">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 py-8 outline container mx-auto sm:grid sm:grid-cols-2 sm:gap-4">
     <h2 class=" tracking-tighter text-gray-400 container mx-auto
     text-4xl
     xs:text-[2.6rem]
+    
     ">
       I create <span class="text-gray-900">innovative solutions</span> for the evolving <span class="text-gray-900">digital landscape</span>
     </h2>
@@ -130,14 +148,18 @@
   </section>
 
   <!-- HEADING PER SECTION (ABOUT) -->
-  <section class="px-4 xs:px-6 text-gray-900 outline container mx-auto">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 text-gray-900 outline container mx-auto">
     <h3 class="leading-none font-medium  flex items-center justify-between
     text-[3.2rem]
     xxs:text-[4.2rem]
     xs:text-[5.5rem]
+    sm:text-[7.2rem]
+    md:text-[8.6rem]
+    lg:text-[10.2rem]
+    lg:justify-center
     ">
       <span class=" ">ABOUT</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 heading__icon-container ">
+      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 heading__icon-container ">
         <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
@@ -147,189 +169,211 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="outline px-4 xs:px-6  py-8 container mx-auto flex flex-col gap-4">
+  <section class="outline px-4 xs:px-6 md:px-8 lg:px-10  py-8 container mx-auto flex flex-col gap-4">
     
-    <div class="flex flex-col gap-4">
-      <img class="self-center " src="https://i.pinimg.com/236x/43/ec/fe/43ecfe755d1430ca63ba9e6a974dd983.jpg">
+    <!-- ABOUT CONTENT WRAPPER -->
+    <div class="flex flex-col gap-4 lg:grid-9-11">
+
+      <!-- PICTURE CONTAINER -->
+      <div class="flex justify-center items-center">
+        <!-- PICTURE -->
+        <img class="self-center " src="https://i.pinimg.com/236x/43/ec/fe/43ecfe755d1430ca63ba9e6a974dd983.jpg">
+      </div>
       
-      <p class="container">I am a <strong class="text-gray-900 font-medium">passionate web developer</strong> born and raised in the lively city of <strong class="text-gray-900 font-medium">Trece Martires, Cavite.</strong> My journey into the world of web development began under the guidance of exceptional professors back in college. Inspired by their teachings, I've embarked on a path that blends <strong class="text-gray-900 font-medium">creativity and technical prowess</strong> to craft engaging digital experiences.</p>
-      <p class="container">I believe in the power of code to transform ideas into captivating online realities. Each line of code represents an opportunity to bring innovation to life and make a <strong class="text-gray-900 font-medium">lasting impact on the digital landscape.</strong> With a commitment to continuous learning and a keen eye for detail, <strong class="font-medium">I strive to create web solutions that not only meet but exceed expectations.</strong></p>
-      <p class="container">In the words of <strong class="text-gray-900 font-medium">Steve Jobs, "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."</strong> This philosophy resonates deeply with my approach to web development, driving me to deliver <strong class="text-gray-900 font-medium">excellence in every project.</strong> Join me on this exciting journey, and let's create <strong class="text-gray-900 font-medium">digital wonders together!</strong></p>
+      
+      <!-- PARAGRAPH CONTAINER -->
+      <div class="space-y-4 lg:row-span-2">
+        <!-- PARAGRAPH -->
+        <p class="container">I am a <strong class="text-gray-900 font-medium">passionate web developer</strong> born and raised in the lively city of <strong class="text-gray-900 font-medium">Trece Martires, Cavite.</strong> My journey into the world of web development began under the guidance of exceptional professors back in college. Inspired by their teachings, I've embarked on a path that blends <strong class="text-gray-900 font-medium">creativity and technical prowess</strong> to craft engaging digital experiences.</p>
+        <p class="container">I believe in the power of code to transform ideas into captivating online realities. Each line of code represents an opportunity to bring innovation to life and make a <strong class="text-gray-900 font-medium">lasting impact on the digital landscape.</strong> With a commitment to continuous learning and a keen eye for detail, <strong class="font-medium">I strive to create web solutions that not only meet but exceed expectations.</strong></p>
+        <p class="container">In the words of <strong class="text-gray-900 font-medium">Steve Jobs, "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."</strong> This philosophy resonates deeply with my approach to web development, driving me to deliver <strong class="text-gray-900 font-medium">excellence in every project.</strong> Join me on this exciting journey, and let's create <strong class="text-gray-900 font-medium">digital wonders together!</strong></p>
+      </div>
 
-
-      <h5 class=" text-2xl italic font-bold mt-4 text-gray-900">SKILLS</h5>
-
-      <!-- SKILLS ICON -->
-      <ul class="flex flex-wrap gap-2">
+      <!-- SKILLS CONTAINERS -->
+      <div class="space-y-4">
+        <!-- HEADING -->
+        <h5 class=" text-2xl xs:text-[2.6rem] italic font-bold mt-4 lg:mt-0 lg:mb-4 text-gray-900">SKILLS</h5>
         
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">HTML</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-html5"
-            ></use>
-          </svg>
-        </li>
+        <!-- SKILLS ICON -->
+        <ul class="flex flex-wrap gap-2">
+          
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">HTML</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-html5"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">CSS</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-css3"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">CSS</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-css3"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">JavaScript</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-javascript"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">JavaScript</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-javascript"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">TypeScript</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-typescript"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">TypeScript</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-typescript"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Vue.js</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-vue-dot-js"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Vue.js</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-vue-dot-js"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">PHP</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-php"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">PHP</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-php"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Laravel</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-laravel"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Laravel</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-laravel"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Python</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-python"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Python</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-python"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Bootstrap</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-bootstrap"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Bootstrap</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-bootstrap"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Sass</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-sass"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Sass</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-sass"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">TailwindCSS</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-tailwindcss"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">TailwindCSS</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-tailwindcss"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">MySQL</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-mysql"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">MySQL</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-mysql"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40]  uppercase">PostgreSQL</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-postgresql"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40]  uppercase">PostgreSQL</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-postgresql"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">GitHub</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-github"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">GitHub</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-github"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Netlify</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-netlify"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Netlify</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-netlify"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Photoshop</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-adobephotoshop"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Photoshop</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-adobephotoshop"
+              ></use>
+            </svg>
+          </li>
 
-        <li class="group h-9 w-9 relative ">
-          <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Illustrator</span>
-          <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
-            <use
-            xlink:href="/icons/sprite.svg#icon-adobeillustrator"
-            ></use>
-          </svg>
-        </li>
+          <li class="group h-9 w-9 relative ">
+            <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 font-bold  pt-[3px] scal text-gray-600 tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">Illustrator</span>
+            <svg class="h-full w-full grayscale group-hover:grayscale-0 group-hover:scale-110 ease-in duration-200">
+              <use
+              xlink:href="/icons/sprite.svg#icon-adobeillustrator"
+              ></use>
+            </svg>
+          </li>
 
-        
+          
 
-      </ul>
+        </ul>
+      </div>
+
+
       
     </div>
 
-    <h5 class="mt-4  text-2xl italic font-bold text-gray-900">EXPERIENCE</h5>
+
+
+    <h5 class="mt-4 text-2xl xs:text-[2.6rem] italic font-bold text-gray-900">EXPERIENCE</h5>
     <!-- TIMELINE -->
-    <div class="container pl-8  relative before:content-[''] before:bg-gray-400 before:absolute before:w-0.5 before:h-full before:left-0">
+    <div class="container pl-8 lg:pl-0  relative before:content-[''] before:bg-gray-400 before:absolute before:w-0.5 before:h-full before:left-0 lg:before:left-[50%]
+    
+    ">
 
       <!-- CARD CONTAINER -->
-      <ul class="space-y-8 " >
+      <ul class="space-y-8 timeline-container xp-card-con lg:w-[50%]" >
 
-        <!-- CARD -->
-        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 before:rounded-full before:top-0 before:left-0 before:translate-x-[-2.3rem] ">
+        <!-- CARD L (TEXT-BOX) -->
+        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 before:rounded-full before:top-0 before:left-0 lg:before:left-full before:translate-x-[-2.3rem] lg:pr-[2rem] lg:before:translate-x-[-45%]
+     
+        ">
           <div class="flex flex-col">
             <span class="leading-5 font-semibold text-lg text-gray-900">Junior Software Developer</span>
             <span class="italic">Cylix Technologies, Inc.</span>
@@ -389,8 +433,10 @@
           </div>
         </li>
 
-        <!-- CARD -->
-        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 before:rounded-full before:top-0 before:left-0 before:translate-x-[-2.3rem] ">
+        <!-- CARD R -->
+        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 before:rounded-full before:top-0 before:left-0 before:translate-x-[-2.3rem] lg:left-full lg:pl-[2rem] lg:before:translate-x-[-45%]
+    
+        ">
           <div class="flex flex-col">
             <span class="leading-5 font-semibold text-lg text-gray-900">IT Staff</span>
             <span class="italic">Shimadzu Philippines Mfg, Inc.</span>
@@ -449,8 +495,10 @@
           </div>
         </li>
 
-        <!-- CARD -->
-        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 before:rounded-full before:top-0 before:left-0 before:translate-x-[-2.3rem]">
+        <!-- CARD L -->
+        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 before:rounded-full before:top-0 before:left-0 lg:before:left-full before:translate-x-[-2.3rem] lg:pr-[2rem] lg:before:translate-x-[-45%] 
+      
+        ">
           <div class="flex flex-col">
             <span class="leading-5 font-semibold text-lg text-gray-900">Desktop Support Engineer (Intern)</span>
             <span class="italic">Cypress Manufacturing Ltd.</span>
@@ -509,14 +557,19 @@
   </section>
 
   <!-- HEADING PER SECTION (PROJECTS) -->
-  <section class="px-4 xs:px-6 text-gray-900 outline container mx-auto">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 text-gray-900 outline container mx-auto">
     <h3 class="uppercase leading-none font-medium  flex items-center justify-between
     text-[2.4rem]
     xxs:text-[3.1rem]
     xs:text-[4.1rem]
+    sm:text-[5.3rem]
+    md:text-[6.3rem]
+    lg:text-[8.6rem]
+    lg:justify-center
+    
     ">
       <span class=" ">my</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 heading__icon-container ">
+      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 heading__icon-container ">
         <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
@@ -526,13 +579,13 @@
   </section>
 
   <!-- PROJECT -->
-  <section class="px-4 xs:px-6  py-8 container mx-auto outline">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10  py-8 container mx-auto outline">
 
     <!-- PROJECTS CONTAINER -->
     <div class="container mx-auto">
       
       <!-- CONTAINER FEATURED PROJECTS -->
-      <div class="flex flex-col gap-8 mb-20">
+      <div class="flex flex-col lg:flex-row gap-8 mb-20">
 
         <!-- FEATURED PROJECTS -->
         <figure class="">
@@ -653,7 +706,7 @@
 
 
       <!-- CONTAINER NOTABLE PROJECTS -->
-      <div class="flex flex-col gap-8">
+      <div class="flex flex-col lg:flex-row gap-8">
         <!-- NOTABLE PROJECTS -->
         <div class="bg-gray-100 px-6 py-4 relative
         border-t-2
@@ -822,14 +875,18 @@
   </section>
 
   <!-- HEADING PER SECTION (CONTACTS) -->
-  <section class="px-4 xs:px-6 text-gray-900 outline container mx-auto">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 text-gray-900 outline container mx-auto">
     <h3 class="uppercase leading-none font-medium  flex items-center justify-between
     text-[2.6rem]
     xxs:text-[3.3rem]
     xs:text-[4.3rem]
+    sm:text-[5.6rem]
+    md:text-[6.65rem]
+    lg:text-[9.1rem]
+    lg:justify-center
     ">
       <span class=" ">contact</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 heading__icon-container ">
+      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 heading__icon-container ">
         <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
@@ -839,7 +896,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="px-4 xs:px-6  py-8 container mx-auto outline flex flex-col gap-8">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 py-8 container mx-auto outline flex flex-col lg:grid lg:grid-cols-2 gap-8">
 
 
     <!-- FORM INPUT (LEFT)-->
@@ -946,7 +1003,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="px-4 xs:px-6 py-8 container mx-auto outline">
+  <footer class="px-4 xs:px-6 md:px-8 lg:px-10 py-8 container mx-auto outline">
 
     <!-- logo -->
     <div class="text-center">Paul Iverson Cortez</div>
@@ -963,9 +1020,13 @@
     text-[2.6rem]
     xxs:text-[3.4rem]
     xs:text-[4.4rem]
+    sm:text-[5.8rem]
+    md:text-[6.9rem]
+    lg:text-[9.4rem]
+    lg:justify-center
     ">
       <span class=" ">salamat</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 heading__icon-container ">
+      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 heading__icon-container ">
         <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
@@ -1075,7 +1136,5 @@ export default {
   }
 
 
-
- 
 
 </style>
