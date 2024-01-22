@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <header class="container h-[64px] mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 outline flex items-center justify-between relative">
+  <header class="container h-[64px] mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 outline flex items-center justify-between relative">
     <!-- ICON -->
     <a href="#" >
       <img
@@ -68,7 +68,7 @@
   </header>
 
   <!-- HERO -->
-  <div class="container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 outline h-[75vh] md:h-[80vh] lg:h-[75vh] md:bg-red-200 flex items-center">
+  <div class="container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 outline h-[75vh] md:h-[80vh] lg:h-[75vh] md:bg-red-200 flex items-center">
 
     <!-- HEADING 1 (default)-->
     <h1 class="text-gray-900 w-full flex flex-col uppercase tracking-[-0.08em] leading-none font-bold
@@ -81,7 +81,8 @@
     lg:flex-row
     lg:gap-8
     lg:justify-center
-    lg:text-[12.2rem]
+    lg:text-[12.2rem] lg:text-yellow-600
+    xl:text-[15rem] xl:text-purple-600
     
     
     
@@ -101,7 +102,7 @@
   </div>
 
   <!-- SCROLL BUTTON -->
-  <div class="container mx-auto outline px-4 xs:px-6 md:px-8 lg:px-10 lg:text-center">
+  <div class="container mx-auto outline px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 lg:text-center">
     <div class="h-16 inline-block hover:cursor-pointer" role="button" >
       <span class="uppercase text-sm  font-bold text-gray-500">scroll</span>
       
@@ -136,7 +137,7 @@
   </div>
 
   <!-- BRIEF INTRO -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 py-8 outline container mx-auto sm:grid sm:grid-cols-2 sm:gap-4">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 py-8 outline container mx-auto sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
     <h2 class=" tracking-tighter text-gray-400 container mx-auto
     text-4xl
     xs:text-[2.6rem]
@@ -144,11 +145,14 @@
     ">
       I create <span class="text-gray-900">innovative solutions</span> for the evolving <span class="text-gray-900">digital landscape</span>
     </h2>
-    <div class="bg-red-400 hidden sm:block"></div>
+    <div class=" hidden sm:block">
+      <img src="../public/svg/undraw_progressive_app_m-9-ms.svg" alt="filler undraw" >
+
+    </div>
   </section>
 
   <!-- HEADING PER SECTION (ABOUT) -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 text-gray-900 outline container mx-auto">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 text-gray-900 outline container mx-auto">
     <h3 class="leading-none font-medium  flex items-center justify-between
     text-[3.2rem]
     xxs:text-[4.2rem]
@@ -157,9 +161,10 @@
     md:text-[8.6rem]
     lg:text-[10.2rem]
     lg:justify-center
+    xl:text-[14.72rem]
     ">
       <span class=" ">ABOUT</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 heading__icon-container ">
+      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
         <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
@@ -169,30 +174,30 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="outline px-4 xs:px-6 md:px-8 lg:px-10  py-8 container mx-auto flex flex-col gap-4">
+  <section class="outline px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  py-8 container mx-auto flex flex-col gap-4">
     
     <!-- ABOUT CONTENT WRAPPER -->
-    <div class="flex flex-col gap-4 lg:grid-9-11">
+    <div class="flex flex-col gap-4 lg:grid-9-11 lg:gap-0 bg-red-300" >
 
       <!-- PICTURE CONTAINER -->
-      <div class="flex justify-center items-center">
+      <div class="flex justify-center items-center ">
         <!-- PICTURE -->
         <img class="self-center " src="https://i.pinimg.com/236x/43/ec/fe/43ecfe755d1430ca63ba9e6a974dd983.jpg">
       </div>
       
       
       <!-- PARAGRAPH CONTAINER -->
-      <div class="space-y-4 lg:row-span-2">
+      <div class="space-y-4 lg:row-span-2 lg:pl-4">
         <!-- PARAGRAPH -->
-        <p class="container">I am a <strong class="text-gray-900 font-medium">passionate web developer</strong> born and raised in the lively city of <strong class="text-gray-900 font-medium">Trece Martires, Cavite.</strong> My journey into the world of web development began under the guidance of exceptional professors back in college. Inspired by their teachings, I've embarked on a path that blends <strong class="text-gray-900 font-medium">creativity and technical prowess</strong> to craft engaging digital experiences.</p>
-        <p class="container">I believe in the power of code to transform ideas into captivating online realities. Each line of code represents an opportunity to bring innovation to life and make a <strong class="text-gray-900 font-medium">lasting impact on the digital landscape.</strong> With a commitment to continuous learning and a keen eye for detail, <strong class="font-medium">I strive to create web solutions that not only meet but exceed expectations.</strong></p>
-        <p class="container">In the words of <strong class="text-gray-900 font-medium">Steve Jobs, "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."</strong> This philosophy resonates deeply with my approach to web development, driving me to deliver <strong class="text-gray-900 font-medium">excellence in every project.</strong> Join me on this exciting journey, and let's create <strong class="text-gray-900 font-medium">digital wonders together!</strong></p>
+        <p class="bg-red-200">I am a <strong class="text-gray-900 font-medium">passionate web developer</strong> born and raised in the lively city of <strong class="text-gray-900 font-medium">Trece Martires, Cavite.</strong> My journey into the world of web development began under the guidance of exceptional professors back in college. Inspired by their teachings, I've embarked on a path that blends <strong class="text-gray-900 font-medium">creativity and technical prowess</strong> to craft engaging digital experiences.</p>
+        <p class="bg-red-200">I believe in the power of code to transform ideas into captivating online realities. Each line of code represents an opportunity to bring innovation to life and make a <strong class="text-gray-900 font-medium">lasting impact on the digital landscape.</strong> With a commitment to continuous learning and a keen eye for detail, <strong class="font-medium">I strive to create web solutions that not only meet but exceed expectations.</strong></p>
+        <p class="bg-red-200">In the words of <strong class="text-gray-900 font-medium">Steve Jobs, "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."</strong> This philosophy resonates deeply with my approach to web development, driving me to deliver <strong class="text-gray-900 font-medium">excellence in every project.</strong> Join me on this exciting journey, and let's create <strong class="text-gray-900 font-medium">digital wonders together!</strong></p>
       </div>
 
       <!-- SKILLS CONTAINERS -->
-      <div class="space-y-4">
+      <div class="space-y-4 lg:pt-4">
         <!-- HEADING -->
-        <h5 class=" text-2xl xs:text-[2.6rem] italic font-bold mt-4 lg:mt-0 lg:mb-4 text-gray-900">SKILLS</h5>
+        <h5 class=" text-2xl  italic font-bold mt-4 lg:mt-0 lg:mb-4 text-gray-900">SKILLS</h5>
         
         <!-- SKILLS ICON -->
         <ul class="flex flex-wrap gap-2">
@@ -361,7 +366,7 @@
 
 
 
-    <h5 class="mt-4 text-2xl xs:text-[2.6rem] italic font-bold text-gray-900">EXPERIENCE</h5>
+    <h5 class="mt-4 text-2xl  italic font-bold text-gray-900">EXPERIENCE</h5>
     <!-- TIMELINE -->
     <div class="container pl-8 lg:pl-0  relative before:content-[''] before:bg-gray-400 before:absolute before:w-0.5 before:h-full before:left-0 lg:before:left-[50%]
     
@@ -557,7 +562,7 @@
   </section>
 
   <!-- HEADING PER SECTION (PROJECTS) -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 text-gray-900 outline container mx-auto">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 text-gray-900 outline container mx-auto">
     <h3 class="uppercase leading-none font-medium  flex items-center justify-between
     text-[2.4rem]
     xxs:text-[3.1rem]
@@ -566,10 +571,11 @@
     md:text-[6.3rem]
     lg:text-[8.6rem]
     lg:justify-center
+    xl:text-[10.8rem]
     
     ">
       <span class=" ">my</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 heading__icon-container ">
+      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
         <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
@@ -579,7 +585,7 @@
   </section>
 
   <!-- PROJECT -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10  py-8 container mx-auto outline">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  py-8 container mx-auto outline">
 
     <!-- PROJECTS CONTAINER -->
     <div class="container mx-auto">
@@ -875,7 +881,7 @@
   </section>
 
   <!-- HEADING PER SECTION (CONTACTS) -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 text-gray-900 outline container mx-auto">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 text-gray-900 outline container mx-auto">
     <h3 class="uppercase leading-none font-medium  flex items-center justify-between
     text-[2.6rem]
     xxs:text-[3.3rem]
@@ -884,9 +890,10 @@
     md:text-[6.65rem]
     lg:text-[9.1rem]
     lg:justify-center
+    xl:text-[11.4rem]
     ">
       <span class=" ">contact</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 heading__icon-container ">
+      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
         <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
@@ -896,20 +903,25 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 py-8 container mx-auto outline flex flex-col lg:grid lg:grid-cols-2 gap-8">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 py-8 container mx-auto outline flex flex-col lg:grid lg:grid-cols-2  gap-8">
 
 
     <!-- FORM INPUT (LEFT)-->
-    <form action="#" class="container grid gap-6">
+    <form action="#" class="container grid gap-6 lg:grid-cols-2  lg:self-start">
+
+      <div class=" ">
+        <label class="pb-6 font-medium"  for="firstname">Firstname</label>
+        <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200" type="text" placeholder="E.g. Paul Iverson" name="firstname" id="firstname"   autocomplete="on">
+      </div>
 
       <div class="">
-        <label class="pb-6 font-medium"  for="name">Name</label>
-        <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200" type="text" placeholder="E.g. Paul Iverson" name="name" id="name"   autocomplete="on">
+        <label class="pb-6 font-medium"  for="lastname">Lastname</label>
+        <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200" type="text" placeholder="E.g. Cortez" name="lastname" id="lastname"   autocomplete="on">
       </div>
 
       <div class="">
         <label class="pb-6 font-medium" for="email">Email Address</label>
-        <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200" type="text" placeholder="E.g. pauliverson@gmail.com" name="email" id="email"  autocomplete="on">
+        <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200" type="text" placeholder="E.g. paul@gmail.com" name="email" id="email"  autocomplete="on">
       </div>
 
       <div class="">
@@ -917,12 +929,15 @@
         <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200" type="text" placeholder="E.g. 09198765432" name="contact" id="contact">
       </div>
 
-      <div>
-        <label class="pb-6 font-medium" for="purpose">Purpose</label>
+      <div class="col-span-full">
+        <label class="pb-6 font-medium"  for="purpose">Purpose</label>
         <textarea placeholder="Your inquiry here..." class="border-b-2 border-gray-200 w-full focus:outline-none py-1 " name="purpose" id="purpose" rows="2" ></textarea>
       </div>
 
-      <button class=" text-gray-600 bg-gray-100 py-1  font-semibold ">Send</button>
+
+    
+      <button class=" text-gray-600 bg-gray-100 py-1 h-10  font-semibold col-span-full">Send</button>
+
 
 
     </form>
@@ -1003,7 +1018,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="px-4 xs:px-6 md:px-8 lg:px-10 py-8 container mx-auto outline">
+  <footer class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 py-8 container mx-auto outline">
 
     <!-- logo -->
     <div class="text-center">Paul Iverson Cortez</div>
@@ -1024,9 +1039,10 @@
     md:text-[6.9rem]
     lg:text-[9.4rem]
     lg:justify-center
+    xl:text-[11.8rem]
     ">
       <span class=" ">salamat</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 heading__icon-container ">
+      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
         <svg class="h-full w-full ">
           <use xlink:href="/icons/sprite.svg#icon-sun"></use>
         </svg>
@@ -1037,10 +1053,6 @@
 
 
   </footer>
-
-
-
-
 
 
 </template>
