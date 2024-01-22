@@ -591,15 +591,18 @@
     <!-- PROJECTS CONTAINER -->
     <div class="container mx-auto">
       
+      <!-- DEMO PLAYER-->
+      <div class="bg-red-200 flex-2 h-[70vh]">
+        <button>prev</button>
+        <button>next</button>
+      </div>
+
       <!-- CONTAINER FEATURED PROJECTS -->
       <div class="flex flex-col lg:flex-row gap-8 mb-20">
 
-        <img ref="gif" src="https://cdn.dribbble.com/users/1106204/screenshots/7063847/web-design-gif--final.gif" alt="">
-        
-
         <!-- FEATURED PROJECTS -->
         <!-- https://cdn.dribbble.com/users/1106204/screenshots/7063847/web-design-gif--final.gif -->
-        <figure class="">
+        <figure class="flex-1">
           <img src="../public/images/projects/meatshoppe.png" alt="">
           <figcaption class="mt-4">
 
@@ -637,7 +640,7 @@
         </figure>
 
         <!-- FEATURED PROJECTS -->
-        <figure class="">
+        <figure class="flex-1">
           <img src="../public/images/projects/ecobuilders.png" alt="">
           <figcaption class="mt-4">
 
@@ -675,7 +678,7 @@
         </figure>
 
         <!-- FEATURED PROJECTS -->
-        <figure class="">
+        <figure class="flex-1">
           <img src="../public/images/projects/notely.png" alt="">
           <figcaption class="mt-4">
 
@@ -1072,6 +1075,9 @@ export default {
       isNavOpen: false,
     };
   },
+
+ 
+
   methods: {
     toggleNav() {
       this.isNavOpen = !this.isNavOpen;
