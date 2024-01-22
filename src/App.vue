@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <header class="container h-[64px] mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 outline flex items-center justify-between relative">
+  <header class="container h-[64px] mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 outline flex items-center justify-between relative">
     <!-- ICON -->
     <a href="#" >
       <img
@@ -68,7 +68,7 @@
   </header>
 
   <!-- HERO -->
-  <div class="container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 outline h-[75vh] md:h-[80vh] lg:h-[75vh] md:bg-red-200 flex items-center">
+  <div class="container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 outline h-[75vh] md:h-[80vh] lg:h-[75vh] md:bg-red-200 flex items-center">
 
     <!-- HEADING 1 (default)-->
     <h1 class="text-gray-900 w-full flex flex-col uppercase tracking-[-0.08em] leading-none font-bold
@@ -102,7 +102,7 @@
   </div>
 
   <!-- SCROLL BUTTON -->
-  <div class="container mx-auto outline px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 lg:text-center">
+  <div class="container mx-auto outline px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 lg:text-center">
     <div class="h-16 inline-block hover:cursor-pointer" role="button" >
       <span class="uppercase text-sm  font-bold text-gray-500">scroll</span>
       
@@ -137,7 +137,7 @@
   </div>
 
   <!-- BRIEF INTRO -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 py-8 outline container mx-auto sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 outline container mx-auto sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
     <h2 class=" tracking-tighter text-gray-400 container mx-auto
     text-4xl
     xs:text-[2.6rem]
@@ -152,16 +152,16 @@
   </section>
 
   <!-- HEADING PER SECTION (ABOUT) -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 text-gray-900 outline container mx-auto">
-    <h3 class="leading-none font-medium  flex items-center justify-between
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 text-gray-900 outline container mx-auto">
+    <h3 class="leading-none font-medium  flex items-center justify-center
     text-[3.2rem]
     xxs:text-[4.2rem]
     xs:text-[5.5rem]
     sm:text-[7.2rem]
     md:text-[8.6rem]
     lg:text-[10.2rem]
-    lg:justify-center
     xl:text-[14.72rem]
+    2xl:text-[17.6rem]
     ">
       <span class=" ">ABOUT</span>
       <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
@@ -174,10 +174,10 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="outline px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  py-8 container mx-auto flex flex-col gap-4">
+  <section class="outline px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16  py-8 container mx-auto flex flex-col gap-4">
     
     <!-- ABOUT CONTENT WRAPPER -->
-    <div class="flex flex-col gap-4 lg:grid-9-11 lg:gap-0 bg-red-300" >
+    <div class="flex flex-col gap-4 lg:flex-none lg:grid lg:grid-cols-2 " >
 
       <!-- PICTURE CONTAINER -->
       <div class="flex justify-center items-center ">
@@ -187,15 +187,15 @@
       
       
       <!-- PARAGRAPH CONTAINER -->
-      <div class="space-y-4 lg:row-span-2 lg:pl-4">
+      <div class="space-y-4 lg:row-span-2 ">
         <!-- PARAGRAPH -->
-        <p class="bg-red-200">I am a <strong class="text-gray-900 font-medium">passionate web developer</strong> born and raised in the lively city of <strong class="text-gray-900 font-medium">Trece Martires, Cavite.</strong> My journey into the world of web development began under the guidance of exceptional professors back in college. Inspired by their teachings, I've embarked on a path that blends <strong class="text-gray-900 font-medium">creativity and technical prowess</strong> to craft engaging digital experiences.</p>
-        <p class="bg-red-200">I believe in the power of code to transform ideas into captivating online realities. Each line of code represents an opportunity to bring innovation to life and make a <strong class="text-gray-900 font-medium">lasting impact on the digital landscape.</strong> With a commitment to continuous learning and a keen eye for detail, <strong class="font-medium">I strive to create web solutions that not only meet but exceed expectations.</strong></p>
-        <p class="bg-red-200">In the words of <strong class="text-gray-900 font-medium">Steve Jobs, "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."</strong> This philosophy resonates deeply with my approach to web development, driving me to deliver <strong class="text-gray-900 font-medium">excellence in every project.</strong> Join me on this exciting journey, and let's create <strong class="text-gray-900 font-medium">digital wonders together!</strong></p>
+        <p class="">I am a <strong class="text-gray-900 font-medium">passionate web developer</strong> born and raised in the lively city of <strong class="text-gray-900 font-medium">Trece Martires, Cavite.</strong> My journey into the world of web development began under the guidance of exceptional professors back in college. Inspired by their teachings, I've embarked on a path that blends <strong class="text-gray-900 font-medium">creativity and technical prowess</strong> to craft engaging digital experiences.</p>
+        <p class="">I believe in the power of code to transform ideas into captivating online realities. Each line of code represents an opportunity to bring innovation to life and make a <strong class="text-gray-900 font-medium">lasting impact on the digital landscape.</strong> With a commitment to continuous learning and a keen eye for detail, <strong class="font-medium">I strive to create web solutions that not only meet but exceed expectations.</strong></p>
+        <p class="">In the words of <strong class="text-gray-900 font-medium">Steve Jobs, "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."</strong> This philosophy resonates deeply with my approach to web development, driving me to deliver <strong class="text-gray-900 font-medium">excellence in every project.</strong> Join me on this exciting journey, and let's create <strong class="text-gray-900 font-medium">digital wonders together!</strong></p>
       </div>
 
       <!-- SKILLS CONTAINERS -->
-      <div class="space-y-4 lg:pt-4">
+      <div class="space-y-4 ">
         <!-- HEADING -->
         <h5 class=" text-2xl  italic font-bold mt-4 lg:mt-0 lg:mb-4 text-gray-900">SKILLS</h5>
         
@@ -562,16 +562,17 @@
   </section>
 
   <!-- HEADING PER SECTION (PROJECTS) -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 text-gray-900 outline container mx-auto">
-    <h3 class="uppercase leading-none font-medium  flex items-center justify-between
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 text-gray-900 outline container mx-auto">
+    <h3 class="uppercase leading-none font-medium  flex items-center justify-center
     text-[2.4rem]
     xxs:text-[3.1rem]
     xs:text-[4.1rem]
     sm:text-[5.3rem]
     md:text-[6.3rem]
     lg:text-[8.6rem]
-    lg:justify-center
+    
     xl:text-[10.8rem]
+    2xl:text-[13rem]
     
     ">
       <span class=" ">my</span>
@@ -585,7 +586,7 @@
   </section>
 
   <!-- PROJECT -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  py-8 container mx-auto outline">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16  py-8 container mx-auto outline">
 
     <!-- PROJECTS CONTAINER -->
     <div class="container mx-auto">
@@ -593,9 +594,13 @@
       <!-- CONTAINER FEATURED PROJECTS -->
       <div class="flex flex-col lg:flex-row gap-8 mb-20">
 
+        <img ref="gif" src="https://cdn.dribbble.com/users/1106204/screenshots/7063847/web-design-gif--final.gif" alt="">
+        
+
         <!-- FEATURED PROJECTS -->
+        <!-- https://cdn.dribbble.com/users/1106204/screenshots/7063847/web-design-gif--final.gif -->
         <figure class="">
-          <img src="https://cdn.dribbble.com/users/1106204/screenshots/7063847/web-design-gif--final.gif" alt="">
+          <img src="../public/images/projects/meatshoppe.png" alt="">
           <figcaption class="mt-4">
 
             <span class="text-sm">Featured Project</span>
@@ -633,7 +638,7 @@
 
         <!-- FEATURED PROJECTS -->
         <figure class="">
-          <img src="https://cdn.dribbble.com/users/1106204/screenshots/7063847/web-design-gif--final.gif" alt="">
+          <img src="../public/images/projects/ecobuilders.png" alt="">
           <figcaption class="mt-4">
 
             <span class="text-sm">Featured Project</span>
@@ -671,7 +676,7 @@
 
         <!-- FEATURED PROJECTS -->
         <figure class="">
-          <img src="https://cdn.dribbble.com/users/1106204/screenshots/7063847/web-design-gif--final.gif" alt="">
+          <img src="../public/images/projects/notely.png" alt="">
           <figcaption class="mt-4">
 
             <span class="text-sm">Featured Project</span>
@@ -881,16 +886,17 @@
   </section>
 
   <!-- HEADING PER SECTION (CONTACTS) -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 text-gray-900 outline container mx-auto">
-    <h3 class="uppercase leading-none font-medium  flex items-center justify-between
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 text-gray-900 outline container mx-auto">
+    <h3 class="uppercase leading-none font-medium  flex items-center justify-center
     text-[2.6rem]
     xxs:text-[3.3rem]
     xs:text-[4.3rem]
     sm:text-[5.6rem]
     md:text-[6.65rem]
     lg:text-[9.1rem]
-    lg:justify-center
+    
     xl:text-[11.4rem]
+    2xl:text-[13.67rem]
     ">
       <span class=" ">contact</span>
       <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
@@ -903,7 +909,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 py-8 container mx-auto outline flex flex-col lg:grid lg:grid-cols-2  gap-8">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 container mx-auto outline flex flex-col lg:grid lg:grid-cols-2  gap-8">
 
 
     <!-- FORM INPUT (LEFT)-->
@@ -1018,7 +1024,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 py-8 container mx-auto outline">
+  <footer class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 container mx-auto outline">
 
     <!-- logo -->
     <div class="text-center">Paul Iverson Cortez</div>
@@ -1031,15 +1037,16 @@
 
     <!-- THANK YOU -->
   <section class="text-gray-900 outline container mx-auto">
-    <h3 class="uppercase leading-none font-medium  flex items-center justify-between
+    <h3 class="uppercase leading-none font-medium  flex items-center justify-center
     text-[2.6rem]
     xxs:text-[3.4rem]
     xs:text-[4.4rem]
     sm:text-[5.8rem]
     md:text-[6.9rem]
     lg:text-[9.4rem]
-    lg:justify-center
+    
     xl:text-[11.8rem]
+    2xl:text-[14.15rem]
     ">
       <span class=" ">salamat</span>
       <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
