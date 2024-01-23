@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <header class="container h-[64px] mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 outline flex items-center justify-between relative">
+  <header class="container h-[64px]  mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 outline flex items-center justify-between relative">
     <!-- ICON -->
     <a href="#" >
       <img
@@ -11,19 +11,23 @@
     </a>
 
     <!-- BUTTON MENU -->
-    <div @click="toggleNav" class="relative h-6 w-6 overflow-hidden z-40 hover:cursor-pointer select-none
+    <div @click="toggleNav" class="relative h-6 w-6 overflow-hidden outline z-40 hover:cursor-pointer select-none
     lg:hidden
     "  role="button">
-      <div class="absolute h-[4px] w-6 bg-black top-0 left-1/2 translate-x-[-50%]">&nbsp;</div>
-      <div class="absolute h-[4px] w-6 bg-black inset-y-2/4 left-1/2 translate-y-[-50%] translate-x-[-20%]">&nbsp;</div>
-      <div class="absolute h-[4px] w-6 bg-black bottom-0 left-1/2 translate-x-[-50%]">&nbsp;</div>
+      <div :class="moveLineMenu1" class="absolute h-[4px] w-6 bg-black top-0 ">&nbsp;</div>
+      <div :class="moveLineMenu2" class="absolute h-[4px] w-6 bg-black top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div>
+      <div :class="moveLineMenu3" class="absolute h-[4px] w-6 bg-black bottom-0">&nbsp;</div>
+
+      <!-- <div class="absolute h-[4px] w-6 bg-black rotate-45 top-1/2 translate-y-[-50%]">&nbsp;</div> -->
+      <!-- <div class="absolute h-[4px] w-6 bg-black top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div> -->
+      <!-- <div class="absolute h-[4px] w-6 bg-black bottom-0 rotate-[135deg] top-1/2 translate-y-[-50%]">&nbsp;</div> -->
     </div>
 
     <!-- NAV LINKS -->
     <!-- Options: (1. top-[-100vh] - this will make the nav links disappear from the viewport (negative height)  -->
     <nav 
     :class="isNavOpen ? 'top-0':'top-[-100vh]'" 
-    class="absolute px-4  bg-white z-10 h-screen w-screen left-0 flex flex-col justify-center gap-4 tracking-tighter
+    class="absolute px-4   bg-white z-10 h-screen w-full left-0 flex flex-col justify-center gap-4 tracking-tighter
     lg:top-0
     lg:h-auto
     lg:w-full
@@ -36,59 +40,53 @@
     
 
     ">
-      <div class="flex gap-4 
+      <div class="flex gap-4 sm:justify-center
                   lg:flex-none lg:gap-0 lg:relative">
         <span class="text-gray-500
                       lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/01</span>
-        <div class="text-gray-900 text-5xl uppercase font-light 
+        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light 
                       lg:text-lg lg:font-medium ">home</div>
       </div>
-      <div class="flex gap-4 
+      <div class="flex gap-4 sm:justify-center
                   lg:flex-none lg:gap-0 lg:relative">
         <span class="text-gray-500
                       lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/02</span>
-        <div class="text-gray-900 text-5xl uppercase font-light 
+        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light 
                       lg:text-lg lg:font-medium ">about</div>
       </div>
-      <div class="flex gap-4 
+      <div class="flex gap-4 sm:justify-center
                   lg:flex-none lg:gap-0 lg:relative">
         <span class="text-gray-500
                       lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/03</span>
-        <div class="text-gray-900 text-5xl uppercase font-light 
+        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light 
                       lg:text-lg lg:font-medium ">projects</div>
       </div>
-      <div class="flex gap-4 
+      <div class="flex gap-4 sm:justify-center
                   lg:flex-none lg:gap-0 lg:relative">
         <span class="text-gray-500
                       lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/04</span>
-        <div class="text-gray-900 text-5xl uppercase font-light 
+        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light 
                       lg:text-lg lg:font-medium ">contact</div>
       </div>
     </nav>
   </header>
 
   <!-- HERO -->
-  <div class="container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 outline h-[75vh] md:h-[80vh] lg:h-[75vh] md:bg-red-200 flex items-center">
+  <div class="container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 outline h-[75vh] md:h-[80vh] lg:h-[75vh]  flex items-center">
 
     <!-- HEADING 1 (default)-->
     <h1 class="text-gray-900 w-full flex flex-col uppercase tracking-[-0.08em] leading-none font-bold
     text-[4.8rem]
-    xxs:text-[6.8rem] xxs:text-red-600
-    xs:text-[8.8rem] xs:text-green-600
-    sm:text-[9.8rem] sm:text-blue-600
+    xxs:text-[6.8rem]
+    xs:text-[8.8rem] 
+    sm:text-[9.8rem]
     sm:leading-[.8]
 
     lg:flex-row
     lg:gap-8
     lg:justify-center
-    lg:text-[12.2rem] lg:text-yellow-600
-    xl:text-[15rem] xl:text-purple-600
-    
-    
-    
-    
-
-    
+    lg:text-[12.2rem] 
+    xl:text-[15rem] 
    
     ">
         <span class="lg:hidden">hi</span>
@@ -586,24 +584,42 @@
   </section>
 
   <!-- PROJECT -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16  py-8 container mx-auto outline">
+  <section class="px-4  xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16  py-8 container mx-auto outline">
 
     <!-- PROJECTS CONTAINER -->
-    <div class="container mx-auto">
+    <div class="container mx-auto max-w-5xl ">
       
       <!-- DEMO PLAYER-->
-      <div class="bg-red-200 flex-2 h-[70vh]">
-        <button>prev</button>
-        <button>next</button>
+      <div class=" mb-10 relative hidden invisible md:block md:visible">
+        <img src="../public/images/projects/meatshoppe.gif" />
+
+        <!-- button previous -->
+        <div class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%]" >
+          <svg class="h-full w-full fill-gray-600">
+              <use
+              xlink:href="/icons/sprite.svg#icon-chevron-down"
+              ></use>
+            </svg>
+        </div>
+
+        <!-- button next -->
+        <div class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%]" >
+          <svg class="h-full w-full fill-gray-600">
+              <use
+              xlink:href="/icons/sprite.svg#icon-chevron-down"
+              ></use>
+            </svg>
+        </div>
+
       </div>
 
       <!-- CONTAINER FEATURED PROJECTS -->
-      <div class="flex flex-col lg:flex-row gap-8 mb-20">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
 
         <!-- FEATURED PROJECTS -->
-        <!-- https://cdn.dribbble.com/users/1106204/screenshots/7063847/web-design-gif--final.gif -->
         <figure class="flex-1">
-          <img src="../public/images/projects/meatshoppe.png" alt="">
+          <img class="hidden invisible md:block md:visible" src="../public/images/projects/meatshoppe-min.jpg" alt="">
+          <img class="block visible md:hidden md:invisible" src="../public/images/projects/meatshoppe.gif" alt="">
           <figcaption class="mt-4">
 
             <span class="text-sm">Featured Project</span>
@@ -641,7 +657,8 @@
 
         <!-- FEATURED PROJECTS -->
         <figure class="flex-1">
-          <img src="../public/images/projects/ecobuilders.png" alt="">
+          <img class="hidden invisible md:block md:visible" src="../public/images/projects/ecobuilders-min.jpg" alt="">
+          <img class="block visible md:hidden md:invisible" src="../public/images/projects/ecobuilders.gif" alt="">
           <figcaption class="mt-4">
 
             <span class="text-sm">Featured Project</span>
@@ -679,7 +696,8 @@
 
         <!-- FEATURED PROJECTS -->
         <figure class="flex-1">
-          <img src="../public/images/projects/notely.png" alt="">
+          <img class="hidden invisible md:block md:visible" src="../public/images/projects/notely-min.jpg" alt="">
+          <img class="block visible md:hidden md:invisible" src="../public/images/projects/notely.gif" alt="">
           <figcaption class="mt-4">
 
             <span class="text-sm">Featured Project</span>
@@ -720,7 +738,7 @@
 
 
       <!-- CONTAINER NOTABLE PROJECTS -->
-      <div class="flex flex-col lg:flex-row gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- NOTABLE PROJECTS -->
         <div class="bg-gray-100 px-6 py-4 relative
         border-t-2
@@ -818,7 +836,7 @@
             </a>
 
           </h4>
-          <p class="container mb-4 mt-2  text-gray-600">This project was developed during my Udemy bootcamp to enhance frontend skills and create a modern-looking website with a mobile-responsive design.</p>
+          <p class="container mb-4 mt-2  text-gray-600">This project was developed during my Udemy bootcamp to enhance frontend skills and create a modern website with a mobile-responsive design.</p>
           <ul class="flex flex-wrap">
             <li class="p-0 h-6 pr-4 font-medium">#HTML</li>
             <li class="p-0 h-6 pr-4 font-medium">#CSS</li>
@@ -1070,6 +1088,19 @@
 <script>
 export default {
   name: "PortfolioApp",
+
+  computed: {
+    moveLineMenu1() {
+      return (this.isNavOpen) ? "rotate-45 top-1/2 translate-y-[-50%]" : "top-0";
+    },
+    moveLineMenu2() {
+      return (this.isNavOpen) ? "translate-x-[100%]" : "translate-x-[-20%]";
+    },
+    moveLineMenu3() {
+      return (this.isNavOpen) ? "rotate-[135deg] top-1/2 translate-y-[-50%]" : "";
+    },
+  },
+
   data() {
     return {
       isNavOpen: false,
