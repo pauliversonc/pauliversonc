@@ -14,20 +14,17 @@
     <div @click="toggleNav" class="relative h-6 w-6 overflow-hidden outline z-40 hover:cursor-pointer select-none
     lg:hidden
     "  role="button">
-      <div :class="moveLineMenu1" class="absolute h-[4px] w-6 bg-black top-0 ">&nbsp;</div>
-      <div :class="moveLineMenu2" class="absolute h-[4px] w-6 bg-black top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div>
-      <div :class="moveLineMenu3" class="absolute h-[4px] w-6 bg-black bottom-0">&nbsp;</div>
+      <div :class="moveLineMenu1" class="ease-out duration-300 absolute h-[4px] w-6 bg-black top-0 ">&nbsp;</div>
+      <div :class="moveLineMenu2" class="ease-out duration-300 absolute h-[4px] w-6 bg-black top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div>
+      <div :class="moveLineMenu3" class="ease-out duration-300 absolute h-[4px] w-6 bg-black bottom-0">&nbsp;</div>
 
-      <!-- <div class="absolute h-[4px] w-6 bg-black rotate-45 top-1/2 translate-y-[-50%]">&nbsp;</div> -->
-      <!-- <div class="absolute h-[4px] w-6 bg-black top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div> -->
-      <!-- <div class="absolute h-[4px] w-6 bg-black bottom-0 rotate-[135deg] top-1/2 translate-y-[-50%]">&nbsp;</div> -->
     </div>
 
     <!-- NAV LINKS -->
     <!-- Options: (1. top-[-100vh] - this will make the nav links disappear from the viewport (negative height)  -->
     <nav 
     :class="isNavOpen ? 'top-0':'top-[-100vh]'" 
-    class="absolute px-4   bg-white z-10 h-screen w-full left-0 flex flex-col justify-center gap-4 tracking-tighter
+    class="ease-out duration-300 absolute px-4 bg-white z-10 h-screen w-full left-0 flex flex-col justify-center gap-4 tracking-tighter
     lg:top-0
     lg:h-auto
     lg:w-full
@@ -37,37 +34,26 @@
     lg:justify-end
     lg:gap-4
     lg:px-0
-    
-
     ">
-      <div class="flex gap-4 sm:justify-center
-                  lg:flex-none lg:gap-0 lg:relative">
-        <span class="text-gray-500
-                      lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/01</span>
-        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light 
-                      lg:text-lg lg:font-medium ">home</div>
-      </div>
-      <div class="flex gap-4 sm:justify-center
-                  lg:flex-none lg:gap-0 lg:relative">
-        <span class="text-gray-500
-                      lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/02</span>
-        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light 
-                      lg:text-lg lg:font-medium ">about</div>
-      </div>
-      <div class="flex gap-4 sm:justify-center
-                  lg:flex-none lg:gap-0 lg:relative">
-        <span class="text-gray-500
-                      lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/03</span>
-        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light 
-                      lg:text-lg lg:font-medium ">projects</div>
-      </div>
-      <div class="flex gap-4 sm:justify-center
-                  lg:flex-none lg:gap-0 lg:relative">
-        <span class="text-gray-500
-                      lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/04</span>
-        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light 
-                      lg:text-lg lg:font-medium ">contact</div>
-      </div>
+      <a href="#" class="flex bg-red-200 gap-4 sm:justify-center lg:flex-none lg:gap-0 lg:relative">
+        <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/01</span>
+        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">home</div>
+      </a>
+
+      <a class="flex gap-4 sm:justify-center lg:flex-none lg:gap-0 lg:relative">
+        <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/02</span>
+        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">about</div>
+      </a>
+
+      <a class="flex gap-4 sm:justify-center lg:flex-none lg:gap-0 lg:relative">
+        <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/03</span>
+        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">projects</div>
+      </a>
+
+      <a class="flex gap-4 sm:justify-center lg:flex-none lg:gap-0 lg:relative">
+        <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/04</span>
+        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">contact</div>
+      </a>
     </nav>
   </header>
 
