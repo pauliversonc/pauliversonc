@@ -35,25 +35,78 @@
     lg:gap-4
     lg:px-0
     ">
-      <a href="#" class="flex bg-red-200 gap-4 sm:justify-center lg:flex-none lg:gap-0 lg:relative">
-        <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/01</span>
-        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">home</div>
-      </a>
+      <div class="bg-red-400 flex justify-center">
+        <a href="#" class="flex relative bg-red-200 gap-4 sm:justify-center lg:flex-none lg:gap-0
+          before:ease-out 
+          before:duration-300
+          before:content-['']
+          before:absolute
+          before:h-0.5
+          before:w-0
+          before:bg-green-400
+          before:bottom-0
+          before:left-0
+          hover:before:w-full
+        ">
+          <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/01</span>
+          <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">home</div>
+        </a>
+      </div>
 
-      <a class="flex gap-4 sm:justify-center lg:flex-none lg:gap-0 lg:relative">
-        <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/02</span>
-        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">about</div>
-      </a>
+      <div class="bg-red-400 flex justify-center">
+        <a href="#" class="flex relative bg-red-200 gap-4 sm:justify-center lg:flex-none lg:gap-0
+          before:ease-out 
+          before:duration-300
+          before:content-['']
+          before:absolute
+          before:h-0.5
+          before:w-0
+          before:bg-green-400
+          before:bottom-0
+          before:left-0
+          hover:before:w-full
+        ">
+          <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/02</span>
+          <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">about</div>
+        </a>
+      </div>
 
-      <a class="flex gap-4 sm:justify-center lg:flex-none lg:gap-0 lg:relative">
-        <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/03</span>
-        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">projects</div>
-      </a>
+      <div class="bg-red-400 flex justify-center">
+        <a href="#" class="flex relative bg-red-200 gap-4 sm:justify-center lg:flex-none lg:gap-0
+          before:ease-out 
+          before:duration-300
+          before:content-['']
+          before:absolute
+          before:h-0.5
+          before:w-0
+          before:bg-green-400
+          before:bottom-0
+          before:left-0
+          hover:before:w-full
+        ">
+          <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/03</span>
+          <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">projects</div>
+        </a>
+      </div>
 
-      <a class="flex gap-4 sm:justify-center lg:flex-none lg:gap-0 lg:relative">
-        <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/04</span>
-        <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">contact</div>
-      </a>
+      <div class="bg-red-400 flex justify-center">
+        <a href="#" class="flex relative bg-red-200 gap-4 sm:justify-center lg:flex-none lg:gap-0
+          before:ease-out 
+          before:duration-300
+          before:content-['']
+          before:absolute
+          before:h-0.5
+          before:w-0
+          before:bg-green-400
+          before:bottom-0
+          before:left-0
+          hover:before:w-full
+        ">
+          <span class="text-gray-500 lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/04</span>
+          <div class="text-gray-900 text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">contact</div>
+        </a>
+      </div>
+
     </nav>
   </header>
 
@@ -146,13 +199,9 @@
     lg:text-[10.2rem]
     xl:text-[14.72rem]
     2xl:text-[17.6rem]
+    gap-4
     ">
       <span class=" ">ABOUT</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
-        <svg class="h-full w-full ">
-          <use xlink:href="/icons/sprite.svg#icon-sun"></use>
-        </svg>
-      </div>
       <span class="italic">ME</span>
     </h3>
   </section>
@@ -360,10 +409,14 @@
       <ul class="space-y-8 timeline-container xp-card-con lg:w-[50%]" >
 
         <!-- CARD L (TEXT-BOX) -->
-        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 before:rounded-full before:top-0 before:left-0 lg:before:left-full before:translate-x-[-2.3rem] lg:pr-[2rem] lg:before:translate-x-[-45%]
-     
-        ">
+        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 before:rounded-full before:top-0 before:left-0 lg:before:left-full before:translate-x-[-2.3rem] lg:pr-[2rem] lg:before:translate-x-[-45%]">
+          
+
           <div class="flex flex-col">
+            <!-- 320 DEFAULT -->
+            <span class="absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white z-40 
+            lg:right-0 lg:translate-x-[115%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
+            ">February 2021 - Present</span>
             <span class="leading-5 font-semibold text-lg text-gray-900">Junior Software Developer</span>
             <span class="italic">Cylix Technologies, Inc.</span>
             <ul class="mt-2 space-y-1">
@@ -427,6 +480,9 @@
     
         ">
           <div class="flex flex-col">
+            <span class="absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white z-40 
+            lg:left-0 lg:translate-x-[-115%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
+            ">October 2019 - June 2020</span>
             <span class="leading-5 font-semibold text-lg text-gray-900">IT Staff</span>
             <span class="italic">Shimadzu Philippines Mfg, Inc.</span>
             <ul class="mt-2 space-y-1">
@@ -489,6 +545,9 @@
       
         ">
           <div class="flex flex-col">
+            <span class="absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white z-40 
+            lg:right-0 lg:translate-x-[115%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
+            ">May 2018 - August 2018</span>
             <span class="leading-5 font-semibold text-lg text-gray-900">Desktop Support Engineer (Intern)</span>
             <span class="italic">Cypress Manufacturing Ltd.</span>
             <ul class="mt-2 space-y-1">
@@ -529,7 +588,18 @@
 
     <!-- RESUME LINK -->
     <div class="mt-6 flex justify-center align-center">
-      <a href="#" class="hover:pointer flex items-center justify-center gap-2">
+      <a href="#" class="hover:pointer flex items-center justify-center gap-2 relative
+        before:ease-out 
+        before:duration-300
+        before:content-['']
+        before:absolute
+        before:h-0.5
+        before:w-0
+        before:bg-green-400
+        before:bottom-0
+        before:left-0
+        hover:before:w-full
+      ">
         <span class="text-gray-900 font-medium">View My Résumé</span>
 
         <div class="flex items-center justify-center">
@@ -554,17 +624,11 @@
     sm:text-[5.3rem]
     md:text-[6.3rem]
     lg:text-[8.6rem]
-    
     xl:text-[10.8rem]
     2xl:text-[13rem]
-    
+    gap-4
     ">
       <span class=" ">my</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
-        <svg class="h-full w-full ">
-          <use xlink:href="/icons/sprite.svg#icon-sun"></use>
-        </svg>
-      </div>
       <span class="italic">projects</span>
     </h3>
   </section>
@@ -580,7 +644,7 @@
         <img src="../public/images/projects/meatshoppe.gif" />
 
         <!-- button previous -->
-        <div class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%]" >
+        <div class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%] hover:bg-gray-900 ease-out duration-300" >
           <svg class="h-full w-full fill-gray-600">
               <use
               xlink:href="/icons/sprite.svg#icon-chevron-down"
@@ -589,8 +653,8 @@
         </div>
 
         <!-- button next -->
-        <div class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%]" >
-          <svg class="h-full w-full fill-gray-600">
+        <div class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%] hover:bg-gray-900 ease-out duration-300 hover:cursor-pointer">
+          <svg class="h-full w-full fill-gray-600 group-hover:fill-white">
               <use
               xlink:href="/icons/sprite.svg#icon-chevron-down"
               ></use>
@@ -901,16 +965,11 @@
     sm:text-[5.6rem]
     md:text-[6.65rem]
     lg:text-[9.1rem]
-    
     xl:text-[11.4rem]
     2xl:text-[13.67rem]
+    gap-4
     ">
       <span class=" ">contact</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
-        <svg class="h-full w-full ">
-          <use xlink:href="/icons/sprite.svg#icon-sun"></use>
-        </svg>
-      </div>
       <span class="italic">me</span>
     </h3>
   </section>
@@ -922,34 +981,103 @@
     <!-- FORM INPUT (LEFT)-->
     <form action="#" class="container grid gap-6 lg:grid-cols-2  lg:self-start">
 
-      <div class=" ">
+      <div class="relative 
+      before:ease-out 
+      before:duration-300
+      before:content-['']
+      before:absolute
+      before:h-0.5
+      before:w-0
+      before:bg-red-600
+      before:bottom-0
+      before:left-0
+      before:hover:w-full
+      ">
         <label class="pb-6 font-medium"  for="firstname">Firstname</label>
         <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200" type="text" placeholder="E.g. Paul Iverson" name="firstname" id="firstname"   autocomplete="on">
       </div>
 
-      <div class="">
+      <div class="relative 
+      before:ease-out 
+      before:duration-300
+      before:content-['']
+      before:absolute
+      before:h-0.5
+      before:w-0
+      before:bg-red-600
+      before:bottom-0
+      before:left-0
+      before:hover:w-full
+      ">
         <label class="pb-6 font-medium"  for="lastname">Lastname</label>
         <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200" type="text" placeholder="E.g. Cortez" name="lastname" id="lastname"   autocomplete="on">
       </div>
 
-      <div class="">
+      <div class="relative 
+      before:ease-out 
+      before:duration-300
+      before:content-['']
+      before:absolute
+      before:h-0.5
+      before:w-0
+      before:bg-red-600
+      before:bottom-0
+      before:left-0
+      before:hover:w-full
+      ">
         <label class="pb-6 font-medium" for="email">Email Address</label>
         <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200" type="text" placeholder="E.g. paul@gmail.com" name="email" id="email"  autocomplete="on">
       </div>
 
-      <div class="">
+      <div class="relative 
+      before:ease-out 
+      before:duration-300
+      before:content-['']
+      before:absolute
+      before:h-0.5
+      before:w-0
+      before:bg-red-600
+      before:bottom-0
+      before:left-0
+      before:hover:w-full
+      ">
         <label class="pb-6 font-medium" for="contact">Contact Number</label>
         <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200" type="text" placeholder="E.g. 09198765432" name="contact" id="contact">
       </div>
 
-      <div class="col-span-full">
+      <div class="col-span-full relative
+      after:
+      after:content-['']
+      after:absolute
+      after:bottom-0
+      after:left-0
+      after:h-0.5
+      after:w-full
+      after:bg-gray-200
+      
+      
+
+      before:ease-out 
+      before:duration-300
+      before:content-['']
+      before:absolute
+      before:h-0.5
+      before:w-0
+      before:bg-red-600
+      before:bottom-0
+      before:left-0
+      before:hover:w-full
+      before:z-40
+      ">
         <label class="pb-6 font-medium"  for="purpose">Purpose</label>
-        <textarea placeholder="Your inquiry here..." class="border-b-2 border-gray-200 w-full focus:outline-none py-1 " name="purpose" id="purpose" rows="2" ></textarea>
+        <textarea placeholder="Your inquiry here..." class="w-full focus:outline-none py-1 " name="purpose" id="purpose" rows="2" ></textarea>
       </div>
 
 
     
-      <button class=" text-gray-600 bg-gray-100 py-1 h-10  font-semibold col-span-full">Send</button>
+      <button class=" text-gray-600 bg-gray-100 py-1 h-10 font-semibold col-span-full
+      hover:bg-gray-900 hover:text-gray-100 ease-out duration-300
+      ">Send</button>
 
 
 
@@ -969,7 +1097,18 @@
         <h5 class=" text-2xl italic font-bold text-gray-900">CONTACTS</h5>
 
         <!-- link -->
-        <a href="#" class="inline-block">
+        <a href="#" class="inline-block relative
+          before:ease-out 
+          before:duration-300
+          before:content-['']
+          before:absolute
+          before:h-0.5
+          before:w-0
+          before:bg-green-400
+          before:bottom-0
+          before:left-0
+          hover:before:w-full
+        ">
           <div class="flex items-center gap-2">
             <div class="">
               <svg class="h-4 w-4 fill-gray-900">
@@ -980,7 +1119,18 @@
           </div>
         </a>
 
-        <a href="#" class="inline-block">
+        <a href="#" class="inline-block relative
+          before:ease-out 
+          before:duration-300
+          before:content-['']
+          before:absolute
+          before:h-0.5
+          before:w-0
+          before:bg-green-400
+          before:bottom-0
+          before:left-0
+          hover:before:w-full
+        ">
           <div class="flex items-center gap-2">
             <div class="">
               <svg class="h-4 w-4 fill-gray-900">
@@ -997,25 +1147,25 @@
       <div class="flex flex-col gap-2">
         <h5 class=" text-2xl italic font-bold text-gray-900">SOCIALS</h5>
         <div class="flex items-center gap-4">
-          <a href="#" class="">
+          <a href="#" class="icon-link">
             <svg class="h-9 w-9 fill-gray-600">
               <use xlink:href="/icons/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
 
-          <a href="#" class="">
+          <a href="#" class="icon-link">
             <svg class="h-9 w-9 fill-gray-600">
               <use xlink:href="/icons/sprite.svg#icon-instagram"></use>
             </svg>
           </a>
 
-          <a href="#" class="">
+          <a href="#" class="icon-link">
             <svg class="h-9 w-9 fill-gray-600">
               <use xlink:href="/icons/sprite.svg#icon-linkedin"></use>
             </svg>
           </a>
 
-          <a href="#" class="">
+          <a href="#" class="icon-link">
             <svg class="h-9 w-9 fill-gray-600">
               <use xlink:href="/icons/sprite.svg#icon-github"></use>
             </svg>
@@ -1051,16 +1201,11 @@
     sm:text-[5.8rem]
     md:text-[6.9rem]
     lg:text-[9.4rem]
-    
     xl:text-[11.8rem]
     2xl:text-[14.15rem]
+    gap-4
     ">
       <span class=" ">salamat</span>
-      <div class="h-4 w-4 xs:h-6 xs:w-6 md:h-8 md:w-8 xl:h-10 xl:w-10  heading__icon-container ">
-        <svg class="h-full w-full ">
-          <use xlink:href="/icons/sprite.svg#icon-sun"></use>
-        </svg>
-      </div>
       <span class="italic">po</span>
     </h3>
   </section>
@@ -1122,21 +1267,6 @@ export default {
     animation-delay: 0.4s;
   }
 
-  .heading__icon {
-    transform: translate(2%, -2%);
-  }
-
-  .heading__icon-container {
-    transform-origin: center;
-
-    /* background-color: gray; */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: rotating 2s linear infinite;
-  }
-
   .icon-pos-a {
     transform: translateY(-27%);
     animation: rotating-a 2s linear infinite;
@@ -1176,6 +1306,39 @@ export default {
         transform:translateY(-18%) rotate(360deg);
     }
   }
+
+  @keyframes bounce {
+    0%, 100%, 20%, 50%, 80% {
+      -webkit-transform: translateY(0);
+      -ms-transform:     translateY(0);
+      transform:         translateY(0)
+    }
+    40% {
+      -webkit-transform: translateY(-20%);
+      -ms-transform:     translateY(-20%);
+      transform:         translateY(-20%)
+    }
+    60% {
+      -webkit-transform: translateY(-10%);
+      -ms-transform:     translateY(-10%);
+      transform:         translateY(-10%)
+    }
+  }
+
+  .icon-link {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+  }
+
+  .icon-link:hover {
+    cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+  }
+
 
 
 
