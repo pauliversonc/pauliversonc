@@ -567,7 +567,16 @@
                     <use xlink:href="/icons/sprite.svg#icon-chevron-down"></use>
                   </svg>
                 </div>
-                <p>Expertly installed, diagnosed, and repaired various <strong class="text-gray-900 font-medium">hardware components</strong>, including PCs, terminals, printers, and scanners</p>
+                <p>Expertly installed, diagnosed, and repaired various <strong class="text-gray-900 font-medium">hardware components</strong>, including PCs, terminals, telephones, printers, and scanners</p>
+              </li>
+
+              <li class="flex gap-2">
+                <div>
+                  <svg class="h-4 w-4 rotate-[270deg] translate-y-[25%] fill-gray-500">
+                    <use xlink:href="/icons/sprite.svg#icon-chevron-down"></use>
+                  </svg>
+                </div>
+                <p><strong class="text-gray-900 font-medium">Coordinated and maintained</strong> meeting rooms to ensure seamless and efficient communication during team collaborations.</p>
               </li>
 
 
@@ -641,25 +650,25 @@
       
       <!-- DEMO PLAYER-->
       <div class=" mb-10 relative hidden invisible md:block md:visible">
-        <img src="../public/images/projects/meatshoppe.gif" />
+        <img class="select-none" :src="`../public/images/projects/${featuredProjects[currentPlaying]}.gif`" />
 
         <!-- button previous -->
-        <div class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%] hover:bg-gray-900 ease-out duration-300" >
-          <svg class="h-full w-full fill-gray-600">
+        <button @click="handlePlaying('control', false)" class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%] group hover:bg-gray-900 ease-out duration-300 hover:cursor-pointer" >
+          <svg class="h-full w-full fill-gray-600 group-hover:fill-gray-100">
               <use
               xlink:href="/icons/sprite.svg#icon-chevron-down"
               ></use>
             </svg>
-        </div>
+        </button>
 
         <!-- button next -->
-        <div class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%] hover:bg-gray-900 ease-out duration-300 hover:cursor-pointer">
-          <svg class="h-full w-full fill-gray-600 group-hover:fill-white">
+        <button @click="handlePlaying('control', true)" class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%] group hover:bg-gray-900 ease-out duration-300 hover:cursor-pointer">
+          <svg class="h-full w-full fill-gray-600 group-hover:fill-gray-100">
               <use
               xlink:href="/icons/sprite.svg#icon-chevron-down"
               ></use>
             </svg>
-        </div>
+        </button>
 
       </div>
 
@@ -668,14 +677,14 @@
 
         <!-- FEATURED PROJECTS -->
         <figure class="flex-1">
-          <img class="hidden invisible md:block md:visible" src="../public/images/projects/meatshoppe-min.jpg" alt="">
+          <img @click="handlePlaying('set', 0)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/meatshoppe-min.jpg" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/meatshoppe.gif" alt="">
           <figcaption class="mt-4">
 
             <span class="text-sm">Featured Project</span>
             <h4 class="font-semibold text-lg  text-gray-900 flex gap-2 items-center">
               
-              <span class="mr-2">Meatshoppe</span>
+              <span @click="handlePlaying('set', 0)" class="mr-2 hover:cursor-pointer">Meatshoppe</span>
 
               <a href="#" class="p-1">
                 <svg class="h-4 w-4 fill-gray-600">
@@ -707,14 +716,14 @@
 
         <!-- FEATURED PROJECTS -->
         <figure class="flex-1">
-          <img class="hidden invisible md:block md:visible" src="../public/images/projects/ecobuilders-min.jpg" alt="">
+          <img @click="handlePlaying('set', 1)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/ecobuilders-min.jpg" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/ecobuilders.gif" alt="">
           <figcaption class="mt-4">
 
             <span class="text-sm">Featured Project</span>
             <h4 class="font-semibold text-lg  text-gray-900 flex gap-2 items-center">
               
-              <span class="mr-2">ECO Builders</span>
+              <span @click="handlePlaying('set', 1)" class="mr-2 hover:cursor-pointer">ECO Builders</span>
 
               <a href="#" class="p-1">
                 <svg class="h-4 w-4 fill-gray-600">
@@ -746,14 +755,14 @@
 
         <!-- FEATURED PROJECTS -->
         <figure class="flex-1">
-          <img class="hidden invisible md:block md:visible" src="../public/images/projects/notely-min.jpg" alt="">
+          <img @click="handlePlaying('set', 2)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/notely-min.jpg" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/notely.gif" alt="">
           <figcaption class="mt-4">
 
-            <span class="text-sm">Featured Project</span>
+            <span class="text-sm ">Featured Project</span>
             <h4 class="font-semibold text-lg  text-gray-900 flex gap-2 items-center">
               
-              <span class="mr-2">Notely</span>
+              <span @click="handlePlaying('set', 2)" class="mr-2 hover:cursor-pointer">Notely</span>
 
               <a href="#" class="p-1">
                 <svg class="h-4 w-4 fill-gray-600">
@@ -784,8 +793,6 @@
         </figure>
 
       </div>
-
-
 
       <!-- CONTAINER NOTABLE PROJECTS -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -948,9 +955,6 @@
           </ul>
         </div>
       </div>
-
-
-
 
     </div>
 
@@ -1219,6 +1223,9 @@
 <script>
 export default {
   name: "PortfolioApp",
+  mounted() {
+    this.startInterval();
+  },
 
   computed: {
     moveLineMenu1() {
@@ -1234,6 +1241,9 @@ export default {
 
   data() {
     return {
+      // 0: meatshoppe, 1: ecobuilders, 2: notely;
+      featuredProjects: ['meatshoppe', 'ecobuilders', 'notely'],
+      currentPlaying: 0,
       isNavOpen: false,
     };
   },
@@ -1243,7 +1253,45 @@ export default {
   methods: {
     toggleNav() {
       this.isNavOpen = !this.isNavOpen;
-    }
+    },
+
+    handlePlaying(action, selected, length = 3) {
+      // remove interval
+      clearInterval(this.intervalId);  
+
+      // run if you select prev or next
+      if(action === 'control') {
+        if (selected) {
+          this.currentPlaying = (this.currentPlaying + 1) % length;
+        } else {
+          this.currentPlaying = (this.currentPlaying - 1 + length) % length;
+        }
+      }
+
+      // set either you select it on the pic
+      if (action === 'set') {
+        this.currentPlaying = selected;
+      }
+
+      // start interval
+      this.startInterval()
+
+      console.log(this.intervalId)
+    },
+
+
+
+    startInterval() {
+      this.intervalId = setInterval(this.autoPlay, 5000);
+    },
+
+    autoPlay() {
+      // next gif
+      this.handlePlaying('control', true);
+    },
+
+
+
   },
 };
 </script>
