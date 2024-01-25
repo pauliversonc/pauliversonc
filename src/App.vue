@@ -35,8 +35,8 @@
     lg:gap-4
     lg:px-0
     ">
-      <div class="bg-red-400 flex justify-center">
-        <a href="#" class="flex relative bg-red-200 gap-4 sm:justify-center lg:flex-none lg:gap-0
+      <div class=" flex justify-center">
+        <a href="#" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
           before:ease-out 
           before:duration-300
           before:content-['']
@@ -53,8 +53,8 @@
         </a>
       </div>
 
-      <div class="bg-red-400 flex justify-center">
-        <a href="#" class="flex relative bg-red-200 gap-4 sm:justify-center lg:flex-none lg:gap-0
+      <div class=" flex justify-center">
+        <a href="#" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
           before:ease-out 
           before:duration-300
           before:content-['']
@@ -71,8 +71,8 @@
         </a>
       </div>
 
-      <div class="bg-red-400 flex justify-center">
-        <a href="#" class="flex relative bg-red-200 gap-4 sm:justify-center lg:flex-none lg:gap-0
+      <div class=" flex justify-center">
+        <a href="#" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
           before:ease-out 
           before:duration-300
           before:content-['']
@@ -89,8 +89,8 @@
         </a>
       </div>
 
-      <div class="bg-red-400 flex justify-center">
-        <a href="#" class="flex relative bg-red-200 gap-4 sm:justify-center lg:flex-none lg:gap-0
+      <div class=" flex justify-center">
+        <a href="#" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
           before:ease-out 
           before:duration-300
           before:content-['']
@@ -653,8 +653,8 @@
         <img class="select-none" :src="`../public/images/projects/${featuredProjects[currentPlaying]}.gif`" />
 
         <!-- button previous -->
-        <button @click="handlePlaying('control', false)" class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%] group hover:bg-gray-900 ease-out duration-300 hover:cursor-pointer" >
-          <svg class="h-full w-full fill-gray-600 group-hover:fill-gray-100">
+        <button @click="handlePlaying('control', false)" class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%] group hover:bg-gray-200 ease-out duration-300 hover:cursor-pointer" >
+          <svg class="h-full w-full fill-gray-600 group-hover:fill-gray-700">
               <use
               xlink:href="/icons/sprite.svg#icon-chevron-down"
               ></use>
@@ -662,8 +662,8 @@
         </button>
 
         <!-- button next -->
-        <button @click="handlePlaying('control', true)" class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%] group hover:bg-gray-900 ease-out duration-300 hover:cursor-pointer">
-          <svg class="h-full w-full fill-gray-600 group-hover:fill-gray-100">
+        <button @click="handlePlaying('control', true)" class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%] group hover:bg-gray-200 ease-out duration-300 hover:cursor-pointer">
+          <svg class="h-full w-full fill-gray-600 group-hover:fill-gray-700">
               <use
               xlink:href="/icons/sprite.svg#icon-chevron-down"
               ></use>
@@ -676,7 +676,9 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
 
         <!-- FEATURED PROJECTS -->
-        <figure class="flex-1">
+        <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-red-400 
+                       md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-blue-400  md:after:translate-x-[-100%] "
+                :class="(currentPlaying === 0) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[5000ms]' : ''">  
           <img @click="handlePlaying('set', 0)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/meatshoppe-min.jpg" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/meatshoppe.gif" alt="">
           <figcaption class="mt-4">
@@ -686,14 +688,14 @@
               
               <span @click="handlePlaying('set', 0)" class="mr-2 hover:cursor-pointer">Meatshoppe</span>
 
-              <a href="#" class="p-1">
-                <svg class="h-4 w-4 fill-gray-600">
+              <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                   <use xlink:href="/icons/sprite.svg#icon-link"></use>
                 </svg>
               </a>
 
-              <a href="#" class="p-1">
-                <svg class="h-4 w-4 fill-gray-600">
+              <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                   <use xlink:href="/icons/sprite.svg#icon-github"></use>
                 </svg>
               </a>
@@ -715,7 +717,9 @@
         </figure>
 
         <!-- FEATURED PROJECTS -->
-        <figure class="flex-1">
+        <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-red-400 
+                       md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-blue-400  md:after:translate-x-[-100%] "
+                :class="(currentPlaying === 1) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[5000ms]' : ''">  
           <img @click="handlePlaying('set', 1)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/ecobuilders-min.jpg" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/ecobuilders.gif" alt="">
           <figcaption class="mt-4">
@@ -725,14 +729,14 @@
               
               <span @click="handlePlaying('set', 1)" class="mr-2 hover:cursor-pointer">ECO Builders</span>
 
-              <a href="#" class="p-1">
-                <svg class="h-4 w-4 fill-gray-600">
+              <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                   <use xlink:href="/icons/sprite.svg#icon-link"></use>
                 </svg>
               </a>
 
-              <a href="#" class="p-1">
-                <svg class="h-4 w-4 fill-gray-600">
+              <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                   <use xlink:href="/icons/sprite.svg#icon-github"></use>
                 </svg>
               </a>
@@ -754,7 +758,9 @@
         </figure>
 
         <!-- FEATURED PROJECTS -->
-        <figure class="flex-1">
+        <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-red-400 
+                       md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-blue-400  md:after:translate-x-[-100%] "
+                :class="(currentPlaying === 2) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[5000ms]' : ''">   
           <img @click="handlePlaying('set', 2)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/notely-min.jpg" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/notely.gif" alt="">
           <figcaption class="mt-4">
@@ -764,14 +770,14 @@
               
               <span @click="handlePlaying('set', 2)" class="mr-2 hover:cursor-pointer">Notely</span>
 
-              <a href="#" class="p-1">
-                <svg class="h-4 w-4 fill-gray-600">
+              <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                   <use xlink:href="/icons/sprite.svg#icon-link"></use>
                 </svg>
               </a>
 
-              <a href="#" class="p-1">
-                <svg class="h-4 w-4 fill-gray-600">
+              <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                   <use xlink:href="/icons/sprite.svg#icon-github"></use>
                 </svg>
               </a>
@@ -801,7 +807,7 @@
         border-t-2
         border-white
         mt-[30px]
-
+    
         
         before:bg-gray-200
         before:absolute
@@ -819,7 +825,8 @@
         after:top-0
         after:left-0
         after:translate-y-[-50%]
-        after:z-[-1]
+        after:z-[-100]
+
 
         ">
           <span class="text-sm">Notable Project</span>
@@ -827,14 +834,14 @@
             
             <span class="mr-2">Natours</span>
 
-            <a href="#" class=" p-1 ">
-              <svg class="h-4 w-4 fill-gray-600">
+            <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                 <use xlink:href="/icons/sprite.svg#icon-link"></use>
               </svg>
             </a>
 
-            <a href="#" class=" p-1 ">
-              <svg class="h-4 w-4 fill-gray-600">
+            <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                 <use xlink:href="/icons/sprite.svg#icon-github"></use>
               </svg>
             </a>
@@ -880,14 +887,14 @@
             
             <span class="mr-2">Omnifood</span>
 
-            <a href="#" class=" p-1 ">
-              <svg class="h-4 w-4 fill-gray-600">
+            <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                 <use xlink:href="/icons/sprite.svg#icon-link"></use>
               </svg>
             </a>
 
-            <a href="#" class=" p-1 ">
-              <svg class="h-4 w-4 fill-gray-600">
+            <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                 <use xlink:href="/icons/sprite.svg#icon-github"></use>
               </svg>
             </a>
@@ -933,14 +940,14 @@
             
             <span class="mr-2">Pauliversonc</span>
 
-            <a href="#" class=" p-1 ">
-              <svg class="h-4 w-4 fill-gray-600">
+            <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                 <use xlink:href="/icons/sprite.svg#icon-link"></use>
               </svg>
             </a>
 
-            <a href="#" class=" p-1 ">
-              <svg class="h-4 w-4 fill-gray-600">
+            <a href="#" class="p-1 icon-link group">
+                <svg class="h-4 w-4 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
                 <use xlink:href="/icons/sprite.svg#icon-github"></use>
               </svg>
             </a>
@@ -1080,7 +1087,7 @@
 
     
       <button class=" text-gray-600 bg-gray-100 py-1 h-10 font-semibold col-span-full
-      hover:bg-gray-900 hover:text-gray-100 ease-out duration-300
+      hover:bg-gray-200 hover:text-gray-700 ease-out duration-300
       ">Send</button>
 
 
@@ -1151,26 +1158,26 @@
       <div class="flex flex-col gap-2">
         <h5 class=" text-2xl italic font-bold text-gray-900">SOCIALS</h5>
         <div class="flex items-center gap-4">
-          <a href="#" class="icon-link">
-            <svg class="h-9 w-9 fill-gray-600">
+          <a href="#" class="icon-link group">
+            <svg class="h-9 w-9 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
               <use xlink:href="/icons/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
 
-          <a href="#" class="icon-link">
-            <svg class="h-9 w-9 fill-gray-600">
+          <a href="#" class="icon-link group">
+            <svg class="h-9 w-9 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
               <use xlink:href="/icons/sprite.svg#icon-instagram"></use>
             </svg>
           </a>
 
-          <a href="#" class="icon-link">
-            <svg class="h-9 w-9 fill-gray-600">
+          <a href="#" class="icon-link group">
+            <svg class="h-9 w-9 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
               <use xlink:href="/icons/sprite.svg#icon-linkedin"></use>
             </svg>
           </a>
 
-          <a href="#" class="icon-link">
-            <svg class="h-9 w-9 fill-gray-600">
+          <a href="#" class="icon-link group">
+            <svg class="h-9 w-9 fill-gray-600 group-hover:fill-gray-900 ease-out duration-300">
               <use xlink:href="/icons/sprite.svg#icon-github"></use>
             </svg>
           </a>
@@ -1383,8 +1390,8 @@ export default {
 
   .icon-link:hover {
     cursor: pointer;
-  animation-name: bounce;
-  -moz-animation-name: bounce;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
   }
 
 
