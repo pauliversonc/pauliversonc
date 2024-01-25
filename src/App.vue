@@ -12,11 +12,10 @@
 
     <!-- BUTTON MENU -->
     <div @click="toggleNav" class="relative h-6 w-6 overflow-hidden  z-40 hover:cursor-pointer select-none
-    lg:hidden
-    "role="button">
-      <div :class="moveLineMenu1" class="ease-out duration-300 absolute h-[4px] w-6 bg-black top-0 ">&nbsp;</div>
-      <div :class="moveLineMenu2" class="ease-out duration-300 absolute h-[4px] w-6 bg-black top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div>
-      <div :class="moveLineMenu3" class="ease-out duration-300 absolute h-[4px] w-6 bg-black bottom-0">&nbsp;</div>
+    lg:hidden" role="button" >
+      <div :class="moveLineMenu1" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-black top-0 ">&nbsp;</div>
+      <div :class="moveLineMenu2" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-black top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div>
+      <div :class="moveLineMenu3" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-black bottom-0">&nbsp;</div>
 
     </div>
 
@@ -126,8 +125,25 @@
     lg:justify-center
     lg:text-[12.2rem] 
     xl:text-[15rem] 
-   
+
+    relative
     ">
+        <span class=" bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-white
+         absolute top-0 left-0 text-gray-200 z-[-1] translate-y-[-50%] bg-red-200 font-normal inline-block p-1
+         text-[2.4rem]
+         xxs:text-[3.4rem]
+         xs:text-[4.4rem] 
+         sm:text-[4.9rem]
+         lg:text-[6.1rem] 
+         xl:text-[7.5rem] 
+         sm:left-[-.5%]
+         lg:left-[2%]
+         xl:left-[3%]
+         2xl:left-[11%]
+        ">/01</span>
+        
+
+    
         <span class="lg:hidden">hi</span>
         <span class="sm:hidden">iam</span>
         <span class="sm:hidden">paul</span>
@@ -200,7 +216,21 @@
     xl:text-[14.72rem]
     2xl:text-[17.6rem]
     gap-4
+    relative
     ">
+    <span class=" bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-white
+         absolute top-0 left-0 text-gray-200 z-[-1] translate-y-[-50%] bg-red-200 font-normal inline-block p-1
+         text-[2.4rem]
+         xxs:text-[3.4rem]
+         xs:text-[4.4rem] 
+         sm:text-[4.9rem]
+         lg:text-[6.1rem] 
+         xl:text-[7.5rem] 
+         md:left-[2%]
+         lg:left-[8%]
+         xl:left-[1%]
+        
+        ">/02</span>
       <span class=" ">ABOUT</span>
       <span class="italic">ME</span>
     </h3>
@@ -637,7 +667,21 @@
     xl:text-[10.8rem]
     2xl:text-[13rem]
     gap-4
+    relative
     ">
+    <span class=" bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-white
+         absolute top-0 left-0 text-gray-200 z-[-1] translate-y-[-50%] bg-red-200 font-normal inline-block p-1
+         text-[2.4rem]
+         xxs:text-[3.4rem]
+         xs:text-[4.4rem] 
+         sm:text-[4.9rem]
+         lg:text-[6.1rem] 
+         xl:text-[7.5rem] 
+         md:left-[2%]
+ 
+ 
+        
+        ">/03</span>
       <span class=" ">my</span>
       <span class="italic">projects</span>
     </h3>
@@ -980,7 +1024,20 @@
     xl:text-[11.4rem]
     2xl:text-[13.67rem]
     gap-4
+    relative
     ">
+    <span class=" bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-white
+         absolute top-0 left-0 text-gray-200 z-[-1] translate-y-[-50%] bg-red-200 font-normal inline-block p-1
+         text-[2.4rem]
+         xxs:text-[3.4rem]
+         xs:text-[4.4rem] 
+         sm:text-[4.9rem]
+         lg:text-[6.1rem] 
+         xl:text-[7.5rem] 
+         md:left-[2%]
+     
+        
+        ">/04</span>
       <span class=" ">contact</span>
       <span class="italic">me</span>
     </h3>
@@ -1216,7 +1273,20 @@
     xl:text-[11.8rem]
     2xl:text-[14.15rem]
     gap-4
+    relative
     ">
+    <span class=" bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-white
+         absolute top-0 left-0 text-gray-200 z-[-1] translate-y-[-50%] bg-red-200 font-normal inline-block p-1
+         text-[2.4rem]
+         xxs:text-[3.4rem]
+         xs:text-[4.4rem] 
+         sm:text-[4.9rem]
+         lg:text-[6.1rem] 
+         xl:text-[7.5rem] 
+         md:left-[2%]
+    
+        
+        ">/05</span>
       <span class=" ">salamat</span>
       <span class="italic">po</span>
     </h3>
@@ -1394,6 +1464,7 @@ export default {
     animation-name: bounce;
     -moz-animation-name: bounce;
   }
+
 
 
 
