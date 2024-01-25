@@ -7,6 +7,7 @@ export default {
       colors: {
         dmBlack: '#191919',
         dmBlackTint1: '#2e2e2e',
+        dmBlackTint2: '#545454',
         dmWhite: '#EAEADE',
         dmGray: '#909090',
       },
