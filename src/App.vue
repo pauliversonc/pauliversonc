@@ -43,7 +43,7 @@
           before:absolute
           before:h-0.5
           before:w-0
-          before:bg-green-400
+          before:bg-gray-900
           before:bottom-0
           before:left-0
           hover:before:w-full
@@ -61,7 +61,7 @@
           before:absolute
           before:h-0.5
           before:w-0
-          before:bg-green-400
+          before:bg-gray-900
           before:bottom-0
           before:left-0
           hover:before:w-full
@@ -79,7 +79,7 @@
           before:absolute
           before:h-0.5
           before:w-0
-          before:bg-green-400
+          before:bg-gray-900
           before:bottom-0
           before:left-0
           hover:before:w-full
@@ -97,7 +97,7 @@
           before:absolute
           before:h-0.5
           before:w-0
-          before:bg-green-400
+          before:bg-gray-900
           before:bottom-0
           before:left-0
           hover:before:w-full
@@ -604,7 +604,7 @@
         before:absolute
         before:h-0.5
         before:w-0
-        before:bg-green-400
+        before:bg-gray-900
         before:bottom-0
         before:left-0
         hover:before:w-full
@@ -653,8 +653,8 @@
         <img class="select-none" :src="`../public/images/projects/${featuredProjects[currentPlaying]}.gif`" />
 
         <!-- button previous -->
-        <button @click="handlePlaying('control', false)" class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%] group hover:bg-gray-200 ease-out duration-300 hover:cursor-pointer" >
-          <svg class="h-full w-full fill-gray-600 group-hover:fill-gray-700">
+        <button @click="handlePlaying('control', false)" class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%] group hover:bg-gray-900 ease-out duration-300 hover:cursor-pointer" >
+          <svg class="h-full w-full fill-gray-600 group-hover:fill-gray-100 ease-out duration-300">
               <use
               xlink:href="/icons/sprite.svg#icon-chevron-down"
               ></use>
@@ -662,8 +662,8 @@
         </button>
 
         <!-- button next -->
-        <button @click="handlePlaying('control', true)" class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%] group hover:bg-gray-200 ease-out duration-300 hover:cursor-pointer">
-          <svg class="h-full w-full fill-gray-600 group-hover:fill-gray-700">
+        <button @click="handlePlaying('control', true)" class="h-6 w-6 bg-gray-100 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%] group hover:bg-gray-900 ease-out duration-300 hover:cursor-pointer">
+          <svg class="h-full w-full fill-gray-600 group-hover:fill-gray-100 ease-out duration-300">
               <use
               xlink:href="/icons/sprite.svg#icon-chevron-down"
               ></use>
@@ -676,8 +676,8 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
 
         <!-- FEATURED PROJECTS -->
-        <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-red-400 
-                       md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-blue-400  md:after:translate-x-[-100%] "
+        <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-gray-100 
+                       md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-gray-900  md:after:translate-x-[-100%] "
                 :class="(currentPlaying === 0) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[5000ms]' : ''">  
           <img @click="handlePlaying('set', 0)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/meatshoppe-min.jpg" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/meatshoppe.gif" alt="">
@@ -717,8 +717,8 @@
         </figure>
 
         <!-- FEATURED PROJECTS -->
-        <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-red-400 
-                       md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-blue-400  md:after:translate-x-[-100%] "
+        <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-gray-100 
+                       md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-gray-900  md:after:translate-x-[-100%] "
                 :class="(currentPlaying === 1) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[5000ms]' : ''">  
           <img @click="handlePlaying('set', 1)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/ecobuilders-min.jpg" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/ecobuilders.gif" alt="">
@@ -758,8 +758,8 @@
         </figure>
 
         <!-- FEATURED PROJECTS -->
-        <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-red-400 
-                       md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-blue-400  md:after:translate-x-[-100%] "
+        <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-gray-100 
+                       md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-gray-900  md:after:translate-x-[-100%] "
                 :class="(currentPlaying === 2) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[5000ms]' : ''">   
           <img @click="handlePlaying('set', 2)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/notely-min.jpg" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/notely.gif" alt="">
@@ -1087,7 +1087,7 @@
 
     
       <button class=" text-gray-600 bg-gray-100 py-1 h-10 font-semibold col-span-full
-      hover:bg-gray-200 hover:text-gray-700 ease-out duration-300
+      hover:bg-gray-900 hover:text-gray-100 ease-out duration-300
       ">Send</button>
 
 
@@ -1115,7 +1115,7 @@
           before:absolute
           before:h-0.5
           before:w-0
-          before:bg-green-400
+          before:bg-gray-900
           before:bottom-0
           before:left-0
           hover:before:w-full
@@ -1137,7 +1137,7 @@
           before:absolute
           before:h-0.5
           before:w-0
-          before:bg-green-400
+          before:bg-gray-900
           before:bottom-0
           before:left-0
           hover:before:w-full
