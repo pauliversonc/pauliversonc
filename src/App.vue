@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <header class="container h-[64px]  mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 outline flex items-center justify-between relative">
+  <header class="container h-[64px]  mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 flex items-center justify-between relative">
     <!-- ICON -->
     <a href="#" >
       <img
@@ -11,9 +11,9 @@
     </a>
 
     <!-- BUTTON MENU -->
-    <div @click="toggleNav" class="relative h-6 w-6 overflow-hidden outline z-40 hover:cursor-pointer select-none
+    <div @click="toggleNav" class="relative h-6 w-6 overflow-hidden  z-40 hover:cursor-pointer select-none
     lg:hidden
-    "  role="button">
+    "role="button">
       <div :class="moveLineMenu1" class="ease-out duration-300 absolute h-[4px] w-6 bg-black top-0 ">&nbsp;</div>
       <div :class="moveLineMenu2" class="ease-out duration-300 absolute h-[4px] w-6 bg-black top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div>
       <div :class="moveLineMenu3" class="ease-out duration-300 absolute h-[4px] w-6 bg-black bottom-0">&nbsp;</div>
@@ -111,7 +111,7 @@
   </header>
 
   <!-- HERO -->
-  <div class="container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 outline h-[75vh] md:h-[80vh] lg:h-[75vh]  flex items-center">
+  <div class="container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 h-[75vh] md:h-[80vh] lg:h-[75vh]  flex items-center">
 
     <!-- HEADING 1 (default)-->
     <h1 class="text-gray-900 w-full flex flex-col uppercase tracking-[-0.08em] leading-none font-bold
@@ -139,7 +139,7 @@
   </div>
 
   <!-- SCROLL BUTTON -->
-  <div class="container mx-auto outline px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 lg:text-center">
+  <div class="container mx-auto  px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 lg:text-center">
     <div class="h-16 inline-block hover:cursor-pointer" role="button" >
       <span class="uppercase text-sm  font-bold text-gray-500">scroll</span>
       
@@ -174,7 +174,7 @@
   </div>
 
   <!-- BRIEF INTRO -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 outline container mx-auto sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 py-8 container mx-auto sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
     <h2 class=" tracking-tighter text-gray-400 container mx-auto
     text-4xl
     xs:text-[2.6rem]
@@ -189,7 +189,7 @@
   </section>
 
   <!-- HEADING PER SECTION (ABOUT) -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 text-gray-900 outline container mx-auto">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 text-gray-900 mb-[2rem] mt-[8rem] container mx-auto">
     <h3 class="leading-none font-medium  flex items-center justify-center
     text-[3.2rem]
     xxs:text-[4.2rem]
@@ -207,7 +207,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="outline px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16  py-8 container mx-auto flex flex-col gap-4">
+  <section class=" px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16  py-8 container mx-auto flex flex-col gap-4">
     
     <!-- ABOUT CONTENT WRAPPER -->
     <div class="flex flex-col gap-4 lg:flex-none lg:grid lg:grid-cols-2 " >
@@ -216,6 +216,7 @@
       <div class="flex justify-center items-center ">
         <!-- PICTURE -->
         <img class="self-center " src="https://i.pinimg.com/236x/43/ec/fe/43ecfe755d1430ca63ba9e6a974dd983.jpg">
+        <!-- <img class="self-center h-[14rem]" src="../public/images/portrait/pauliversoncortez.png"> -->
       </div>
       
       
@@ -625,7 +626,7 @@
   </section>
 
   <!-- HEADING PER SECTION (PROJECTS) -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 text-gray-900 outline container mx-auto">
+  <section class="mb-[2rem] mt-[8rem] px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 text-gray-900  container mx-auto">
     <h3 class="uppercase leading-none font-medium  flex items-center justify-center
     text-[2.4rem]
     xxs:text-[3.1rem]
@@ -643,7 +644,7 @@
   </section>
 
   <!-- PROJECT -->
-  <section class="px-4  xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16  py-8 container mx-auto outline">
+  <section class="px-4  xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16  py-8 container mx-auto ">
 
     <!-- PROJECTS CONTAINER -->
     <div class="container mx-auto max-w-5xl ">
@@ -968,7 +969,7 @@
   </section>
 
   <!-- HEADING PER SECTION (CONTACTS) -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 text-gray-900 outline container mx-auto">
+  <section class="mb-[2rem] mt-[8rem] px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 text-gray-900  container mx-auto">
     <h3 class="uppercase leading-none font-medium  flex items-center justify-center
     text-[2.6rem]
     xxs:text-[3.3rem]
@@ -986,7 +987,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 container mx-auto outline flex flex-col lg:grid lg:grid-cols-2  gap-8">
+  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 py-8 container mx-auto  flex flex-col lg:grid lg:grid-cols-2  gap-8">
 
 
     <!-- FORM INPUT (LEFT)-->
@@ -1192,10 +1193,10 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 container mx-auto outline">
+  <footer class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 mt-[8rem]  2xl:px-16 py-8 container mx-auto ">
 
     <!-- logo -->
-    <div class="text-center">Paul Iverson Cortez</div>
+    <div class="text-center">Paul Iverson Cortez | Portfolio</div>
 
     <!-- credits -->
     <div class="flex flex-col items-center">
@@ -1204,7 +1205,7 @@
     </div>
 
     <!-- THANK YOU -->
-  <section class="text-gray-900 outline container mx-auto">
+  <section class="text-gray-900 mt-[2rem]  container mx-auto">
     <h3 class="uppercase leading-none font-medium  flex items-center justify-center
     text-[2.6rem]
     xxs:text-[3.4rem]
@@ -1283,7 +1284,7 @@ export default {
       // start interval
       this.startInterval()
 
-      console.log(this.intervalId)
+      // console.log(this.intervalId)
     },
 
 
