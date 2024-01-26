@@ -204,7 +204,7 @@
       I create <span class="text-gray-900 dark:text-dmWhite">innovative solutions</span> for the evolving <span class="text-gray-900 dark:text-dmWhite">digital landscape</span>
     </h2>
     <div class=" hidden sm:block">
-      <img src="../public/svg/undraw_progressive_app_m-9-ms.svg" alt="filler undraw" >
+      <img src="../public/svg/undraw_progressive_app_m-9-ms-dark.svg" alt="filler undraw" >
 
     </div>
   </section>
@@ -645,11 +645,13 @@
         before:bottom-0
         before:left-0
         hover:before:w-full
+        dark:before:bg-dmWhite
+        group
       ">
-        <span class="text-gray-900 font-medium">View My Résumé</span>
-
+        <span class="text-gray-900 font-medium dark:text-dmGray dark:group-hover:text-dmWhite dark:ease-out dark:duration-300">View My Résumé</span>
+        
         <div class="flex items-center justify-center">
-        <svg class="h-4 w-4 fill-gray-900">
+        <svg class="h-4 w-4 fill-gray-900 dark:fill-dmGray dark:group-hover:fill-dmWhite dark:ease-out dark:duration-300">
           <use xlink:href="/icons/sprite.svg#icon-file-text"></use>
         </svg>
       </div>
@@ -704,7 +706,7 @@
         <img class="select-none" :src="`../public/images/projects/${featuredProjects[currentPlaying]}.gif`" />
 
         <!-- button previous -->
-        <button @click="handlePlaying('control', false)" class="h-6 w-6 bg-gray-100 dark:bg-dmBlackTint2 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%] group hover:bg-gray-900 dark:hover:bg-dmWhite ease-out duration-300 hover:cursor-pointer" >
+        <button @click="handlePlaying('control', false)" class="h-6 w-6 bg-gray-100 dark:bg-dmBlackTint2 p-1 rounded-full rotate-90 absolute left-0 top-1/2 translate-x-[-105%] translate-y-[-50%] group hover:bg-gray-900 dark:hover:bg-dmWhite ease-out duration-300 hover:cursor-pointer hover:translate-x-[-120%]" >
           <svg class="h-full w-full fill-gray-600 dark:fill-dmWhite group-hover:fill-gray-100 dark:group-hover:fill-dmBlackTint1 ease-out duration-300">
               <use
               xlink:href="/icons/sprite.svg#icon-chevron-down"
@@ -713,7 +715,7 @@
         </button>
 
         <!-- button next -->
-        <button @click="handlePlaying('control', true)" class="h-6 w-6 bg-gray-100 dark:bg-dmBlackTint2 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%] group hover:bg-gray-900 dark:hover:bg-dmWhite ease-out duration-300 hover:cursor-pointer">
+        <button @click="handlePlaying('control', true)" class="h-6 w-6 bg-gray-100 dark:bg-dmBlackTint2 p-1 rounded-full rotate-[270deg] absolute right-0 top-1/2 translate-x-[105%] translate-y-[-50%] group hover:bg-gray-900 dark:hover:bg-dmWhite ease-out duration-300 hover:cursor-pointer hover:translate-x-[120%]">
           <svg class="h-full w-full fill-gray-600 dark:fill-dmWhite group-hover:fill-gray-100 dark:group-hover:fill-dmBlackTint1 ease-out duration-300">
               <use
               xlink:href="/icons/sprite.svg#icon-chevron-down"
@@ -730,7 +732,7 @@
         <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-gray-100 dark:md:before:bg-dmBlackTint2
                        md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-gray-900 dark:md:after:bg-dmWhite  md:after:translate-x-[-100%] "
                 :class="(currentPlaying === 0) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[20000ms]' : ''">  
-          <img @click="handlePlaying('set', 0)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/meatshoppe-min.jpg" alt="">
+          <img @click="handlePlaying('set', 0)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/meatshoppe-min.png" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/meatshoppe.gif" alt="">
           <figcaption class="mt-4">
 
@@ -771,7 +773,7 @@
         <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-gray-100 dark:md:before:bg-dmBlackTint2
                        md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-gray-900 dark:md:after:bg-dmWhite md:after:translate-x-[-100%] "
                 :class="(currentPlaying === 1) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[20000ms]' : ''">  
-          <img @click="handlePlaying('set', 1)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/ecobuilders-min.jpg" alt="">
+          <img @click="handlePlaying('set', 1)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/ecobuilders-min.png" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/ecobuilders.gif" alt="">
           <figcaption class="mt-4">
 
@@ -812,7 +814,7 @@
         <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-gray-100 dark:md:before:bg-dmBlackTint2
                        md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-gray-900 dark:md:after:bg-dmWhite md:after:translate-x-[-100%] "
                 :class="(currentPlaying === 2) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[20000ms]' : ''">   
-          <img @click="handlePlaying('set', 2)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/notely-min.jpg" alt="">
+          <img @click="handlePlaying('set', 2)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="../public/images/projects/notely-min.png" alt="">
           <img class="block visible md:hidden md:invisible" src="../public/images/projects/notely.gif" alt="">
           <figcaption class="mt-4">
 
@@ -1200,14 +1202,15 @@
           before:bottom-0
           before:left-0
           hover:before:w-full
+          group
         ">
           <div class="flex items-center gap-2">
             <div class="">
-              <svg class="h-4 w-4 fill-gray-900 dark:fill-dmWhite">
+              <svg class="h-4 w-4 fill-gray-900 dark:fill-dmGray dark:group-hover:fill-dmWhite dark:ease-out dark:duration-300 ">
                 <use xlink:href="/icons/sprite.svg#icon-mail"></use>
               </svg>
             </div>
-            <span class="text-gray-900 dark:text-dmWhite font-medium">pauliversonc@gmail.com</span>
+            <span class="text-gray-900 dark:text-dmGray dark:group-hover:text-dmWhite font-medium dark:ease-out dark:duration-300">pauliversonc@gmail.com</span>
           </div>
         </a>
 
@@ -1223,14 +1226,15 @@
           before:bottom-0
           before:left-0
           hover:before:w-full
+          group
         ">
           <div class="flex items-center gap-2">
             <div class="">
-              <svg class="h-4 w-4 fill-gray-900 dark:fill-dmWhite">
+              <svg class="h-4 w-4 fill-gray-900 dark:fill-dmGray dark:group-hover:fill-dmWhite dark:ease-out dark:duration-300 ">
                 <use xlink:href="/icons/sprite.svg#icon-phone"></use>
               </svg>
             </div>
-            <span class="text-gray-900 dark:text-dmWhite font-medium">09155436882</span>
+            <span class="text-gray-900 dark:text-dmGray dark:group-hover:text-dmWhite font-medium dark:ease-out dark:duration-300">09155436882</span>
           </div>
         </a>
 
