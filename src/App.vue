@@ -4,19 +4,68 @@
     <!-- ICON -->
     <a href="#" >
       <img
-        class="h-10"
-        src="/images/logo/icon-transparent.png"
+        class="h-10 hidden dark:block"
+        src="/images/logo/icon-white.png"
+        alt="Paul Iverson Cortez - PIC Logo"
+      />
+
+      <img
+        class="h-10 block dark:hidden"
+        src="/images/logo/icon-black.png"
         alt="Paul Iverson Cortez - PIC Logo"
       />
     </a>
 
-    <!-- BUTTON MENU -->
-    <div @click="toggleNav" class="relative h-6 w-6 overflow-hidden  z-40 hover:cursor-pointer select-none
-    lg:hidden" role="button" >
-      <div :class="moveLineMenu1" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-black top-0 ">&nbsp;</div>
-      <div :class="moveLineMenu2" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-black top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div>
-      <div :class="moveLineMenu3" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-black bottom-0">&nbsp;</div>
+    <!-- wrapper -->
+    <div class="flex gap-4">
 
+      <!-- TOGGLE BUTTON DARKMODE-->
+      <div @click="toggleDarkMode()" class="h-6 w-8 justify-self-end relative
+      before:absolute
+      before:content-['']
+      before:h-[10px]
+      before:w-8
+      before:bg-gray-900
+      before:top-[50%]
+      before:left-0
+      before:translate-y-[-50%]
+      before:rounded-lg
+      overflow-hidden
+      dark:before:bg-dmWhite
+      cursor-pointer
+      before:ease-out
+      before:duration-300
+      ">
+
+      <!-- ACTUAL CIRCLE DARKMODE -->
+      <div :class="isDarkMode" class="absolute  ease-out duration-300 h-4 w-4  overflow-hidden  rounded-full left-0 bg-gray-100 dark:bg-dmBlackTint2 top-[50%] translate-y-[-50%]">
+        <div class="relative h-full w-full">
+          <svg :class="darkMode ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
+              <use
+              xlink:href="/icons/sprite.svg#icon-sun"
+              ></use>
+          </svg>
+
+          <svg :class="darkMode ? 'translate-y-[0]': 'translate-y-[-110%]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
+              <use
+              xlink:href="/icons/sprite.svg#icon-moon"
+              ></use>
+          </svg>
+        </div>
+
+
+      </div>
+      
+    </div>
+
+      <!-- BUTTON MENU -->
+      <div @click="toggleNav" class="relative h-6 w-6 overflow-hidden  z-40 hover:cursor-pointer select-none
+      lg:hidden" role="button" >
+        <div :class="moveLineMenu1" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-gray-900 top-0 ">&nbsp;</div>
+        <div :class="moveLineMenu2" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-gray-900 top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div>
+        <div :class="moveLineMenu3" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-gray-900 bottom-0">&nbsp;</div>
+
+      </div>
     </div>
 
     <!-- NAV LINKS -->
@@ -204,8 +253,8 @@
       I create <span class="text-gray-900 dark:text-dmWhite">innovative solutions</span> for the evolving <span class="text-gray-900 dark:text-dmWhite">digital landscape</span>
     </h2>
     <div class=" hidden sm:block">
-      <img src="../public/svg/undraw_progressive_app_m-9-ms-dark.svg" alt="filler undraw" >
-
+      <img class="block dark:hidden" src="../public/svg/undraw_progressive_app_m-9-ms-dark.svg" alt="filler undraw" >
+      <img class="hidden dark:block" src="../public/svg/undraw_progressive_app_m-9-ms-light.svg" alt="filler undraw" >
     </div>
   </section>
 
@@ -251,8 +300,8 @@
       <!-- PICTURE CONTAINER -->
       <div class="flex justify-center items-center ">
         <!-- PICTURE -->
-        <img class="self-center " src="https://i.pinimg.com/236x/43/ec/fe/43ecfe755d1430ca63ba9e6a974dd983.jpg">
-        <!-- <img class="self-center h-[14rem]" src="../public/images/portrait/pauliversoncortez.png"> -->
+        <!-- <img class="self-center h-[18rem]" src="https://i.pinimg.com/236x/43/ec/fe/43ecfe755d1430ca63ba9e6a974dd983.jpg"> -->
+        <img class="self-center h-[16rem] grayscale" src="../public/images/portrait/pauliversonc.jpg">
       </div>
       
       
@@ -664,7 +713,7 @@
   </section>
 
   <!-- HEADING PER SECTION (PROJECTS) -->
-  <section class="mb-[2rem] mt-[8rem] px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 text-gray-900 dark:text-dmWhite  container mx-auto">
+  <section ref="projects" class="mb-[2rem] mt-[8rem] px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 text-gray-900 dark:text-dmWhite  container mx-auto">
     <h3 class="uppercase leading-none font-medium  flex items-center justify-center
     text-[2.4rem]
     xxs:text-[3.1rem]
@@ -729,6 +778,7 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
 
         <!-- FEATURED PROJECTS -->
+        
         <figure class="flex-1 overflow-hidden relative md:pt-[1.4rem] md:before:content-[''] md:before:absolute md:before:top-0 md:before:left-0 md:before:h-1 md:before:w-full md:before:bg-gray-100 dark:md:before:bg-dmBlackTint2
                        md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-gray-900 dark:md:after:bg-dmWhite  md:after:translate-x-[-100%] "
                 :class="(currentPlaying === 0) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[20000ms]' : ''">  
@@ -1278,9 +1328,23 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 mt-[8rem]  2xl:px-16 py-8 container mx-auto ">
+  <footer class="px-4 text-center  xs:px-6 md:px-8 lg:px-10 xl:px-12 mt-[8rem]  2xl:px-16 py-8 container mx-auto ">
 
     <!-- logo -->
+    <a href="#" class="inline-block" >
+      <img
+        class="h-12 hidden dark:block"
+        src="/images/logo/icon-white.png"
+        alt="Paul Iverson Cortez - PIC Logo"
+      />
+
+      <img
+        class="h-12 block dark:hidden"
+        src="/images/logo/icon-black.png"
+        alt="Paul Iverson Cortez - PIC Logo"
+      />
+    </a>
+
     <div class="text-center dark:text-dmWhite">Paul Iverson Cortez | Portfolio</div>
 
     <!-- credits -->
@@ -1329,8 +1393,14 @@
 <script>
 export default {
   name: "PortfolioApp",
-  mounted() {
+
+  created() {
     this.startInterval();
+    
+  },
+
+  mounted() {
+    this.observeHeading();
   },
 
   computed: {
@@ -1343,23 +1413,41 @@ export default {
     moveLineMenu3() {
       return (this.isNavOpen) ? "rotate-[135deg] top-1/2 translate-y-[-50%]" : "";
     },
+
+    isDarkMode() {
+      return (this.darkMode) ? "translate-x-[100%]" : " translate-x-[0]";
+    }
   },
 
   data() {
     return {
       // 0: meatshoppe, 1: ecobuilders, 2: notely;
       featuredProjects: ['meatshoppe', 'ecobuilders', 'notely'],
-      currentPlaying: 0,
+      currentPlaying: 2,
       isNavOpen: false,
+
+      observer: null,
+      headingIntersected: false,
+
+      darkMode: false,
     };
   },
 
  
 
   methods: {
+    toggleDarkMode() {
+      this.darkMode = !this.darkMode;
+
+      console.log(this.darkMode)
+    },
+
     toggleNav() {
       this.isNavOpen = !this.isNavOpen;
     },
+
+    // action: control (you use prev or next button)
+    //         set (you click on the exact proj for you to play)
 
     handlePlaying(action, selected, length = 3) {
       // remove interval
@@ -1382,19 +1470,40 @@ export default {
       // start interval
       this.startInterval()
 
-      // console.log(this.intervalId)
+      console.log(this.intervalId)
     },
-
-
 
     startInterval() {
       this.intervalId = setInterval(this.autoPlay, 20000);
     },
 
     autoPlay() {
-      // next gif
       this.handlePlaying('control', true);
     },
+
+    observeHeading() {
+      const headingProject = this.$refs.projects;
+
+
+      this.observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !this.headingIntersected) {
+            // Do something when heading intersects for the first time
+
+            // Unobserve the heading
+            this.observer.unobserve(headingProject);
+            
+            // Update the flag to prevent further observations
+            this.headingIntersected = true;
+
+            // set current playing to 0
+            this.handlePlaying('set', 0)
+          }
+        });
+      });
+
+      this.observer.observe(headingProject)
+    }
 
 
 
@@ -1494,7 +1603,7 @@ export default {
   }
 
 
-
-
+ 
+  
 
 </style>
