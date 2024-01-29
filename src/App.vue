@@ -19,44 +19,46 @@
     <!-- wrapper -->
     <div class="flex gap-4">
 
-      <!-- TOGGLE BUTTON DARKMODE-->
+      <!-- TOGGLE DARKMODE BUTTON -->
       <div @click="toggleDarkMode()" class="h-6 w-8 justify-self-end relative
-      before:absolute
-      before:content-['']
-      before:h-[10px]
-      before:w-8
-      before:bg-gray-900
-      before:top-[50%]
-      before:left-0
-      before:translate-y-[-50%]
-      before:rounded-lg
-      overflow-hidden
-      dark:before:bg-dmWhite
-      cursor-pointer
-      before:ease-out
-      before:duration-300
-      ">
+        before:absolute
+        before:content-['']
+        before:h-[10px]
+        before:w-8
+        before:bg-gray-900
+        before:top-[50%]
+        before:left-0
+        before:translate-y-[-50%]
+        before:rounded-lg
+        overflow-hidden
+        dark:before:bg-dmWhite
+        cursor-pointer
+        before:ease-out
+        before:duration-300
+        block
+        lg:hidden
+        ">
 
-      <!-- ACTUAL CIRCLE DARKMODE -->
-      <div :class="isDarkMode" class="absolute  ease-out duration-300 h-4 w-4  overflow-hidden  rounded-full left-0 bg-gray-100 dark:bg-dmBlackTint2 top-[50%] translate-y-[-50%]">
-        <div class="relative h-full w-full">
-          <svg :class="darkMode ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
-              <use
-              xlink:href="/icons/sprite.svg#icon-sun"
-              ></use>
-          </svg>
+        
+        <div :class="isDarkMode" class="absolute  ease-out duration-300 h-4 w-4  overflow-hidden  rounded-full left-0 bg-gray-100 dark:bg-dmBlackTint2 top-[50%] translate-y-[-50%]">
+          <div class="relative h-full w-full">
+            <svg :class="darkMode ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
+                <use
+                xlink:href="/icons/sprite.svg#icon-sun"
+                ></use>
+            </svg>
 
-          <svg :class="darkMode ? 'translate-y-[0]': 'translate-y-[-110%]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
-              <use
-              xlink:href="/icons/sprite.svg#icon-moon"
-              ></use>
-          </svg>
+            <svg :class="darkMode ? 'translate-y-[0]': 'translate-y-[-110%]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
+                <use
+                xlink:href="/icons/sprite.svg#icon-moon"
+                ></use>
+            </svg>
+          </div>
+
+
         </div>
-
-
+        
       </div>
-      
-    </div>
 
       <!-- BUTTON MENU -->
       <div @click="toggleNav" class="relative h-6 w-6 overflow-hidden  z-40 hover:cursor-pointer select-none
@@ -64,8 +66,9 @@
         <div :class="moveLineMenu1" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-gray-900 top-0 ">&nbsp;</div>
         <div :class="moveLineMenu2" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-gray-900 top-1/2 left-1/2 translate-y-[-50%]">&nbsp;</div>
         <div :class="moveLineMenu3" class="ease-out duration-300 absolute h-[4px] w-6 dark:bg-dmWhite bg-gray-900 bottom-0">&nbsp;</div>
-
       </div>
+
+
     </div>
 
     <!-- NAV LINKS -->
@@ -159,6 +162,52 @@
         </a>
       </div>
 
+      
+      <div class="pl-4 border-l border-slate-600 lg:block hidden">
+        
+        <div @click="toggleDarkMode()" class="h-6 w-8 justify-self-end relative
+        before:absolute
+        before:content-['']
+        before:h-[10px]
+        before:w-8
+        before:bg-gray-900
+        before:top-[50%]
+        before:left-0
+        before:translate-y-[-50%]
+        before:rounded-lg
+        overflow-hidden
+        dark:before:bg-dmWhite
+        cursor-pointer
+        before:ease-out
+        before:duration-300
+
+
+        ">
+
+        <!-- ACTUAL CIRCLE DARKMODE -->
+        <div :class="isDarkMode" class="absolute  ease-out duration-300 h-4 w-4  overflow-hidden  rounded-full left-0 bg-gray-100 dark:bg-dmBlackTint2 top-[50%] translate-y-[-50%]">
+          <div class="relative h-full w-full">
+            <svg :class="darkMode ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
+                <use
+                xlink:href="/icons/sprite.svg#icon-sun"
+                ></use>
+            </svg>
+
+            <svg :class="darkMode ? 'translate-y-[0]': 'translate-y-[-110%]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
+                <use
+                xlink:href="/icons/sprite.svg#icon-moon"
+                ></use>
+            </svg>
+          </div>
+
+
+        </div>
+        
+      </div>
+      </div>
+
+
+
     </nav>
   </header>
 
@@ -194,6 +243,7 @@
          xl:left-[3%]
          2xl:left-[11%]
          tracking-[0.001em]
+         select-none
         ">/01</span>
         
 
