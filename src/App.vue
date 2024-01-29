@@ -75,7 +75,7 @@
     <!-- Options: (1. top-[-100vh] - this will make the nav links disappear from the viewport (negative height)  -->
     <nav 
     :class="isNavOpen ? 'top-0':'top-[-100vh]'" 
-    class="ease-out duration-300 absolute px-4 dark:bg-dmBlack bg-white z-10 h-screen w-full left-0 flex flex-col justify-center gap-4 tracking-tighter
+    class="ease-out transition-transform duration-300 absolute px-4 dark:bg-dmBlack bg-white z-10 h-screen w-full left-0 flex flex-col justify-center gap-4 tracking-tighter
     lg:top-0
     lg:h-auto
     lg:w-full
