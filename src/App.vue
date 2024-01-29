@@ -42,13 +42,13 @@
         
         <div :class="isDarkMode" class="absolute  ease-out duration-300 h-4 w-4  overflow-hidden  rounded-full left-0 bg-gray-100 dark:bg-dmBlackTint2 top-[50%] translate-y-[-50%]">
           <div class="relative h-full w-full">
-            <svg :class="darkMode ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
+            <svg :class="isDark ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
                 <use
                 xlink:href="/icons/sprite.svg#icon-sun"
                 ></use>
             </svg>
 
-            <svg :class="darkMode ? 'translate-y-[0]': 'translate-y-[-110%]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
+            <svg :class="isDark ? 'translate-y-[0]': 'translate-y-[-110%]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
                 <use
                 xlink:href="/icons/sprite.svg#icon-moon"
                 ></use>
@@ -187,13 +187,13 @@
         <!-- ACTUAL CIRCLE DARKMODE -->
         <div :class="isDarkMode" class="absolute  ease-out duration-300 h-4 w-4  overflow-hidden  rounded-full left-0 bg-gray-100 dark:bg-dmBlackTint2 top-[50%] translate-y-[-50%]">
           <div class="relative h-full w-full">
-            <svg :class="darkMode ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
+            <svg :class="isDark ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
                 <use
                 xlink:href="/icons/sprite.svg#icon-sun"
                 ></use>
             </svg>
 
-            <svg :class="darkMode ? 'translate-y-[0]': 'translate-y-[-110%]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
+            <svg :class="isDark ? 'translate-y-[0]': 'translate-y-[-110%]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
                 <use
                 xlink:href="/icons/sprite.svg#icon-moon"
                 ></use>
@@ -205,6 +205,7 @@
         
       </div>
       </div>
+      
 
 
 
@@ -1435,18 +1436,23 @@
   </section>
 
 
-  </footer>
 
+  </footer>
+{{ isDark }}
 
 </template>
 
 <script>
+import { useDark } from '@vueuse/core'
+
+
+
+
 export default {
   name: "PortfolioApp",
-
+  
   created() {
     this.startInterval();
-    
   },
 
   mounted() {
@@ -1465,7 +1471,7 @@ export default {
     },
 
     isDarkMode() {
-      return (this.darkMode) ? "translate-x-[100%]" : " translate-x-[0]";
+      return (this.isDark) ? "translate-x-[100%]" : " translate-x-[0]";
     }
   },
 
@@ -1479,17 +1485,22 @@ export default {
       observer: null,
       headingIntersected: false,
 
-      darkMode: false,
+   
+      isDark: useDark({ disableTransition: false }),
+
+      
     };
   },
 
  
 
   methods: {
-    toggleDarkMode() {
-      this.darkMode = !this.darkMode;
+    toggleDark() {
+      useToggle(this.isDark);
+    },
 
-      console.log(this.darkMode)
+    toggleDarkMode() {
+      this.isDark = !this.isDark;
     },
 
     toggleNav() {
