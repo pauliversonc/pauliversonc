@@ -20,7 +20,7 @@
     <div class="flex gap-4">
 
       <!-- TOGGLE DARKMODE BUTTON -->
-      <div @click="toggleDarkMode()" class="h-6 w-8 justify-self-end relative
+      <div role="button" @click="toggleDarkMode()" class="h-6 w-8 justify-self-end relative
         before:absolute
         before:content-['']
         before:h-[10px]
@@ -185,7 +185,7 @@
         ">
 
         <!-- ACTUAL CIRCLE DARKMODE -->
-        <div :class="isDarkMode" class="absolute  ease-out duration-300 h-4 w-4  overflow-hidden  rounded-full left-0 bg-gray-100 dark:bg-dmBlackTint2 top-[50%] translate-y-[-50%]">
+        <div role="button" :class="isDarkMode" class="absolute  ease-out duration-300 h-4 w-4  overflow-hidden  rounded-full left-0 bg-gray-100 dark:bg-dmBlackTint2 top-[50%] translate-y-[-50%]">
           <div class="relative h-full w-full">
             <svg :class="isDark ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
                 <use
