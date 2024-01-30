@@ -120,7 +120,6 @@
 </template>
 
 <script>
-import { useDark } from '@vueuse/core'
 import TheHeader from './components/layout/TheHeader.vue';
 import TheHero from './components/layout/TheHero.vue';
 import TheScroll from './components/layout/TheScroll.vue';
@@ -129,6 +128,7 @@ import TheAbout from './components/layout/TheAbout.vue';
 import TheProjects from './components/layout/TheProjects.vue';
 import TheContacts from './components/layout/TheContacts.vue';
 import TheFooter from './components/layout/TheFooter.vue';
+
 export default {
   name: "PauliversoncApp",
   components: {
@@ -141,179 +141,11 @@ export default {
     TheContacts,
     TheFooter,
   },
-  
 
-
-
-
-  computed: {
-    moveLineMenu1() {
-      return (this.isNavOpen) ? "rotate-45 top-1/2 translate-y-[-50%]" : "top-0";
-    },
-    moveLineMenu2() {
-      return (this.isNavOpen) ? "translate-x-[100%]" : "translate-x-[-20%]";
-    },
-    moveLineMenu3() {
-      return (this.isNavOpen) ? "rotate-[135deg] top-1/2 translate-y-[-50%]" : "";
-    },
-
-    isDarkMode() {
-      return (this.isDark) ? "translate-x-[100%]" : " translate-x-[0]";
-    }
-  },
-
-  data() {
-    return {
-      // 0: meatshoppe, 1: ecobuilders, 2: notely;
-      featuredProjects: ['meatshoppe', 'ecobuilders', 'notely'],
-      currentPlaying: 2,
-      
-      observer: null,
-      headingIntersected: false,
-      
-      
-      isNavOpen: false,
-      isDark: useDark({ disableTransition: false }),
-
-      
-    };
-  },
-
- 
-
-  methods: {
-    toggleDarkMode() {
-      this.isDark = !this.isDark;
-    },
-
-    toggleNav() {
-      this.isNavOpen = !this.isNavOpen;
-    },
-
-    // action: control (you use prev or next button)
-    //         set (you click on the exact proj for you to play)
-
-    handlePlaying(action, selected, length = 3) {
-      // remove interval
-      clearInterval(this.intervalId);  
-
-      // run if you select prev or next
-      if(action === 'control') {
-        if (selected) {
-          this.currentPlaying = (this.currentPlaying + 1) % length;
-        } else {
-          this.currentPlaying = (this.currentPlaying - 1 + length) % length;
-        }
-      }
-
-      // set either you select it on the pic
-      if (action === 'set') {
-        this.currentPlaying = selected;
-      }
-
-      // start interval
-      this.startInterval()
-
-      console.log(this.intervalId)
-    },
-
-    startInterval() {
-      this.intervalId = setInterval(this.autoPlay, 20000);
-    },
-
-    autoPlay() {
-      this.handlePlaying('control', true);
-    },
-
-    observeHeading() {
-      const headingProject = this.$refs.projects;
-
-
-      this.observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !this.headingIntersected) {
-            // Do something when heading intersects for the first time
-
-            // Unobserve the heading
-            this.observer.unobserve(headingProject);
-            
-            // Update the flag to prevent further observations
-            this.headingIntersected = true;
-
-            // set current playing to 0
-            this.handlePlaying('set', 0)
-          }
-        });
-      });
-
-      this.observer.observe(headingProject)
-    }
-
-
-
-  },
 };
 </script>
 
 <style scoped>
-  @keyframes fade {
-    to {
-      opacity: 0.1;
-    }
-  }
-
-  .down-fade > div{
-    animation: fade .8s infinite alternate;
-  }
-
-  .down-fade > div:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  
-  .down-fade > div:nth-child(3) {
-    animation-delay: 0.4s;
-  }
-
-  .icon-pos-a {
-    transform: translateY(-27%);
-    animation: rotating-a 2s linear infinite;
-
-  }
-
-  .icon-pos-b {
-    transform: translateY(-18%);
-    animation: rotating-b 2s linear infinite;
-
-  }
-
-  @keyframes rotating {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-  }
-
-
-  @keyframes rotating-a {
-    0% {
-        transform:translateY(-27%) rotate(0deg);
-    }
-    100% {
-        transform:translateY(-27%) rotate(360deg);
-    }
-  }
-
-  @keyframes rotating-b {
-    0% {
-        transform:translateY(-18%) rotate(0deg);
-    }
-    100% {
-        transform:translateY(-18%) rotate(360deg);
-    }
-  }
-
   @keyframes bounce {
     0%, 100%, 20%, 50%, 80% {
       -webkit-transform: translateY(0);
@@ -345,12 +177,4 @@ export default {
     animation-name: bounce;
     -moz-animation-name: bounce;
   }
-
-  .nav {
-    transition: top 0.3s ease-out;
-  }
-
- 
-  
-
 </style>
