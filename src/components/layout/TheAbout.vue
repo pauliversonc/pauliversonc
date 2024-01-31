@@ -107,24 +107,13 @@
 
             </ul>
             <ul class="flex flex-wrap gap-2 mt-4">
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">HTML</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">CSS</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">JavaScript</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">PHP</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Laravel</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Vue</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Rest API</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Github</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Adobe Photoshop</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Adobe Illustrator</li>
+              <BaseTag v-for="(tag1, index) in tags1" :key="index" :tag-name="tag1" />
             </ul>
           </div>
         </li>
 
         <!-- CARD R -->
-        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 dark:before:bg-dmWhite before:rounded-full before:top-0 before:left-0 before:translate-x-[-2.3rem] lg:left-full lg:pl-[2rem] lg:before:translate-x-[-45%]
-    
-        ">
+        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 dark:before:bg-dmWhite before:rounded-full before:top-0 before:left-0 before:translate-x-[-2.3rem] lg:left-full lg:pl-[2rem] lg:before:translate-x-[-45%]">
           <div class="flex flex-col">
             <span class="absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white dark:bg-dmBlack z-40 
             lg:left-0 lg:translate-x-[-115%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
@@ -173,23 +162,14 @@
             </ul>
 
             <ul class="flex flex-wrap gap-2 mt-4">
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Visual Basic</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">RPA</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">UiPath</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Oracle</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Hardware</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Software</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Troubleshooting</li>
-              
+              <BaseTag v-for="(tag2, index) in tags2" :key="index" :tag-name="tag2" />
             </ul>
             
           </div>
         </li>
 
         <!-- CARD L -->
-        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 dark:before:bg-dmWhite before:rounded-full before:top-0 before:left-0 lg:before:left-full before:translate-x-[-2.3rem] lg:pr-[2rem] lg:before:translate-x-[-45%] 
-      
-        ">
+        <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 dark:before:bg-dmWhite before:rounded-full before:top-0 before:left-0 lg:before:left-full before:translate-x-[-2.3rem] lg:pr-[2rem] lg:before:translate-x-[-45%]">
           <div class="flex flex-col">
             <span class="absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white dark:bg-dmBlack z-40 
             lg:right-0 lg:translate-x-[115%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
@@ -228,11 +208,7 @@
 
             </ul>
             <ul class="flex flex-wrap gap-2 mt-4">
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Network Support</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Technical Expertise</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Hardware</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Software</li>
-              <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Troubleshooting</li>
+              <BaseTag v-for="(tag3, index) in tags3" :key="index" :tag-name="tag3" />
             </ul>
           </div>
         </li>
@@ -295,7 +271,38 @@ export default {
         {'name': 'Netlify' , 'icon':'netlify'},
         {'name': 'Photoshop' , 'icon':'adobephotoshop'},
         {'name': 'Illustrator' , 'icon':'adobeillustrator'}
-      ]
+      ],
+
+      tags1: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'PHP',
+        'Laravel',
+        'Vue',
+        'Rest API',
+        'Github',
+        'Adobe Photoshop',
+        'Adobe Illustrator',
+      ],
+
+      tags2: [
+        'Visual Basic',
+        'RPA',
+        'UiPath',
+        'Oracle',
+        'Hardware',
+        'Software',
+        'Troubleshooting',
+      ],
+
+      tags3: [
+        'Network Support',
+        'Technical Expertise',
+        'Hardware',
+        'Software',
+        'Troubleshooting',
+      ],
     };
   },
 }
