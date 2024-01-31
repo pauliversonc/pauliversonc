@@ -86,27 +86,9 @@
     lg:gap-4
     lg:px-0
     ">
-      <div class=" flex justify-center">
-        <a href="#" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
-          before:ease-out 
-          before:duration-300
-          before:content-['']
-          before:absolute
-          before:h-0.5
-          before:w-0
-          before:bg-gray-900
-          before:bottom-0
-          before:left-0
-          hover:before:w-full
-          dark:before:bg-dmWhite
-        ">
-          <span class="text-gray-500 dark:text-dmGray lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/01</span>
-          <div class="text-gray-900 dark:text-dmWhite text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">home</div>
-        </a>
-      </div>
 
-      <div class=" flex justify-center">
-        <a href="#" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
+      <div v-for="(link, index) in links" :key="index"  class=" flex justify-center">
+        <a :href="link.href" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
           before:ease-out 
           before:duration-300
           before:content-['']
@@ -119,46 +101,8 @@
           hover:before:w-full
           dark:before:bg-dmWhite
         ">
-          <span class="text-gray-500 dark:text-dmGray lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/02</span>
-          <div class="text-gray-900 dark:text-dmWhite text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">about</div>
-        </a>
-      </div>
-
-      <div class=" flex justify-center">
-        <a href="#" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
-          before:ease-out 
-          before:duration-300
-          before:content-['']
-          before:absolute
-          before:h-0.5
-          before:w-0
-          before:bg-gray-900
-          before:bottom-0
-          before:left-0
-          hover:before:w-full
-          dark:before:bg-dmWhite
-        ">
-          <span class="text-gray-500 dark:text-dmGray lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/03</span>
-          <div class="text-gray-900 dark:text-dmWhite text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">projects</div>
-        </a>
-      </div>
-
-      <div class=" flex justify-center">
-        <a href="#" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
-          before:ease-out 
-          before:duration-300
-          before:content-['']
-          before:absolute
-          before:h-0.5
-          before:w-0
-          before:bg-gray-900
-          before:bottom-0
-          before:left-0
-          hover:before:w-full
-          dark:before:bg-dmWhite
-        ">
-          <span class="text-gray-500 dark:text-dmGray lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/04</span>
-          <div class="text-gray-900 dark:text-dmWhite text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">contact</div>
+          <span class="text-gray-500 dark:text-dmGray lg:text-[.5rem] lg:absolute lg:left-0 lg:top-0 lg:translate-y-[-50%]">/{{ '0'+(index + 1)  }}</span>
+          <div class="text-gray-900 dark:text-dmWhite text-5xl sm:text-[4rem] uppercase font-light lg:text-lg lg:font-medium ">{{ link.name }}</div>
         </a>
       </div>
 
@@ -203,7 +147,8 @@
 
         </div>
         
-      </div>
+        </div>
+
       </div>
       
 
@@ -234,6 +179,12 @@ export default {
   },
   data(){
     return {
+      links: [
+        {'href':'#', 'name':'home'},
+        {'href':'#', 'name':'about'},
+        {'href':'#', 'name':'projects'},
+        {'href':'#', 'name':'contact'},
+      ],
       isNavOpen: false,
       isDark: useDark({ disableTransition: false }),
     }
