@@ -24,39 +24,6 @@
   <span class=" text-gray-500 dark:text-dmBlackTint2 font-medium text-sm">All RIGHTS RESERVED</span>
 </div>
 
-<!-- THANK YOU -->
-<section class="text-gray-900 dark:text-dmWhite mt-[2rem]  container mx-auto">
-<h3 class="uppercase leading-none font-medium  flex items-center justify-center
-text-[2.6rem]
-xxs:text-[3.4rem]
-xs:text-[4.4rem]
-sm:text-[5.8rem]
-md:text-[6.9rem]
-lg:text-[9.4rem]
-xl:text-[11.8rem]
-2xl:text-[14.15rem]
-gap-4
-relative
-">
-<span class=" bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-white dark:from-dmGray dark:to-dmBlack
-     absolute top-0 left-0 text-gray-200 z-[-1] translate-y-[-50%] font-normal inline-block p-1
-     text-[2.4rem]
-     xxs:text-[3.4rem]
-     xs:text-[4.4rem] 
-     sm:text-[4.9rem]
-     lg:text-[6.1rem] 
-     xl:text-[7.5rem] 
-     md:left-[2%]
-
-    
-    ">/05</span>
-  <span class=" ">salamat</span>
-  <span class="italic">po</span>
-</h3>
-</section>
-
-
-
 </footer>
 </template>
 <script>
