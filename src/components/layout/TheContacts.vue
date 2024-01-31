@@ -128,7 +128,7 @@
   
   <!-- CONTACTS -->
   <div class="flex flex-col items-start gap-2">
-    <h5 class=" text-2xl italic font-bold text-gray-900 dark:text-dmWhite">CONTACTS</h5>
+    <BaseHeadingFive title="contacts" />
 
     <!-- link -->
     <a href="#" class="inline-block relative
@@ -183,7 +183,8 @@
 
   <!-- SOCIALS -->
   <div class="flex flex-col gap-2">
-    <h5 class=" text-2xl italic font-bold text-gray-900 dark:text-dmWhite">SOCIALS</h5>
+
+    <BaseHeadingFive title="socials" />
     <div class="flex items-center gap-4">
       <a href="#" class="icon-link group">
         <svg class="h-9 w-9 fill-gray-600 dark:fill-dmBlackTint2 group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">

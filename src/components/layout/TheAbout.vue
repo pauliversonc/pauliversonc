@@ -21,7 +21,7 @@
       <!-- SKILLS CONTAINERS -->
       <div class="space-y-4 ">
         <!-- HEADING -->
-        <h5 class=" text-2xl  italic font-bold mt-4 lg:mt-0 lg:mb-4 text-gray-900 dark:text-dmWhite">SKILLS</h5>
+        <BaseHeadingFive title="skills" :margin-custom="true" :margin-top-custom="true" />
         
         <!-- SKILLS ICON -->
         <ul class="flex flex-wrap gap-2">
@@ -45,7 +45,7 @@
 
 
 
-    <h5 class="mt-4 text-2xl  italic font-bold text-gray-900 dark:text-dmWhite">EXPERIENCE</h5>
+    <BaseHeadingFive title="experience" :margin-top-custom="true" />
     <!-- TIMELINE -->
     <div class="container pl-8 lg:pl-0  relative before:content-[''] before:bg-gray-400 dark:before:bg-dmGray before:absolute before:w-0.5 before:h-full before:left-0 lg:before:left-[50%]
     
