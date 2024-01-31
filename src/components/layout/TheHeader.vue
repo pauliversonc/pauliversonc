@@ -20,45 +20,7 @@
     <div class="flex gap-4">
 
       <!-- TOGGLE DARKMODE BUTTON -->
-      <div role="button" @click="toggleDarkMode()" class="h-6 w-8 justify-self-end relative
-        before:absolute
-        before:content-['']
-        before:h-[10px]
-        before:w-8
-        before:bg-gray-900
-        before:top-[50%]
-        before:left-0
-        before:translate-y-[-50%]
-        before:rounded-lg
-        overflow-hidden
-        dark:before:bg-dmWhite
-        cursor-pointer
-        before:ease-out
-        before:duration-300
-        block
-        lg:hidden
-        ">
-
-        
-        <div :class="isDarkMode" class="absolute  ease-out duration-300 h-4 w-4  overflow-hidden  rounded-full left-0 bg-gray-100 dark:bg-dmBlackTint2 top-[50%] translate-y-[-50%]">
-          <div class="relative h-full w-full">
-            <svg :class="isDark ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
-                <use
-                xlink:href="/icons/sprite.svg#icon-sun"
-                ></use>
-            </svg>
-
-            <svg :class="isDark ? 'translate-y-[0]': 'translate-y-[-110%]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
-                <use
-                xlink:href="/icons/sprite.svg#icon-moon"
-                ></use>
-            </svg>
-          </div>
-
-
-        </div>
-        
-      </div>
+     <BaseToggleSwitch :btn-min="true"></BaseToggleSwitch>
 
       <!-- BUTTON MENU -->
       <div @click="toggleNav" class="relative h-6 w-6 overflow-hidden  z-40 hover:cursor-pointer select-none
@@ -109,45 +71,7 @@
       
       <div class="pl-4 border-l border-slate-600 lg:block hidden">
         
-        <div @click="toggleDarkMode()" class="h-6 w-8 justify-self-end relative
-        before:absolute
-        before:content-['']
-        before:h-[10px]
-        before:w-8
-        before:bg-gray-900
-        before:top-[50%]
-        before:left-0
-        before:translate-y-[-50%]
-        before:rounded-lg
-        overflow-hidden
-        dark:before:bg-dmWhite
-        cursor-pointer
-        before:ease-out
-        before:duration-300
-
-
-        ">
-
-        <!-- ACTUAL CIRCLE DARKMODE -->
-        <div role="button" :class="isDarkMode" class="absolute  ease-out duration-300 h-4 w-4  overflow-hidden  rounded-full left-0 bg-gray-100 dark:bg-dmBlackTint2 top-[50%] translate-y-[-50%]">
-          <div class="relative h-full w-full">
-            <svg :class="isDark ? 'translate-y-[110%]': 'translate-y-[0]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
-                <use
-                xlink:href="/icons/sprite.svg#icon-sun"
-                ></use>
-            </svg>
-
-            <svg :class="isDark ? 'translate-y-[0]': 'translate-y-[-110%]'" class="p-[2px] absolute ease-out duration-300 h-full w-full fill-gray-600 dark:fill-dmWhite">
-                <use
-                xlink:href="/icons/sprite.svg#icon-moon"
-                ></use>
-            </svg>
-          </div>
-
-
-        </div>
-        
-        </div>
+        <BaseToggleSwitch></BaseToggleSwitch>
 
       </div>
       
@@ -158,10 +82,13 @@
   </header>
 </template>
 <script>
-import { useDark } from '@vueuse/core'
+import BaseToggleSwitch from '../base/BaseToggleSwitch.vue';
 
 export default {
   name: 'PauliversoncTheHeader',
+  components: {
+    BaseToggleSwitch,
+  },
   computed: {
     moveLineMenu1() {
       return (this.isNavOpen) ? "rotate-45 top-1/2 translate-y-[-50%]" : "top-0";
@@ -173,9 +100,7 @@ export default {
       return (this.isNavOpen) ? "rotate-[135deg] top-1/2 translate-y-[-50%]" : "";
     },
 
-    isDarkMode() {
-      return (this.isDark) ? "translate-x-[100%]" : " translate-x-[0]";
-    }
+
   },
   data(){
     return {
@@ -186,15 +111,11 @@ export default {
         {'href':'#', 'name':'contact'},
       ],
       isNavOpen: false,
-      isDark: useDark({ disableTransition: false }),
+      
     }
   },
 
   methods: {
-    toggleDarkMode() {
-      this.isDark = !this.isDark;
-    },
-
     toggleNav() {
       this.isNavOpen = !this.isNavOpen;
     },
