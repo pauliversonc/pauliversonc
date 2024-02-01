@@ -129,55 +129,8 @@
   <!-- CONTACTS -->
   <div class="flex flex-col items-start gap-2">
     <BaseHeadingFive title="contacts" />
-
-    <!-- link -->
-    <a href="#" class="inline-block relative
-      before:ease-out 
-      before:duration-300
-      before:content-['']
-      before:absolute
-      before:h-0.5
-      before:w-0
-      before:bg-gray-900
-      dark:before:bg-dmWhite
-      before:bottom-0
-      before:left-0
-      hover:before:w-full
-      group
-    ">
-      <div class="flex items-center gap-2">
-        <div class="">
-          <svg class="h-4 w-4 fill-gray-900 dark:fill-dmGray dark:group-hover:fill-dmWhite dark:ease-out dark:duration-300 ">
-            <use xlink:href="/icons/sprite.svg#icon-mail"></use>
-          </svg>
-        </div>
-        <span class="text-gray-900 dark:text-dmGray dark:group-hover:text-dmWhite font-medium dark:ease-out dark:duration-300">pauliversonc@gmail.com</span>
-      </div>
-    </a>
-
-    <a href="#" class="inline-block relative
-      before:ease-out 
-      before:duration-300
-      before:content-['']
-      before:absolute
-      before:h-0.5
-      before:w-0
-      before:bg-gray-900
-      dark:before:bg-dmWhite
-      before:bottom-0
-      before:left-0
-      hover:before:w-full
-      group
-    ">
-      <div class="flex items-center gap-2">
-        <div class="">
-          <svg class="h-4 w-4 fill-gray-900 dark:fill-dmGray dark:group-hover:fill-dmWhite dark:ease-out dark:duration-300 ">
-            <use xlink:href="/icons/sprite.svg#icon-phone"></use>
-          </svg>
-        </div>
-        <span class="text-gray-900 dark:text-dmGray dark:group-hover:text-dmWhite font-medium dark:ease-out dark:duration-300">09155436882</span>
-      </div>
-    </a>
+    <BaseLink text="09155436882" icon="phone" />
+    <BaseLink text="pauliversonc@gmail.com" icon="mail" />
 
   </div>
 

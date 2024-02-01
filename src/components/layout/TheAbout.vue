@@ -219,7 +219,7 @@
 
     <!-- RESUME LINK -->
     <div class="mt-6 flex justify-center align-center">
-      <a href="#" class="hover:pointer flex items-center justify-center gap-2 relative
+      <a href="#" class="flex items-center justify-center gap-2 relative
         before:ease-out 
         before:duration-300
         before:content-['']
