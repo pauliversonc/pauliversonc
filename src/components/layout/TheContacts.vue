@@ -186,29 +186,10 @@
 
     <BaseHeadingFive title="socials" />
     <div class="flex items-center gap-4">
-      <a href="#" class="icon-link group">
-        <svg class="h-9 w-9 fill-gray-600 dark:fill-dmBlackTint2 group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-          <use xlink:href="/icons/sprite.svg#icon-facebook"></use>
-        </svg>
-      </a>
-
-      <a href="#" class="icon-link group">
-        <svg class="h-9 w-9 fill-gray-600 dark:fill-dmBlackTint2 group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-          <use xlink:href="/icons/sprite.svg#icon-instagram"></use>
-        </svg>
-      </a>
-
-      <a href="#" class="icon-link group">
-        <svg class="h-9 w-9 fill-gray-600 dark:fill-dmBlackTint2 group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-          <use xlink:href="/icons/sprite.svg#icon-linkedin"></use>
-        </svg>
-      </a>
-
-      <a href="#" class="icon-link group">
-        <svg class="h-9 w-9 fill-gray-600 dark:fill-dmBlackTint2 group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-          <use xlink:href="/icons/sprite.svg#icon-github"></use>
-        </svg>
-      </a>
+      <BaseIconLink icon="facebook" />
+      <BaseIconLink icon="instagram" />
+      <BaseIconLink icon="linkedin" />
+      <BaseIconLink icon="github" />
     </div>
 
 
