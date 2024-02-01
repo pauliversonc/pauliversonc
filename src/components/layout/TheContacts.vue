@@ -3,7 +3,7 @@
 
 
 <!-- FORM INPUT (LEFT)-->
-<form action="#" class="container grid gap-6 lg:grid-cols-2  lg:self-start">
+<form action="#" @submit.prevent="submitForm" class="container grid gap-6 lg:grid-cols-2  lg:self-start" ref="form">
 
   <div class="relative 
   before:ease-out 
@@ -19,7 +19,7 @@
   before:hover:w-full
   ">
     <label class="pb-6 font-medium"  for="firstname">Firstname</label>
-    <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack dark:placeholder-dmBlackTint2" type="text" placeholder="E.g. Paul Iverson" name="firstname" id="firstname"   autocomplete="on">
+    <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack dark:placeholder-dmBlackTint2" type="text" placeholder="E.g. Paul Iverson" v-model="form.firstname" name="firstname" id="firstname"   autocomplete="on">
   </div>
 
   <div class="relative 
@@ -36,7 +36,7 @@
   before:hover:w-full
   ">
     <label class="pb-6 font-medium"  for="lastname">Lastname</label>
-    <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack dark:placeholder-dmBlackTint2" type="text" placeholder="E.g. Cortez" name="lastname" id="lastname"   autocomplete="on">
+    <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack dark:placeholder-dmBlackTint2" type="text" placeholder="E.g. Cortez" v-model="form.lastname" name="lastname" id="lastname"   autocomplete="on">
   </div>
 
   <div class="relative 
@@ -53,7 +53,7 @@
   before:hover:w-full
   ">
     <label class="pb-6 font-medium" for="email">Email Address</label>
-    <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack dark:placeholder-dmBlackTint2" type="text" placeholder="E.g. paul@gmail.com" name="email" id="email"  autocomplete="on">
+    <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack dark:placeholder-dmBlackTint2" type="text" placeholder="E.g. paul@gmail.com" v-model="form.email" name="email" id="email"  autocomplete="on">
   </div>
 
   <div class="relative 
@@ -70,7 +70,7 @@
   before:hover:w-full
   ">
     <label class="pb-6 font-medium" for="contact">Contact Number</label>
-    <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack dark:placeholder-dmBlackTint2" type="text" placeholder="E.g. 09198765432" name="contact" id="contact">
+    <input class="py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack dark:placeholder-dmBlackTint2" type="text" placeholder="E.g. 09198765432" v-model="form.contact" name="contact" id="contact">
   </div>
 
   <div class="col-span-full relative
@@ -100,7 +100,7 @@
   before:z-40
   ">
     <label class="pb-6 font-medium"  for="purpose">Purpose</label>
-    <textarea placeholder="Your inquiry here..." class="w-full focus:outline-none py-1 dark:bg-dmBlack dark:placeholder-dmBlackTint2" name="purpose" id="purpose" rows="2" ></textarea>
+    <textarea placeholder="Your inquiry here..." class="w-full focus:outline-none py-1 dark:bg-dmBlack dark:placeholder-dmBlackTint2" name="purpose" id="purpose" rows="2" v-model="form.purpose" ></textarea>
   </div>
 
 
@@ -154,8 +154,42 @@
 </section>
 </template>
 <script>
+import emailjs from 'emailjs-com';
 export default {
   name: 'PauliversoncTheContacts',
+  data(){
+    return {
+      form: {
+        firstname:'Jade',
+        lastname:'Alinab',
+        email:'jadealinab@gmail.com',
+        contact:'123456789',
+        purpose:'purpose ko talaga sa buhay ito',
+
+      }
+    };
+  },
+  methods: {
+    submitForm(){
+      const form = this.$refs.form;
+        emailjs.sendForm('service_laz5zne', 'template_kwlkq3b', form, '0Wfiv9HDUBHIc-2NH')
+        .then((result) => {
+            console.log('SUCCESS!', result.text);
+            
+
+  
+            
+       
+
+          }, (error) => {
+            // Hide loading state
+        
+
+            console.error(error)
+         
+        });
+    },
+  },
 }
 </script>
 <style scoped>
