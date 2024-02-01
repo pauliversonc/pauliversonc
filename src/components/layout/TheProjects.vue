@@ -44,18 +44,8 @@
         <h4 class="font-semibold text-lg  text-gray-900 dark:text-dmWhite flex gap-2 items-center">
           
           <span @click="handlePlaying('set', 0)" class="mr-2 hover:cursor-pointer">Meatshoppe</span>
-
-          <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-              <use xlink:href="/icons/sprite.svg#icon-link"></use>
-            </svg>
-          </a>
-
-          <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-              <use xlink:href="/icons/sprite.svg#icon-github"></use>
-            </svg>
-          </a>
+          <BaseIconLink :small="true" icon="link" />
+          <BaseIconLink :small="true" icon="github" />
 
         </h4>
 
@@ -81,17 +71,8 @@
           
           <span @click="handlePlaying('set', 1)" class="mr-2 hover:cursor-pointer">ECO Builders</span>
 
-          <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-              <use xlink:href="/icons/sprite.svg#icon-link"></use>
-            </svg>
-          </a>
-
-          <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-              <use xlink:href="/icons/sprite.svg#icon-github"></use>
-            </svg>
-          </a>
+          <BaseIconLink :small="true" icon="link" />
+          <BaseIconLink :small="true" icon="github" />
 
         </h4>
 
@@ -117,17 +98,8 @@
           
           <span @click="handlePlaying('set', 2)" class="mr-2 hover:cursor-pointer">Notely</span>
 
-          <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-              <use xlink:href="/icons/sprite.svg#icon-link"></use>
-            </svg>
-          </a>
-
-          <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-              <use xlink:href="/icons/sprite.svg#icon-github"></use>
-            </svg>
-          </a>
+          <BaseIconLink :small="true" icon="link" />
+          <BaseIconLink :small="true" icon="github" />
 
         </h4>
 
@@ -178,17 +150,8 @@
         
         <span class="mr-2">Natours</span>
 
-        <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-            <use xlink:href="/icons/sprite.svg#icon-link"></use>
-          </svg>
-        </a>
-
-        <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-            <use xlink:href="/icons/sprite.svg#icon-github"></use>
-          </svg>
-        </a>
+        <BaseIconLink :small="true" icon="link" />
+        <BaseIconLink :small="true" icon="github" />
 
       </h4>
       <p class="container mb-4 mt-2 text-gray-600 dark:text-dmGray">A fictional company that provides adventurous nature tours. The website was built as a practice project to demonstrate Sass skills and responsive web design.</p>
@@ -232,18 +195,9 @@
       <h4 class="font-semibold text-lg text-gray-900 dark:text-dmWhite flex gap-2 items-center">
         
         <span class="mr-2">Omnifood</span>
+        <BaseIconLink :small="true" icon="link" />
+        <BaseIconLink :small="true" icon="github" />
 
-        <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-            <use xlink:href="/icons/sprite.svg#icon-link"></use>
-          </svg>
-        </a>
-
-        <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-            <use xlink:href="/icons/sprite.svg#icon-github"></use>
-          </svg>
-        </a>
 
       </h4>
       <p class="container mb-4 mt-2 text-gray-600 dark:text-dmGray">This project was developed during my Udemy bootcamp to enhance frontend skills and create a modern website with a mobile-responsive design.</p>
@@ -287,18 +241,9 @@
       <h4 class="font-semibold text-lg text-gray-900 dark:text-dmWhite flex gap-2 items-center">
         
         <span class="mr-2">Pauliversonc</span>
-
-        <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-            <use xlink:href="/icons/sprite.svg#icon-link"></use>
-          </svg>
-        </a>
-
-        <a href="#" class="p-1 icon-link group">
-            <svg class="h-4 w-4 fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
-            <use xlink:href="/icons/sprite.svg#icon-github"></use>
-          </svg>
-        </a>
+        <BaseIconLink :small="true" icon="link" />
+        <BaseIconLink :small="true" icon="github" />
+ 
 
       </h4>
       <p class="container mt-2 mb-4 text-gray-600 dark:text-dmGray">A Portfolio Website, where each project seamlessly blends innovation and aesthetics to showcase my expertise in creating a captivating digital presence. </p>
