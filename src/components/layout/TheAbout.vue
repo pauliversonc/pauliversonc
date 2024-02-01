@@ -219,31 +219,7 @@
 
     <!-- RESUME LINK -->
     <div class="mt-6 flex justify-center align-center">
-      <a href="#" class="flex items-center justify-center gap-2 relative
-        before:ease-out 
-        before:duration-300
-        before:content-['']
-        before:absolute
-        before:h-0.5
-        before:w-0
-        before:bg-gray-900
-        before:bottom-0
-        before:left-0
-        hover:before:w-full
-        dark:before:bg-dmWhite
-        group
-      ">
-        <span class="text-gray-900 font-medium dark:text-dmGray dark:group-hover:text-dmWhite dark:ease-out dark:duration-300">View My Résumé</span>
-        
-        <div class="flex items-center justify-center">
-        <svg class="h-4 w-4 fill-gray-900 dark:fill-dmGray dark:group-hover:fill-dmWhite dark:ease-out dark:duration-300">
-          <use xlink:href="/icons/sprite.svg#icon-file-text"></use>
-        </svg>
-      </div>
-      
-      </a>
-
-      
+      <BaseLink text="View My Résumé" icon="file-text" :icon-right="true" />
     </div>
 
   </section>
