@@ -62,12 +62,7 @@
         <p class="container mb-4 mt-2 text-gray-600 dark:text-dmGray">Where quality meets flavor! This showcase project represents the frontend of a sophisticated e-commerce platform dedicated to delivering the finest meats.</p>
         
         <ul class="flex flex-wrap gap-2 ">
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">HTML</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Sass</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">JavaScript</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Vue.js</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Vite</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">EmailJS</li>
+          <BaseTag v-for="(tag, index) in tags.meatshoppe" :key="index" :tag-name="tag" />
         </ul>
         
       </figcaption>
@@ -103,12 +98,7 @@
         <p class="container mb-4 mt-2 text-gray-600 dark:text-dmGray">Explore the future of sustainable living. featuring a minimalist design approach that elegantly highlights the essence of modern sustainable living.</p>
         
         <ul class="flex flex-wrap gap-2 ">
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">HTML</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">CSS</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">JavaScript</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Hero Icons</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Parcel</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Minimalist</li>
+          <BaseTag v-for="(tag, index) in tags.ecobuilders" :key="index" :tag-name="tag" />
         </ul>
         
       </figcaption>
@@ -144,12 +134,7 @@
         <p class="container mb-4 mt-2 text-gray-600 dark:text-dmGray">A web application that allows you to create and manage notes, It provides a simple and intuitive interface for taking and organizing your thoughts and ideas.</p>
         
         <ul class="flex flex-wrap gap-2 ">
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">HTML</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">CSS</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">JavaScript</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">OOP</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">Parcel</li>
-          <li class="bg-gray-100 dark:bg-dmBlackTint1 text-sm font-medium text-gray-600 dark:text-dmGray inline-block px-3 py-0.5">CoreJS</li>
+          <BaseTag v-for="(tag, index) in tags.notely" :key="index" :tag-name="tag" />
         </ul>
         
       </figcaption>
@@ -349,6 +334,37 @@ export default {
       
       observer: null,
       headingIntersected: false,
+
+      tags: {
+        meatshoppe: [
+          'HTML',
+          'Sass',
+          'JavaScript',
+          'Vue.js',
+          'Vite',
+          'EmailJS',
+        ],
+
+        ecobuilders: [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'Hero Icons',
+          'Parcel',
+          'Minimalist',
+        ],
+
+        notely: [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'OOP',
+          'Parcel',
+          'CoreJS',
+        ],
+      }
+
+
     };
   },  
 
