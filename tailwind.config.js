@@ -10,6 +10,8 @@ export default {
         dmBlackTint2: '#545454',
         dmWhite: '#EAEADE',
         dmGray: '#909090',
+        lmRed: '#FDF2F2',
+        dmRed: '#681A17',
       },
       fontFamily:{
         'figtree': ["Figtree", "sans-serif"],
