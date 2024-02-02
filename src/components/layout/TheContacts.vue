@@ -2,9 +2,9 @@
   <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 py-8 container mx-auto  flex flex-col lg:grid lg:grid-cols-2  gap-8">
   <!-- ERROR LIST -->
   <div class="lg:order-1">
-    <div v-show="errorList.length > 0" class="text-red-600 dark:text-red-700 flex gap-4 border border-red-600 dark:border-red-700 bg-lmRed dark:bg-dmRed">
-      <div class="flex items-center justify-center border-r border-red-600 dark:border-red-700 p-2">
-        <svg  class="fill-red-600 h-9 w-9 dark:fill-red-700">
+    <div v-show="errorList.length > 0" class="text-red-600 dark:text-dmRed2 flex gap-4 border-2  border-red-600 dark:border-dmRed2 bg-lmRed dark:bg-dmBlackTint1">
+      <div class="flex items-center justify-center  border-r-2 border-red-600 dark:border-dmRed2 p-2">
+        <svg  class="fill-red-600 h-9 w-9 dark:fill-dmRed2">
           <use xlink:href="/icons/sprite.svg#icon-x-circle"></use>
         </svg>
       </div>
@@ -69,8 +69,8 @@
     before:left-0
     before:hover:w-full
     ">
-      <label :class="isFormErrorLabel('email')" class="pb-6 font-medium" for="email">Email</label>
-      <input :disabled="isLoading" :class="{'cursor-not-allowed': isLoading},isFormErrorInput('email')" @input="filterInput('email')" @focus="resetInput('email')" @blur="validateInput('email')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 bg-white dark:bg-dmBlack " type="text" placeholder="E.g. pauliversonc@gmail.com" v-model.trim="form.email" name="email" id="email" autocomplete="on">
+      <label :class="isFormErrorLabel('email')" class="pb-6 font-medium" for="email">Email Address</label>
+      <input :disabled="isLoading" :class="{'cursor-not-allowed': isLoading},isFormErrorInput('email')" @input="filterInput('email')" @focus="resetInput('email')" @blur="validateInput('email')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 bg-white dark:bg-dmBlack " type="text" placeholder="E.g. paul.gc@gmail.com" v-model.trim="form.email" name="email" id="email" autocomplete="on">
     </div>
 
     <!-- contact -->
@@ -88,7 +88,7 @@
     before:left-0
     before:hover:w-full
     ">
-      <label :class="isFormErrorLabel('contact')" class="pb-6 font-medium" for="contact">Contact</label>
+      <label :class="isFormErrorLabel('contact')" class="pb-6 font-medium" for="contact">Contact Number</label>
       <input :disabled="isLoading" :class="{'cursor-not-allowed': isLoading},isFormErrorInput('contact')" @input="filterInput('contact')" @focus="resetInput('contact')" @blur="validateInput('contact')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 bg-white dark:bg-dmBlack " type="text" placeholder="E.g. 09198765432" v-model.trim="form.contact" name="contact" id="contact" autocomplete="on">
     </div>
 
@@ -195,7 +195,11 @@ export default {
  
   computed: {
     errorList(){
-      return Object.values(this.errors).flat();
+      return Object.values(this.errors).filter(value => value.length > 0);
+    },
+
+    allFieldsFilled(){
+      return Object.values(this.form).every(value => value !== '');
     },
   },
   data(){
@@ -209,22 +213,28 @@ export default {
       },
 
       errors: {
-        firstname: [],
-        lastname: [],
-        email: [],
-        contact: [],
-        purpose: [],
+        firstname: '',
+        lastname: '',
+        email: '',
+        contact: '',
+        purpose: '',
       },
 
       isLoading: false,
-
-
 
     };
   },
   methods: {
     capitalizeFirstLetter(str) {
       return str.charAt(0).toUpperCase() + str.slice(1);
+    },
+
+    clearForms() {
+      this.form.firstname = this.form.lastname = this.form.email = this.form.contact = this.form.purpose = '';
+    },
+
+    clearErrors(){
+      this.errors.firstname = this.errors.lastname = this.errors.email = this.errors.contact = this.errors.purpose = '';
     },
 
     // SORT OF COMPUTED
@@ -235,24 +245,26 @@ export default {
 
     // before: change to red if error else change to black
     isFormInvalid(formName) {
-      return (this.errors[formName]?.length > 0) ? 'before:bg-red-600 dark:before:bg-red-500' : 'before:bg-gray-900 dark:before:bg-dmWhite';
+      return (this.errors[formName]?.length > 0) ? 'before:bg-red-600 dark:before:bg-dmRed2' : 'before:bg-gray-900 dark:before:bg-dmWhite';
     },
 
     // text-color change to red if invalid else default
     isFormErrorLabel(formName) {
-      return (this.errors[formName]?.length > 0) ? 'text-red-600 dark:text-red-500' : '';
+      return (this.errors[formName]?.length > 0) ? 'text-red-600 dark:text-dmRed2' : '';
     },
+
     // text-color and placeholder-color change to red if invalid else default
     isFormErrorInput(formName) {
-      return (this.errors[formName]?.length > 0) ? 'text-red-600 dark:text-red-500 placeholder:text-red-700 dark:placeholder:text-red-600':'placeholder:text-gray-400 dark:placeholder-dmBlackTint2'
+      return (this.errors[formName]?.length > 0) ? 'text-red-600 dark:text-dmRed2 placeholder:text-red-700 dark:placeholder:text-dmRed2':'placeholder:text-gray-400 dark:placeholder-dmBlackTint2'
     },
 
 
 
     // EVENTS
     resetInput(formName){
-      this.errors[formName] = [];
+      this.errors[formName] = '';
     },
+
 
     validateInput(formName) {
       // firstname
@@ -275,11 +287,11 @@ export default {
               if (pattern.test(this.form[formName])) {
                 console.log('pasok');
               } else {
-                this.errors[formName].push(`${mutatedFormName}: Please use only one space between names.`)
+                this.errors[formName] = `${mutatedFormName}: Please use only one space between names.`;
               }
 
             } else {
-              this.errors[formName].push(`${mutatedFormName}: Should not exceed 120 characters.`)
+              this.errors[formName] = `${mutatedFormName}: Should not exceed 120 characters.`;
             }
 
           }
@@ -294,10 +306,10 @@ export default {
               if (pattern.test(this.form[formName])) {
                 console.log('pasok');
               } else {
-                this.errors[formName].push(`Enter a valid email address.`)
+                this.errors[formName] = `Enter a valid email address.`;
               }
             } else {
-              this.errors[formName].push(`${mutatedFormName} should not exceed 320 characters.`)
+              this.errors[formName] = `${mutatedFormName} should not exceed 320 characters.`;
             }
           }
 
@@ -305,7 +317,7 @@ export default {
             if(this.form[formName]?.length <= 13){
               console.log('pasok');
             } else {
-              this.errors[formName].push(`${mutatedFormName} number should not exceed 13 characters.`)
+              this.errors[formName] = `${mutatedFormName} number should not exceed 13 characters.`;
             }
           }
 
@@ -313,13 +325,13 @@ export default {
             if(this.form[formName]?.length <= 520){
               console.log('pasok');
             } else {
-              this.errors[formName].push(`${mutatedFormName} should not exceed 520 characters.`)
+              this.errors[formName] = `${mutatedFormName} should not exceed 520 characters.`;
             }
           }
       }
       
       else {
-        this.errors[formName].push(`${mutatedFormName} is required.`)
+        this.errors[formName] = `${mutatedFormName} is required.`;
       }
 
     },
@@ -335,6 +347,11 @@ export default {
     },
 
     submitForm(){
+      // guard block
+      if(this.errorList.length === 0 && this.allFieldsFilled) {
+
+      
+      
       this.isLoading = true;
       const form = this.$refs.form;
         emailjs.sendForm('service_laz5zne', 'template_kwlkq3b', form, '0Wfiv9HDUBHIc-2NH')
@@ -348,6 +365,17 @@ export default {
             console.error(error)
          
         });
+
+      }
+
+      else {
+
+        this.validateInput('firstname');
+        this.validateInput('lastname');
+        this.validateInput('email');
+        this.validateInput('contact');
+        this.validateInput('purpose');
+      }
     },
   },
 }
