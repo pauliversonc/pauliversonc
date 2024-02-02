@@ -11,6 +11,7 @@ export default {
         dmWhite: '#EAEADE',
         dmGray: '#909090',
         lmRed: '#FDF2F2',
+        lmGreen: '#9BE495',
         dmRed1: '#681A17',
         dmRed2: '#F36F6A',
       },

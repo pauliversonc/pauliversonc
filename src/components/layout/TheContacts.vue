@@ -1,18 +1,46 @@
 <template >
   <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 py-8 container mx-auto  flex flex-col lg:grid lg:grid-cols-2  gap-8">
-  <!-- ERROR LIST -->
+  <!-- MESSAGE WRAPPER -->
   <div class="lg:order-1">
-    <div v-show="errorList.length > 0" class="text-red-600 dark:text-dmRed2 flex gap-4 border-2  border-red-600 dark:border-dmRed2 bg-lmRed dark:bg-dmBlackTint1">
+
+    <!-- ERROR -->
+    <!-- <div v-show="errorList.length > 0" class="text-red-600 dark:text-dmRed2 flex gap-4 border-2  border-red-600 dark:border-dmRed2 bg-lmRed dark:bg-dmBlackTint1">
       <div class="flex items-center justify-center  border-r-2 border-red-600 dark:border-dmRed2 p-2">
         <svg  class="fill-red-600 h-9 w-9 dark:fill-dmRed2">
-          <use xlink:href="/icons/sprite.svg#icon-x-circle"></use>
+          <use xlink:href="/icons/sprite.svg#icon-x-square"></use>
         </svg>
       </div>
 
       <ul class="list-disc py-2 pl-4 pr-2 flex flex-col justify-center">
         <li v-for="(error, index) in errorList" :key="index">{{ error }}</li>
       </ul>
+    </div> -->
+
+
+
+    <!-- SUCCESS -->
+    <div v-show="errorList.length > 0" class="py-2 text-green-900 dark:text-lmGreen flex items-center justify-between border-2  border-green-900 dark:border-lmGreen bg-green-50 dark:bg-dmBlackTint1">
+
+      <div class="flex gap-4">
+       <div class="flex items-center justify-center  border-r-2 border-green-900 dark:border-lmGreen p-2">
+         <svg  class="fill-green-900 h-9 w-9 dark:fill-lmGreen">
+           <use xlink:href="/icons/sprite.svg#icon-check-square"></use>
+         </svg>
+       </div>
+
+       <span>Your email has been sent successfully. <br> Thank you for reaching out!</span>
     </div>
+
+      <div class="flex items-center justify-center p-2 cursor-pointer">
+        <svg  class="fill-green-900 h-8 w-8 dark:fill-lmGreen">
+          <use xlink:href="/icons/sprite.svg#icon-x"></use>
+        </svg>
+      </div>
+
+
+    </div>
+
+
   </div>
 
   <!-- FORM INPUT (LEFT)-->
@@ -267,10 +295,7 @@ export default {
 
 
     validateInput(formName) {
-      // firstname
-      console.log(formName)
-
-      const mutatedFormName = this.capitalizeFirstLetter(formName)
+      const mutatedFormName = this.capitalizeFirstLetter(formName);
 
       // validate if formname has a value
       if(this.form[formName]?.length > 0) {
@@ -285,7 +310,8 @@ export default {
               console.log(pattern.test(this.form[formName]));
 
               if (pattern.test(this.form[formName])) {
-                console.log('pasok');
+                // clear error
+                this.errors[formName] = '';
               } else {
                 this.errors[formName] = `${mutatedFormName}: Please use only one space between names.`;
               }
@@ -304,7 +330,8 @@ export default {
               console.log(pattern.test(this.form[formName]));
 
               if (pattern.test(this.form[formName])) {
-                console.log('pasok');
+                // clear error
+                this.errors[formName] = '';
               } else {
                 this.errors[formName] = `Enter a valid email address.`;
               }
@@ -315,7 +342,8 @@ export default {
 
           if(formName === 'contact') {
             if(this.form[formName]?.length <= 13){
-              console.log('pasok');
+              // clear error
+              this.errors[formName] = '';
             } else {
               this.errors[formName] = `${mutatedFormName} number should not exceed 13 characters.`;
             }
@@ -323,7 +351,8 @@ export default {
 
           if(formName === 'purpose') {
             if(this.form[formName]?.length <= 520){
-              console.log('pasok');
+              // clear error
+              this.errors[formName] = '';
             } else {
               this.errors[formName] = `${mutatedFormName} should not exceed 520 characters.`;
             }
@@ -349,23 +378,18 @@ export default {
     submitForm(){
       // guard block
       if(this.errorList.length === 0 && this.allFieldsFilled) {
-
-      
       
       this.isLoading = true;
       const form = this.$refs.form;
         emailjs.sendForm('service_laz5zne', 'template_kwlkq3b', form, '0Wfiv9HDUBHIc-2NH')
         .then((result) => {
             console.log('SUCCESS!', result.text);
-
+            this.clearForms();
             this.isLoading = false;
           }, (error) => {
             // Hide loading state
-
             console.error(error)
-         
         });
-
       }
 
       else {
