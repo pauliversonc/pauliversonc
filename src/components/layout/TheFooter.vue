@@ -16,12 +16,12 @@
   />
 </a>
 
-<div class="text-center dark:text-dmWhite">Paul Iverson Cortez | Portfolio</div>
+<div class="text-center text-gray-900 dark:text-dmWhite">Paul Iverson Cortez | Portfolio</div>
 
 <!-- credits -->
 <div class="flex flex-col items-center">
-  <span class="font-secondary font-medium">&copy; 2014 &#x2022; Paul Iverson Cortez</span>
-  <span class=" text-gray-500 dark:text-dmBlackTint2 font-medium text-sm">All RIGHTS RESERVED</span>
+  <span class="font-secondary dark:text-dmGray font-medium">&copy; 2014 &#x2022; Paul Iverson Cortez</span>
+  <span class=" text-gray-600 dark:text-dmBlackTint2 font-medium text-sm">All RIGHTS RESERVED</span>
 </div>
 
 </footer>
