@@ -34,7 +34,7 @@
     before:hover:w-full
     ">
       <label :class="isFormErrorLabel('firstname')" class="pb-6 font-medium" for="firstname">Firstname</label>
-      <input :class="isFormErrorInput('firstname')" @input="filterInput('firstname')" @focus="resetInput('firstname')" @blur="validateInput('firstname')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack " type="text" placeholder="E.g. Paul Iverson" v-model.trim="form.firstname" name="firstname" id="firstname" autocomplete="on">
+      <input :disabled="isLoading" :class="{'cursor-not-allowed': isLoading},isFormErrorInput('firstname')" @input="filterInput('firstname')" @focus="resetInput('firstname')" @blur="validateInput('firstname')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 bg-white dark:bg-dmBlack " type="text" placeholder="E.g. Paul Iverson" v-model.trim="form.firstname" name="firstname" id="firstname" autocomplete="on">
     </div>
     <!-- lastname -->
     <div
@@ -52,7 +52,7 @@
     before:hover:w-full
     ">
       <label :class="isFormErrorLabel('lastname')" class="pb-6 font-medium" for="lastname">Lastname</label>
-      <input :class="isFormErrorInput('lastname')" @input="filterInput('lastname')" @focus="resetInput('lastname')" @blur="validateInput('lastname')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack " type="text" placeholder="E.g. Cortez" v-model.trim="form.lastname" name="lastname" id="lastname" autocomplete="on">
+      <input :disabled="isLoading" :class="{'cursor-not-allowed': isLoading},isFormErrorInput('lastname')" @input="filterInput('lastname')" @focus="resetInput('lastname')" @blur="validateInput('lastname')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 bg-white dark:bg-dmBlack " type="text" placeholder="E.g. Cortez" v-model.trim="form.lastname" name="lastname" id="lastname" autocomplete="on">
     </div>
     <!-- email -->
     <div
@@ -70,7 +70,7 @@
     before:hover:w-full
     ">
       <label :class="isFormErrorLabel('email')" class="pb-6 font-medium" for="email">Email</label>
-      <input :class="isFormErrorInput('email')" @input="filterInput('email')" @focus="resetInput('email')" @blur="validateInput('email')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack " type="text" placeholder="E.g. pauliversonc@gmail.com" v-model.trim="form.email" name="email" id="email" autocomplete="on">
+      <input :disabled="isLoading" :class="{'cursor-not-allowed': isLoading},isFormErrorInput('email')" @input="filterInput('email')" @focus="resetInput('email')" @blur="validateInput('email')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 bg-white dark:bg-dmBlack " type="text" placeholder="E.g. pauliversonc@gmail.com" v-model.trim="form.email" name="email" id="email" autocomplete="on">
     </div>
 
     <!-- contact -->
@@ -89,7 +89,7 @@
     before:hover:w-full
     ">
       <label :class="isFormErrorLabel('contact')" class="pb-6 font-medium" for="contact">Contact</label>
-      <input :class="isFormErrorInput('contact')" @input="filterInput('contact')" @focus="resetInput('contact')" @blur="validateInput('contact')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 dark:bg-dmBlack " type="text" placeholder="E.g. 09198765432" v-model.trim="form.contact" name="contact" id="contact" autocomplete="on">
+      <input :disabled="isLoading" :class="{'cursor-not-allowed': isLoading},isFormErrorInput('contact')" @input="filterInput('contact')" @focus="resetInput('contact')" @blur="validateInput('contact')" class="placeholder:opacity-60 py-1 w-full focus:outline-none border-b-2 border-gray-200 dark:border-dmBlackTint2 bg-white dark:bg-dmBlack " type="text" placeholder="E.g. 09198765432" v-model.trim="form.contact" name="contact" id="contact" autocomplete="on">
     </div>
 
 
@@ -123,18 +123,30 @@
     :class="{'before:w-full': isForm('purpose')}, isFormInvalid('purpose')"
     >
       <label :class="isFormErrorLabel('purpose')" class="pb-6 font-medium"  for="purpose">Purpose</label>
-      <textarea :class="isFormErrorInput('purpose')" @input="filterInput('purpose')" @focus="resetInput('purpose')" @blur="validateInput('purpose')" placeholder="Your inquiry here..." class="placeholder:opacity-60 w-full focus:outline-none py-1 dark:bg-dmBlack dark:placeholder-dmBlackTint2" name="purpose" id="purpose" rows="2" v-model="form.purpose" ></textarea>
+      <textarea :disabled="isLoading" :class="{'cursor-not-allowed': isLoading},isFormErrorInput('purpose')" @input="filterInput('purpose')" @focus="resetInput('purpose')" @blur="validateInput('purpose')" placeholder="Your inquiry here..." class="placeholder:opacity-60 w-full focus:outline-none py-1 dark:bg-dmBlack bg-white dark:placeholder-dmBlackTint2" name="purpose" id="purpose" rows="2" v-model="form.purpose" ></textarea>
     </div>
 
 
 
-    <button class="py-1 h-10 font-semibold col-span-full
+    <button 
+    class="py-1 h-10 font-semibold col-span-full
     bg-gray-100 dark:bg-dmBlackTint2 
     hover:bg-gray-900 dark:hover:bg-dmWhite
     text-gray-600 dark:text-dmWhite 
     hover:text-gray-100 dark:hover:text-dmBlackTint1 
     ease-out duration-300
-    ">Send</button>
+    group
+    flex
+    gap-2
+    items-center
+    justify-center
+    ">
+    <span>Send</span>
+  
+    <svg v-show="isLoading" class="animate-spin h-4 w-4 fill-gray-600 dark:fill-dmWhite group-hover:fill-gray-100 dark:group-hover:fill-dmBlackTint1 ease-out duration-300">
+      <use xlink:href="/icons/sprite.svg#icon-refresh-cw"></use>
+    </svg>
+    </button>
 
 
 
@@ -204,7 +216,7 @@ export default {
         purpose: [],
       },
 
-
+      isLoading: false,
 
 
 
@@ -323,11 +335,13 @@ export default {
     },
 
     submitForm(){
+      this.isLoading = true;
       const form = this.$refs.form;
         emailjs.sendForm('service_laz5zne', 'template_kwlkq3b', form, '0Wfiv9HDUBHIc-2NH')
         .then((result) => {
             console.log('SUCCESS!', result.text);
 
+            this.isLoading = false;
           }, (error) => {
             // Hide loading state
 
