@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <header class="container h-[64px]  mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 flex items-center justify-between relative">
+  <header ref="header" class="container h-[64px]  mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 flex items-center justify-between relative">
     <!-- ICON -->
     <a href="#" >
       <img
@@ -83,6 +83,7 @@
 </template>
 <script>
 import BaseToggleSwitch from '../base/BaseToggleSwitch.vue';
+import gsap from 'gsap';
 
 export default {
   name: 'PauliversoncTheHeader',
@@ -115,9 +116,24 @@ export default {
     }
   },
 
+  mounted() {
+    this.animateElement();
+  },
+
   methods: {
     toggleNav() {
       this.isNavOpen = !this.isNavOpen;
+    },
+
+    animateElement(){
+      const header = this.$refs.header;
+
+      gsap.from(header, {
+        duration:2,
+        ease: "expoScale(0.5,7,none)",
+        opacity: 0, // Example animation property
+        delay: .6,
+      });
     },
   },
 }

@@ -1,5 +1,5 @@
 <template >
-   <div ref="ho" class="overflow-hidden container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 h-[75vh] md:h-[80vh] lg:h-[75vh]  flex items-center">
+   <div class="overflow-hidden container mx-auto py-4 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 h-[75vh] md:h-[80vh] lg:h-[75vh]  flex items-center">
 
 <!-- HEADING 1 (default)-->
 <h1 class="text-gray-900 dark:text-dmWhite w-full flex flex-col uppercase tracking-[-0.08em] leading-none font-bold
@@ -68,6 +68,8 @@ export default {
       gsap.from(spanNum, {
         duration:2,
         ease: "expoScale(0.5,7,none)",
+        y: 50,
+        scale: 20,
         opacity: 0, // Example animation property
         delay: 1,
       });
