@@ -1,6 +1,6 @@
 <template >
     <div class="container mx-auto  px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 lg:text-center">
-    <div class="h-16 inline-block hover:cursor-pointer" role="button" >
+    <div ref="scrollWrapper"  class="h-16 inline-block hover:cursor-pointer" role="button" >
       <span class="uppercase text-sm  font-bold text-gray-500 dark:text-dmGray">scroll</span>
       
       <div class="relative down-fade">
@@ -34,8 +34,27 @@
   </div>
 </template>
 <script>
+import gsap from 'gsap';
+
 export default {
   name: 'PauliversoncTheScroll',
+  mounted() {
+    this.animateElement();
+  },
+  methods: {
+    animateElement() {
+      const scrollWrapper = this.$refs.scrollWrapper;
+
+      gsap.from(scrollWrapper, {
+        duration:1,
+        ease: "back.out(1.7)",
+        y: 100, // Example animation property
+        delay: 3.2,
+        rotate: 360,
+        opacity: 0,
+      });
+    },
+  },
 }
 </script>
 <style scoped>
