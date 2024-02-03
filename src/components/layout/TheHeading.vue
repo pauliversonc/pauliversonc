@@ -1,9 +1,9 @@
 <template >
   <section :class="headingSection" class="mb-[2rem] px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 text-gray-900 dark:text-dmWhite  container mx-auto">
-    <h3 class="uppercase leading-none font-medium  flex items-center justify-center gap-4 relative"
+    <h3 ref="headingWrapper" class="uppercase leading-none font-medium  flex items-center justify-center gap-4 relative"
       :class="headingWrapper"
     >
-    <span class="bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-white dark:from-dmGray dark:to-dmBlack
+    <span ref="spanTopNum" class="bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-white dark:from-dmGray dark:to-dmBlack
          absolute top-0 text-gray-200 z-[-1] translate-y-[-50%] font-normal inline-block p-1
          text-[2.4rem]
          xxs:text-[3.4rem]
@@ -14,14 +14,20 @@
          
          :class="spanNumClass"
          >{{ spanNum }}</span>
-      <span class=" ">{{ spanLeft }}</span>
-      <span class="italic">{{ spanRight }}</span>
+      <span ref="spanLeftTxt" class=" ">{{ spanLeft }}</span>
+      <span ref="spanRightTxt" class="italic">{{ spanRight }}</span>
     </h3>
   </section>
 </template>
 <script>
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 export default {
   name: 'PauliversoncTheHeading',
+  mounted() {
+    this.animateElement();
+  },
   props: {
     headingName: {
       type: String,
@@ -63,6 +69,33 @@ export default {
     },
   },
 
+  methods: {
+    animateElement() {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const headingWrapper = this.$refs.headingWrapper;
+      const spanTopNum = this.$refs.spanTopNum;
+      const spanLeftTxt = this.$refs.spanLeftTxt;
+      const spanRightTxt = this.$refs.spanRightTxt;
+
+      // Create the timeline
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: headingWrapper, // Set your trigger element
+          start: "top 90%", // Adjust the start position based on your requirements
+          end: "bottom 15%",
+          scrub: 1, // Enables smooth scrolling with scrubbing effect
+        },
+        repeat: 0,
+        repeatDelay: 0,
+      });
+
+      // Add animations to the timeline
+      tl.from(spanTopNum, { y: 50, opacity: 0, duration: 1, ease: "expo.out" });
+      tl.from(spanLeftTxt, { x: "-50%", duration: 1 }, 0);
+      tl.from(spanRightTxt, { x: "50%", duration: 1 }, 0);
+    }
+  },
 
 }
 </script>
