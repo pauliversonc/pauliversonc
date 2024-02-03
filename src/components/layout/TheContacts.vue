@@ -4,7 +4,7 @@
   <div class="lg:order-1">
 
     <!-- ERROR -->
-    <!-- <div v-show="errorList.length > 0" class="text-red-600 dark:text-dmRed2 flex gap-4 border-2  border-red-600 dark:border-dmRed2 bg-lmRed dark:bg-dmBlackTint1">
+    <div v-show="errorList.length > 0" class="text-red-600 dark:text-dmRed2 flex gap-4 border-2  border-red-600 dark:border-dmRed2 bg-lmRed dark:bg-dmBlackTint1">
       <div class="flex items-center justify-center  border-r-2 border-red-600 dark:border-dmRed2 p-2">
         <svg  class="fill-red-600 h-9 w-9 dark:fill-dmRed2">
           <use xlink:href="/icons/sprite.svg#icon-x-square"></use>
@@ -14,24 +14,24 @@
       <ul class="list-disc py-2 pl-4 pr-2 flex flex-col justify-center">
         <li v-for="(error, index) in errorList" :key="index">{{ error }}</li>
       </ul>
-    </div> -->
+    </div>
 
 
 
     <!-- SUCCESS -->
-    <div v-show="errorList.length > 0" class="py-2 text-green-900 dark:text-lmGreen flex items-center justify-between border-2  border-green-900 dark:border-lmGreen bg-green-50 dark:bg-dmBlackTint1">
+    <div v-show="isVisible" class="py-2 text-green-900 dark:text-lmGreen flex items-center justify-between border-2  border-green-900 dark:border-lmGreen bg-green-50 dark:bg-dmBlackTint1">
 
       <div class="flex gap-4">
-       <div class="flex items-center justify-center  border-r-2 border-green-900 dark:border-lmGreen p-2">
-         <svg  class="fill-green-900 h-9 w-9 dark:fill-lmGreen">
-           <use xlink:href="/icons/sprite.svg#icon-check-square"></use>
-         </svg>
-       </div>
+        <div class="flex items-center justify-center  border-r-2 border-green-900 dark:border-lmGreen p-2">
+          <svg  class="fill-green-900 h-9 w-9 dark:fill-lmGreen">
+            <use xlink:href="/icons/sprite.svg#icon-check-square"></use>
+          </svg>
+        </div>
 
-       <span>Your email has been sent successfully. <br> Thank you for reaching out!</span>
-    </div>
+        <span>Your email has been sent successfully. <br> Thank you for reaching out!</span>
+      </div>
 
-      <div class="flex items-center justify-center p-2 cursor-pointer">
+      <div @click="closeMessage()" class="flex items-center justify-center p-2 cursor-pointer" role="button">
         <svg  class="fill-green-900 h-8 w-8 dark:fill-lmGreen">
           <use xlink:href="/icons/sprite.svg#icon-x"></use>
         </svg>
@@ -44,7 +44,7 @@
   </div>
 
   <!-- FORM INPUT (LEFT)-->
-  <form :class="{'lg:mt-[-2rem]': errorList.length === 0 }" action="#" @submit.prevent="submitForm" class="lg:order-3 container grid gap-6 lg:grid-cols-2  lg:self-start" ref="form">
+  <form :class="{'mt-[-2rem]': errorList.length === 0 && isVisible === false }" action="#" @submit.prevent="submitForm" class="lg:order-3 container grid gap-6 lg:grid-cols-2  lg:self-start" ref="form">
 
     <!-- firstname -->
     <div
@@ -122,7 +122,6 @@
 
 
     <div class="col-span-full relative
-    after:
     after:content-['']
     after:absolute
     after:bottom-0
@@ -131,8 +130,6 @@
     after:w-full
     after:bg-gray-200
     dark:after:bg-dmBlackTint2
-    
-    
 
     before:ease-out 
     before:duration-300
@@ -140,8 +137,6 @@
     before:absolute
     before:h-0.5
     before:w-0
-    before:bg-gray-900
-    dark:before:bg-dmWhite
     before:bottom-0
     before:left-0
     before:hover:w-full
@@ -249,10 +244,15 @@ export default {
       },
 
       isLoading: false,
+      isVisible: false,
 
     };
   },
   methods: {
+    closeMessage(){
+      this.isVisible = false;
+    },
+
     capitalizeFirstLetter(str) {
       return str.charAt(0).toUpperCase() + str.slice(1);
     },
@@ -376,6 +376,8 @@ export default {
     },
 
     submitForm(){
+      
+
       // guard block
       if(this.errorList.length === 0 && this.allFieldsFilled) {
       
@@ -385,6 +387,9 @@ export default {
         .then((result) => {
             console.log('SUCCESS!', result.text);
             this.clearForms();
+            // show success message
+            this.isVisible = true
+
             this.isLoading = false;
           }, (error) => {
             // Hide loading state
@@ -393,7 +398,7 @@ export default {
       }
 
       else {
-
+        this.isLoading = false;
         this.validateInput('firstname');
         this.validateInput('lastname');
         this.validateInput('email');
