@@ -50,7 +50,7 @@ export default {
         ease: "back.out(1.7)",
         y: 100, // Example animation property
         delay: 3.2,
-        rotate: 360,
+        rotation: 360,
         opacity: 0,
       });
     },
