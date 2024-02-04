@@ -24,7 +24,7 @@
         <BaseHeadingFive title="skills" :margin-custom="true" :margin-top-custom="true" />
         
         <!-- SKILLS ICON -->
-        <ul class="flex flex-wrap gap-2">
+        <ul ref="skills" class="flex flex-wrap gap-2">
           
           <li v-for="skill in skills" :key="skill.name" class="group h-9 w-9 relative ">
             <span class="absolute top-1 left-[50%] translate-x-[-50%] translate-y-[-110%] text-xs px-1 bg-gray-100 dark:bg-dmBlackTint1 font-bold  py-[3px] scal text-gray-600 dark:text-dmGray tracking-tighter group-hover:top-[-5%] opacity-0 group-hover:opacity-100 ease-in duration-200 z-[-100] group-hover:z-[40] uppercase">{{ skill.name }}</span>
@@ -47,9 +47,8 @@
 
     <BaseHeadingFive title="experience" :margin-top-custom="true" />
     <!-- TIMELINE -->
-    <div class="container pl-8 lg:pl-0  relative before:content-[''] before:bg-gray-400 dark:before:bg-dmGray before:absolute before:w-0.5 before:h-full before:left-0 lg:before:left-[50%]
-    
-    ">
+    <div ref="timeline" class="overflow-y-clip container pl-8 lg:pl-0  relative before:content-[''] before:bg-gray-400 dark:before:bg-dmGray before:absolute before:w-0.5 before:h-full before:left-0 lg:before:left-[50%]">
+      <span ref="progressBar" style="height: 0;" class="absolute top-0 select-none w-0.5 bg-gray-900 dark:bg-dmWhite left-0 lg:left-[50%]">&nbsp;</span>
 
       <!-- CARD CONTAINER -->
       <ul class="space-y-8 timeline-container xp-card-con lg:w-[50%]" >
@@ -262,7 +261,27 @@ export default {
       this.applyAnimation3(paragraph);
       this.applyAnimation2(imageCon);
 
+      const skills = this.$refs.skills;
+      this.applyAnimation2(skills);
 
+
+      const timeline = this.$refs.timeline;
+      const progressBar = this.$refs.progressBar;
+
+      gsap.from(progressBar, {
+        scrollTrigger: {
+          trigger: timeline,
+          start: 'top center',
+          end: 'bottom top',
+          markers: true,
+          scrub: 1,
+          onUpdate: self => {
+            const progress = (self.progress * 110).toFixed(2);
+            gsap.to(progressBar, { height: progress + '%' });
+          }
+        },
+
+      });
 
     },
 
@@ -272,9 +291,7 @@ export default {
         scrollTrigger: {
           trigger: el,
           start: 'start 70%',
-          markers: true,
         },
-        duration:1,
         y: '20%',
         opacity: 0,
       });
@@ -286,7 +303,6 @@ export default {
         scrollTrigger: {
           trigger: el,
           start: 'start 70%',
-          markers: true,
         },
         duration:1,
         ease: "back.out(1.7)",
