@@ -5,17 +5,17 @@
     <div class="flex flex-col gap-4 lg:flex-none lg:grid lg:grid-cols-2 " >
 
       <!-- PICTURE CONTAINER -->
-      <div class="flex justify-center items-center ">
+      <div ref="imageCon" class="flex justify-center items-center ">
         <!-- PICTURE -->
         <img class="self-center h-[16rem] grayscale" src="/images/portrait/pauliversonc.jpg">
       </div>
       
       <!-- PARAGRAPH CONTAINER -->
-      <div class="space-y-4 lg:row-span-2 ">
+      <div ref="paragraph" class="space-y-4 lg:row-span-2 ">
         <!-- PARAGRAPH -->
-        <p class="">I am a <strong class="text-gray-900 font-medium dark:text-dmWhite">passionate web developer</strong> born and raised in the lively city of <strong class="text-gray-900 font-medium dark:text-dmWhite">Trece Martires, Cavite.</strong> My journey into the world of web development began under the guidance of exceptional professors back in college. Inspired by their teachings, I've embarked on a path that blends <strong class="text-gray-900 font-medium dark:text-dmWhite">creativity and technical prowess</strong> to craft engaging digital experiences.</p>
-        <p class="">I believe in the power of code to transform ideas into captivating online realities. Each line of code represents an opportunity to bring innovation to life and make a <strong class="text-gray-900 font-medium dark:text-dmWhite">lasting impact on the digital landscape.</strong> With a commitment to continuous learning and a keen eye for detail, <strong class="font-medium dark:text-dmWhite">I strive to create web solutions that not only meet but exceed expectations.</strong></p>
-        <p class="">In the words of <strong class="text-gray-900 font-medium dark:text-dmWhite">Steve Jobs, "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."</strong> This philosophy resonates deeply with my approach to web development, driving me to deliver <strong class="text-gray-900 font-medium dark:text-dmWhite">excellence in every project.</strong> Join me on this exciting journey, and let's create <strong class="text-gray-900 font-medium dark:text-dmWhite">digital wonders together!</strong></p>
+        <p class="">I am a <span ref="highlight1" class="ease-out duration-300">passionate web developer</span> born and raised in the lively city of <span ref="highlight2" class="ease-out duration-300">Trece Martires, Cavite.</span> My journey into the world of web development began under the guidance of exceptional professors back in college. Inspired by their teachings, I've embarked on a path that blends <span ref="highlight3" class="ease-out duration-300">creativity and technical prowess</span> to craft engaging digital experiences.</p>
+        <p class="">I believe in the power of code to transform ideas into captivating online realities. Each line of code represents an opportunity to bring innovation to life and make a <span ref="highlight4" class="ease-out duration-300">lasting impact on the digital landscape.</span> With a commitment to continuous learning and a keen eye for detail, <span ref="highlight5" class="ease-out duration-300">I strive to create web solutions that not only meet but exceed expectations.</span></p>
+        <p class="">In the words of <span ref="highlight6" class="ease-out duration-300">Steve Jobs, "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."</span> This philosophy resonates deeply with my approach to web development, driving me to deliver <span ref="highlight7" class="ease-out duration-300">excellence in every project.</span> Join me on this exciting journey, and <span ref="highlight8" class="ease-out duration-300">let's create digital wonders together!</span></p>
       </div>
 
       <!-- SKILLS CONTAINERS -->
@@ -225,8 +225,92 @@
   </section>
 </template>
 <script>
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 export default {
   name: 'PauliversoncTheAbout',
+  mounted() {
+    this.animateElement();
+  },
+  methods: {
+    animateElement(){
+      gsap.registerPlugin(ScrollTrigger);
+
+      const highlight1 = this.$refs.highlight1;
+      const highlight2 = this.$refs.highlight2;
+      const highlight3 = this.$refs.highlight3;
+      const highlight4 = this.$refs.highlight4;
+      const highlight5 = this.$refs.highlight5;
+      const highlight6 = this.$refs.highlight6;
+      const highlight7 = this.$refs.highlight7;
+      const highlight8 = this.$refs.highlight8;
+
+
+      this.applyAnimation(highlight1);
+      this.applyAnimation(highlight2);
+      this.applyAnimation(highlight3);
+      this.applyAnimation(highlight4);
+      this.applyAnimation(highlight5);
+      this.applyAnimation(highlight6);
+      this.applyAnimation(highlight7);
+      this.applyAnimation(highlight8);
+
+      const paragraph = this.$refs.paragraph;
+      const imageCon = this.$refs.imageCon;
+
+      this.applyAnimation3(paragraph);
+      this.applyAnimation2(imageCon);
+
+
+
+    },
+
+    // element showing without ease
+    applyAnimation3(el){
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: 'start 70%',
+          markers: true,
+        },
+        duration:1,
+        y: '20%',
+        opacity: 0,
+      });
+    },
+
+    // element showing with ease
+    applyAnimation2(el){
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: 'start 70%',
+          markers: true,
+        },
+        duration:1,
+        ease: "back.out(1.7)",
+        y: '20%',
+        opacity: 0,
+      });
+    },
+
+    // add color highlight
+    applyAnimation(el) {
+      gsap.to(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: 'start center',
+          onEnter: () => {
+            el.classList.add('text-gray-900'); // Add class on enter
+            el.classList.add('font-medium'); // Add class on enter
+            el.classList.add('dark:text-dmWhite'); // Add class on enter
+          },
+        },
+      });
+    },
+  },
+
   data(){
     return {
      skills: [
