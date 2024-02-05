@@ -123,6 +123,15 @@ export default {
   methods: {
     toggleNav() {
       this.isNavOpen = !this.isNavOpen;
+
+      console.log(this.isNavOpen)
+
+      this.isScrollable(!this.isNavOpen);
+    },
+
+    isScrollable(bool) {
+      if (bool) document.body.classList.remove('overflow-y-hidden');
+      else document.body.classList.add('overflow-y-hidden');
     },
 
     animateElement(){
@@ -132,7 +141,7 @@ export default {
         duration:2,
         ease: "expoScale(0.5,7,none)",
         opacity: 0, // Example animation property
-        delay: .6,
+        delay: 1,
       });
     },
   },
