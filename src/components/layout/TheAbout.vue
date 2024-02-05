@@ -57,10 +57,13 @@
         <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 dark:before:bg-dmWhite before:rounded-full before:top-0 before:left-0 lg:before:left-full before:translate-x-[-2.3rem] lg:pr-[2rem] lg:before:translate-x-[-45%]">
           
 
-          <div class="flex flex-col">
+          <div ref="card1" class="flex flex-col">
             <!-- 320 DEFAULT -->
-            <span class="absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white dark:bg-dmBlack z-40 
-            lg:right-0 lg:translate-x-[115%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
+
+            <!-- old: lg:translate-x-[115%] -->
+            <!-- need to have when gsap is added: lg:translate-x-[125%] -->
+            <span ref="history1" class="ease-out duration-300 absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white dark:bg-dmBlack z-40 
+            lg:right-0 lg:translate-x-[135%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
             ">February 2021 - Present</span>
             <span class="leading-5 font-semibold text-lg text-gray-900 dark:text-dmWhite">Junior Software Developer</span>
             <span class="italic">Cylix Technologies, Inc.</span>
@@ -113,9 +116,9 @@
 
         <!-- CARD R -->
         <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 dark:before:bg-dmWhite before:rounded-full before:top-0 before:left-0 before:translate-x-[-2.3rem] lg:left-full lg:pl-[2rem] lg:before:translate-x-[-45%]">
-          <div class="flex flex-col">
-            <span class="absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white dark:bg-dmBlack z-40 
-            lg:left-0 lg:translate-x-[-115%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
+          <div ref="card2" class="flex flex-col">
+            <span ref="history2" class="ease-out duration-300 absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white dark:bg-dmBlack z-40 
+            lg:left-0 lg:translate-x-[-135%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
             ">October 2019 - June 2020</span>
             <span class="leading-5 font-semibold text-lg text-gray-900 dark:text-dmWhite">IT Staff</span>
             <span class="italic">Shimadzu Philippines Mfg, Inc.</span>
@@ -169,9 +172,9 @@
 
         <!-- CARD L -->
         <li class="relative before:content-[''] before:absolute before:w-[12px] before:h-[12px] before:bg-gray-900 dark:before:bg-dmWhite before:rounded-full before:top-0 before:left-0 lg:before:left-full before:translate-x-[-2.3rem] lg:pr-[2rem] lg:before:translate-x-[-45%]">
-          <div class="flex flex-col">
-            <span class="absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white dark:bg-dmBlack z-40 
-            lg:right-0 lg:translate-x-[115%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
+          <div ref="card3" class="flex flex-col">
+            <span ref="history3" class="ease-out duration-300 absolute top-1/2  rotate-[270deg] translate-x-[-68%] font-medium bg-white dark:bg-dmBlack z-40 
+            lg:right-0 lg:translate-x-[135%] lg:translate-y-[-25%] lg:rotate-0 lg:top-0
             ">May 2018 - August 2018</span>
             <span class="leading-5 font-semibold text-lg text-gray-900 dark:text-dmWhite">Desktop Support Engineer (Intern)</span>
             <span class="italic">Cypress Manufacturing Ltd.</span>
@@ -273,16 +276,67 @@ export default {
           trigger: timeline,
           start: 'top center',
           end: 'bottom top',
-          markers: true,
           scrub: 1,
           onUpdate: self => {
             const progress = (self.progress * 110).toFixed(2);
             gsap.to(progressBar, { height: progress + '%' });
           }
         },
-
       });
 
+
+      const card1 = this.$refs.card1;
+      const card2 = this.$refs.card2;
+      const card3 = this.$refs.card3;
+      this.applyAnimation4(card1, true)
+      this.applyAnimation4(card2, false)
+      this.applyAnimation4(card3, true)
+
+
+      const history1 = this.$refs.history1;
+      const history2 = this.$refs.history2;
+      const history3 = this.$refs.history3;
+
+      this.applyAnimation5(history1)
+      this.applyAnimation5(history2)
+      this.applyAnimation5(history3)
+
+    },
+
+    // scroll trigger add color highlight start and end 
+    applyAnimation5(el) {
+      gsap.to(el, {
+        scrollTrigger: {
+          trigger: el,
+          scrub: true,
+          start: 'center center',
+          onEnter: () => {
+            el.classList.add('text-gray-900'); // Add class on enter
+            el.classList.add('dark:text-dmWhite'); // Add class on enter
+          },
+          onLeaveBack: () => {
+            el.classList.remove('text-gray-900'); // Add class on enter
+            el.classList.remove('dark:text-dmWhite'); // Add class on enter
+          },
+        },
+      });
+    },
+
+    // fadein On scroll
+    applyAnimation4(el, pos){
+      const isPosL = (pos) ? '-100%' : '100%';
+
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: 'start 70%',
+          ease: "back.out(1.7)",
+          
+        },
+        x: isPosL,
+        duration: .4,
+        opacity: 0,
+      });
     },
 
     // element showing without ease
@@ -291,6 +345,7 @@ export default {
         scrollTrigger: {
           trigger: el,
           start: 'start 70%',
+          ease: "back.out(1.7)",
         },
         y: '20%',
         opacity: 0,

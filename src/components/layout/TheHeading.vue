@@ -83,7 +83,7 @@ export default {
         scrollTrigger: {
           trigger: headingWrapper, // Set your trigger element
           start: "top 90%", // Adjust the start position based on your requirements
-          end: "bottom 15%",
+          end: "bottom 50%",
           scrub: 1, // Enables smooth scrolling with scrubbing effect
         },
         repeat: 0,

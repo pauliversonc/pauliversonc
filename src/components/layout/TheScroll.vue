@@ -49,7 +49,7 @@ export default {
         duration:1,
         ease: "back.out(1.7)",
         y: 100, // Example animation property
-        delay: 3.2,
+        delay: 2.2,
         rotation: 360,
         opacity: 0,
       });
