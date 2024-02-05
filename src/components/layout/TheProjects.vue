@@ -115,7 +115,8 @@
   </div>
 
   <!-- CONTAINER NOTABLE PROJECTS -->
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div ref="notablePrjCon" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
     <!-- NOTABLE PROJECTS -->
     <div class="bg-gray-100 dark:bg-dmBlackTint1 px-6 py-4 relative
     border-t-2
@@ -254,6 +255,7 @@
         <li class="p-0 h-6 pr-4 font-medium">#Frontend</li>
       </ul>
     </div>
+
   </div>
 
 </div>
@@ -261,6 +263,8 @@
 </section>
 </template>
 <script>
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default {
   name: 'PauliversoncTheProjects',
   created() {
@@ -269,6 +273,7 @@ export default {
 
   mounted() {
     this.observeHeading();
+    this.animateElement();
   },
 
   data() {
@@ -314,6 +319,27 @@ export default {
   },  
 
   methods: {
+    // Animation
+    animateElement(){
+      gsap.registerPlugin(ScrollTrigger);
+
+      const notablePrjCon = this.$refs.notablePrjCon;
+      gsap.from(notablePrjCon.children, {
+        scrollTrigger: {
+          trigger: notablePrjCon,
+          start: 'top 70%',
+          markers: true,
+        },
+        y: '30%',
+        ease: 'back.out(1.7)',
+        duration: 1,
+        stagger: 0.2,
+      });
+
+
+    },
+
+
       // action: control (you use prev or next button)
     //         set (you click on the exact proj for you to play)
 
