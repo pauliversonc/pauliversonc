@@ -22,7 +22,7 @@
   <!-- FOOTER -->
   <TheFooter></TheFooter>
   <!-- HEADING PER SECTION (SALAMAT) -->
-  <TheHeading heading-name="footer"></TheHeading>
+  <TheHeading heading-name="footer" :isBottom="true"></TheHeading>
 
 </template>
 

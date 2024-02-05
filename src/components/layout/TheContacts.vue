@@ -261,7 +261,7 @@ export default {
       gsap.from(contactSection, {
         scrollTrigger: {
           trigger: contactSection,
-          start: 'top 70%',
+          start: 'top 80%',
         },
         y: '100',
         ease: 'back.out(1.7)',

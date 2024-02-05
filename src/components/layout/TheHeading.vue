@@ -32,7 +32,12 @@ export default {
     headingName: {
       type: String,
       required: true,
-   
+    },
+
+    isBottom: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
   computed: {
@@ -78,12 +83,14 @@ export default {
       const spanLeftTxt = this.$refs.spanLeftTxt;
       const spanRightTxt = this.$refs.spanRightTxt;
 
+      const isBottom = (this.isBottom) ? 'bottom bottom': 'bottom 50%';
+
       // Create the timeline
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: headingWrapper, // Set your trigger element
           start: "top 90%", // Adjust the start position based on your requirements
-          end: "bottom 50%",
+          end: isBottom,
           scrub: 1, // Enables smooth scrolling with scrubbing effect
         },
         repeat: 0,
