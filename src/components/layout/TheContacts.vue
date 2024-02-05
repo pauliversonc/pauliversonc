@@ -1,5 +1,5 @@
 <template >
-  <section class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 py-8 container mx-auto  flex flex-col lg:grid lg:grid-cols-2  gap-8">
+  <section ref="contactSection" class="px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 py-8 container mx-auto  flex flex-col lg:grid lg:grid-cols-2  gap-8">
   <!-- MESSAGE WRAPPER -->
   <div class="lg:order-1">
 
@@ -213,9 +213,13 @@
 </template>
 <script>
 import emailjs from 'emailjs-com';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default {
   name: 'PauliversoncTheContacts',
- 
+  mounted() {
+    this.animateElement();
+  },
   computed: {
     errorList(){
       return Object.values(this.errors).filter(value => value.length > 0);
@@ -249,6 +253,24 @@ export default {
     };
   },
   methods: {
+      // Animation
+    animateElement(){
+      gsap.registerPlugin(ScrollTrigger);
+
+      const contactSection = this.$refs.contactSection;
+      gsap.from(contactSection, {
+        scrollTrigger: {
+          trigger: contactSection,
+          start: 'top 70%',
+          markers: true,
+        },
+        y: '100',
+        ease: 'back.out(1.7)',
+        duration: 1,
+      });
+
+    },
+
     closeMessage(){
       this.isVisible = false;
     },

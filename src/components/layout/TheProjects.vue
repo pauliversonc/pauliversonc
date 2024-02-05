@@ -328,7 +328,6 @@ export default {
         scrollTrigger: {
           trigger: notablePrjCon,
           start: 'top 70%',
-          markers: true,
         },
         y: '30%',
         ease: 'back.out(1.7)',
