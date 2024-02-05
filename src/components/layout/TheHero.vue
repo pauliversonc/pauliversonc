@@ -98,7 +98,7 @@ export default {
       gsap.from(spanImPaul, {
         duration:1,
         ease: "back.out(1.7)",
-        x: 700, // Example animation property
+        x: 800, // Example animation property
         delay: 2.4,
       });
 

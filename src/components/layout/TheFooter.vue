@@ -48,7 +48,7 @@ export default {
         },
         opacity: 0,
         ease: 'power1.inOut',
-        duration: 2,
+        duration: 1.2,
       });
 
 

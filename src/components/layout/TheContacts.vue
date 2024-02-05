@@ -328,7 +328,6 @@ export default {
             if(this.form[formName]?.length <= 120){
               // firstname and lastname regex pattern
               const pattern = /^[a-zA-Z]+(?:\s[a-zA-Z]+)*$/;
-              console.log(pattern.test(this.form[formName]));
 
               if (pattern.test(this.form[formName])) {
                 // clear error
@@ -348,7 +347,6 @@ export default {
             if(this.form[formName]?.length <= 320){
               // regex for email
               const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-              console.log(pattern.test(this.form[formName]));
 
               if (pattern.test(this.form[formName])) {
                 // clear error

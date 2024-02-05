@@ -37,7 +37,7 @@
                    md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-gray-900 dark:md:after:bg-dmWhite  md:after:translate-x-[-100%] "
             :class="(currentPlaying === 0) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[20000ms]' : ''">  
       <img @click="handlePlaying('set', 0)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="/images/projects/meatshoppe-min.png" alt="">
-      <img class="block visible md:hidden md:invisible" src="/images/projects/meatshoppe.gif" alt="">
+      <img class="block visible md:hidden md:invisible" src="/images/projects/meatshoppe-min.gif" alt="">
       <figcaption class="mt-4">
 
         <span class="text-sm dark:text-dmBlackTint2">Featured Project</span>
@@ -63,7 +63,7 @@
                    md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-1 md:after:bg-gray-900 dark:md:after:bg-dmWhite md:after:translate-x-[-100%] "
             :class="(currentPlaying === 1) ? 'md:after:translate-x-[0%] md:after:ease-linear md:after:duration-[20000ms]' : ''">  
       <img @click="handlePlaying('set', 1)" class="hidden select-none invisible md:block md:visible hover:cursor-pointer" src="/images/projects/ecobuilders-min.png" alt="">
-      <img class="block visible md:hidden md:invisible" src="/images/projects/ecobuilders.gif" alt="">
+      <img class="block visible md:hidden md:invisible" src="/images/projects/ecobuilders-min.gif" alt="">
       <figcaption class="mt-4">
 
         <span class="text-sm dark:text-dmBlackTint2">Featured Project</span>
@@ -362,8 +362,6 @@ export default {
 
       // start interval
       this.startInterval()
-
-      console.log(this.intervalId)
     },
 
     startInterval() {
