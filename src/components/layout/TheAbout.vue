@@ -360,7 +360,7 @@ export default {
           start: 'start 70%',
         },
         duration:1,
-        ease: "back.out(1.7)",
+        ease: 'power1.inOut',
         y: '20%',
         opacity: 0,
       });

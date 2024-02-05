@@ -1,5 +1,5 @@
 <template >
-  <footer class="px-4 text-center  xs:px-6 md:px-8 lg:px-10 xl:px-12 mt-[8rem]  2xl:px-16 py-8 container mx-auto ">
+  <footer ref="footerSection" class="px-4 text-center  xs:px-6 md:px-8 lg:px-10 xl:px-12 mt-[8rem]  2xl:px-16 py-8 container mx-auto ">
 
 <!-- logo -->
 <a href="#" class="inline-block" >
@@ -27,8 +27,34 @@
 </footer>
 </template>
 <script>
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default {
   name: 'PauliversoncTheFooter',
+  mounted() {
+    this.animateElement();
+  },
+
+  methods: {
+    // Animation
+    animateElement(){
+      gsap.registerPlugin(ScrollTrigger);
+
+      const footerSection = this.$refs.footerSection;
+      gsap.from(footerSection, {
+        scrollTrigger: {
+          trigger: footerSection,
+          start: 'top 70%',
+        },
+        opacity: 0,
+        ease: 'power1.inOut',
+        duration: 2,
+      });
+
+
+    },
+  },
+  
 }
 </script>
 

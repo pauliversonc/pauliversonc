@@ -262,7 +262,6 @@ export default {
         scrollTrigger: {
           trigger: contactSection,
           start: 'top 70%',
-          markers: true,
         },
         y: '100',
         ease: 'back.out(1.7)',
