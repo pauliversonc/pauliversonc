@@ -79,6 +79,7 @@ export default {
         ease: "back.out(1.7)",
         x: -400, // Example animation property
         delay: 1.8,
+        opacity: 0, // Example animation property
       });
 
       gsap.from(spanIam, {
@@ -86,6 +87,7 @@ export default {
         ease: "back.out(1.7)",
         x: -400, // Example animation property
         delay: 2.3,
+        opacity: 0, // Example animation property
       });
 
       gsap.from(spanPaul, {
@@ -93,6 +95,7 @@ export default {
         ease: "back.out(1.7)",
         x: -400, // Example animation property
         delay: 2.9,
+        opacity: 0, // Example animation property
       });
 
       gsap.from(spanImPaul, {
@@ -100,6 +103,7 @@ export default {
         ease: "back.out(1.7)",
         x: 800, // Example animation property
         delay: 2.4,
+        opacity: 0, // Example animation property
       });
 
       gsap.from(spanHiImPaul, {
@@ -107,6 +111,7 @@ export default {
         ease: "back.out(1.7)",
         y: 400, // Example animation property
         delay: 1.6,
+        opacity: 0, // Example animation property
       });
 
     },

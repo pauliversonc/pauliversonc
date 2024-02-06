@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <div class="fixed translate-x-[-50%] top-0 bg-white dark:bg-dmBlack w-full left-[50%] z-[9999]">
+  <div ref="preHeader" class="headerSec fixed translate-x-[-50%] top-0 bg-white dark:bg-dmBlack w-full left-[50%] z-[9999]">
     <header ref="header" class="container h-[64px] mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 flex items-center justify-between relative">
       <!-- ICON -->
       <a href="#" >
@@ -85,7 +85,7 @@
 
 
   <!-- PRE-SPACER -->
-  <div ref="preSpacer" class="container h-[64px]  mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 border-4 border-red-400"></div>  
+  <div ref="preSpacer" class="bg-white dark:bg-dmBlack container h-[64px]  mx-auto py-2 px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16"></div>  
 
 
 
@@ -122,7 +122,7 @@ export default {
         {'href':'#','section':'theContact' ,'name':'contact'},
       ],
       isNavOpen: false,
-      
+      lastScrollPosition: 0,
     }
   },
 
@@ -160,11 +160,37 @@ export default {
         delay: 1,
       });
 
+      gsap.registerPlugin(ScrollTrigger);
 
-      const preSpacer = this.$refs.preSpacer;
-      console.log(preSpacer)
+
+
+
+      window.addEventListener('scroll', this.handleScroll);
 
     },
+
+    handleScroll() {
+      const currentScrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+      if (currentScrollPosition > this.lastScrollPosition) {
+        // Scrolling down
+        if(!this.$refs.preHeader.classList.contains('translate-y-[-100%]')) {
+          this.$refs.preHeader.classList.add('translate-y-[-100%]');
+        }
+
+
+      } else {
+        // Scrolling up
+        if(this.$refs.preHeader.classList.contains('translate-y-[-100%]')) {
+          this.$refs.preHeader.classList.remove('translate-y-[-100%]');
+        }
+
+        
+      }
+
+      this.lastScrollPosition = currentScrollPosition;
+    },
+
   },
 }
 </script>
@@ -173,6 +199,11 @@ export default {
 <style>
   .nav {
     transition: top 0.3s ease-out;
+  }
+
+
+  .headerSec {
+    transition: transform 0.3s ease-out;
   }
 
 </style>

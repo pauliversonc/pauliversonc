@@ -344,7 +344,7 @@ export default {
       gsap.from(el, {
         scrollTrigger: {
           trigger: el,
-          start: 'start 70%',
+          start: 'start 60%',
           ease: "back.out(1.7)",
         },
         y: '20%',
