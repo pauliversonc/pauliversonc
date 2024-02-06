@@ -130,7 +130,7 @@ export default {
     this.animateElement();
   },
 
-  emits:['toggle-details'],
+  emits:['to-link'],
 
   methods: {
     scrollTo() {
@@ -146,7 +146,7 @@ export default {
       // close modal
       this.isNavOpen = false;
       this.isScrollable(true);
-      this.$emit('toggle-details', section); // Emit a custom event
+      this.$emit('to-link', section); // Emit a custom event
     },
 
     toggleNav() {
