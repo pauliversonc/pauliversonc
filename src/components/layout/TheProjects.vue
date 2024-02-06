@@ -121,27 +121,27 @@
     <div class="bg-gray-100 dark:bg-dmBlackTint1 px-6 py-4 relative
     border-t-2
     border-white dark:border-dmBlack
-    mt-[30px]
+    mt-[28px]
 
     
     before:bg-gray-200
     dark:before:bg-dmBlackTint2
     before:absolute
     before:w-1/4
-    before:h-[30px]
+    before:h-[14px]
     before:top-0
     before:left-0
-    before:translate-y-[-100%]
+    before:translate-y-[-200%]
     before:z-[-1]
 
     after:bg-gray-200
     dark:after:bg-dmBlackTint2
     after:absolute
     after:w-full
-    after:h-[30px]
+    after:h-[14px]
     after:top-0
     after:left-0
-    after:translate-y-[-50%]
+    after:translate-y-[-100%]
     after:z-[-100]
 
 
@@ -168,27 +168,27 @@
     <div class="bg-gray-100 dark:bg-dmBlackTint1 px-6 py-4 relative
     border-t-2
     border-white dark:border-dmBlack
-    mt-[30px]
+    mt-[28px]
 
     
     before:bg-gray-200
     dark:before:bg-dmBlackTint2
     before:absolute
     before:w-1/4
-    before:h-[30px]
+    before:h-[14px]
     before:top-0
     before:left-0
-    before:translate-y-[-100%]
+    before:translate-y-[-200%]
     before:z-[-1]
 
     after:bg-gray-200
     dark:after:bg-dmBlackTint2
     after:absolute
     after:w-full
-    after:h-[30px]
+    after:h-[14px]
     after:top-0
     after:left-0
-    after:translate-y-[-50%]
+    after:translate-y-[-100%]
     after:z-[-1]
 
     ">
@@ -214,27 +214,27 @@
     <div class="bg-gray-100 dark:bg-dmBlackTint1 px-6 py-4 relative
     border-t-2
     border-white dark:border-dmBlack
-    mt-[30px]
+    mt-[28px]
 
     
     before:bg-gray-200
     dark:before:bg-dmBlackTint2
     before:absolute
     before:w-1/4
-    before:h-[30px]
+    before:h-[14px]
     before:top-0
     before:left-0
-    before:translate-y-[-100%]
+    before:translate-y-[-200%]
     before:z-[-1]
 
     after:bg-gray-200
     dark:after:bg-dmBlackTint2
     after:absolute
     after:w-full
-    after:h-[30px]
+    after:h-[14px]
     after:top-0
     after:left-0
-    after:translate-y-[-50%]
+    after:translate-y-[-100%]
     after:z-[-1]
 
     ">
