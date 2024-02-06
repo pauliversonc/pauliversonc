@@ -8,15 +8,15 @@
   <!-- BRIEF INTRO -->
   <TheIntro></TheIntro>
   <!-- HEADING PER SECTION (ABOUT) -->
-  <TheHeading heading-name="about"></TheHeading>
+  <TheHeading ref="theAbout" heading-name="about"></TheHeading>
   <!-- ABOUT -->
   <TheAbout></TheAbout>
   <!-- HEADING PER SECTION (PROJECTS) -->
-  <TheHeading heading-name="project"></TheHeading>
+  <TheHeading ref="theProject" heading-name="project"></TheHeading>
   <!-- PROJECT -->
   <TheProjects></TheProjects>
   <!-- HEADING PER SECTION (CONTACTS) -->
-  <TheHeading heading-name="contact"></TheHeading>
+  <TheHeading ref="theContact" heading-name="contact"></TheHeading>
   <!-- CONTACT -->
   <TheContacts></TheContacts>
   <!-- FOOTER -->
