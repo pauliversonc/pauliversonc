@@ -75,6 +75,10 @@ export default {
   },
 
   methods: {
+    scrollTo(){
+      this.$refs.headingWrapper.scrollIntoView({ behavior: "smooth"})
+    },
+
     animateElement() {
       gsap.registerPlugin(ScrollTrigger);
 

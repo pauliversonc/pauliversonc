@@ -50,7 +50,7 @@
     ">
 
       <div v-for="(link, index) in links" :key="index"  class=" flex justify-center">
-        <a :href="link.href" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
+        <a @click="scrollTo(link.section)" :href="link.href" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
           before:ease-out 
           before:duration-300
           before:content-['']
@@ -106,10 +106,10 @@ export default {
   data(){
     return {
       links: [
-        {'href':'#', 'name':'home'},
-        {'href':'#', 'name':'about'},
-        {'href':'#', 'name':'projects'},
-        {'href':'#', 'name':'contact'},
+        {'href':'#','section':'theHome' ,'name':'home'},
+        {'href':'#','section':'theAbout' ,'name':'about'},
+        {'href':'#','section':'theProject' ,'name':'projects'},
+        {'href':'#','section':'theContact' ,'name':'contact'},
       ],
       isNavOpen: false,
       
@@ -120,12 +120,18 @@ export default {
     this.animateElement();
   },
 
+  emits:['toggle-details'],
+
   methods: {
+    scrollTo(section){
+      // close modal
+      this.isNavOpen = false;
+      this.isScrollable(true);
+      this.$emit('toggle-details', section); // Emit a custom event
+    },
+
     toggleNav() {
       this.isNavOpen = !this.isNavOpen;
-
-      console.log(this.isNavOpen)
-
       this.isScrollable(!this.isNavOpen);
     },
 

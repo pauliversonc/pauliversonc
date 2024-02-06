@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <TheHeader></TheHeader>
+  <TheHeader @toggle-details="toggleDetailsStatus" ></TheHeader>
   <!-- HERO -->
   <TheHero></TheHero>
   <!-- SCROLL BUTTON -->
@@ -50,6 +50,14 @@ export default {
     TheFooter,
     TheHeading,
   },
+
+  methods: {
+    toggleDetailsStatus(section){
+      this.$refs[section].scrollTo();
+    },
+  },
+
+
 
 };
 </script>
