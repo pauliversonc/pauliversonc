@@ -51,7 +51,7 @@
       ">
 
         <div v-for="(link, index) in links" :key="index"  class=" flex justify-center">
-          <a @click="scrollTo(link.section)" :href="link.href" class="flex relative  gap-4 sm:justify-center lg:flex-none lg:gap-0
+          <a @click="scrollToSec(link.section)" class="flex relative  gap-4 sm:justify-center lg:flex-none cursor-pointer lg:gap-0
             before:ease-out 
             before:duration-300
             before:content-['']
@@ -133,7 +133,16 @@ export default {
   emits:['toggle-details'],
 
   methods: {
-    scrollTo(section){
+    scrollTo() {
+      this.$refs.preSpacer.scrollIntoView({ behavior: "smooth",
+      block: "start", // or "end", "center", "nearest"
+      inline: "start" // or "start", "end", "center"
+    })
+    },
+
+    scrollToSec(section){
+      console.log(section)
+
       // close modal
       this.isNavOpen = false;
       this.isScrollable(true);

@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <TheHeader @toggle-details="toggleDetailsStatus" ></TheHeader>
+  <TheHeader ref="theHome" @toggle-details="toggleDetailsStatus" ></TheHeader>
   <!-- HERO -->
   <TheHero></TheHero>
   <!-- SCROLL BUTTON -->

@@ -1,16 +1,21 @@
 <template >
-  <section :class="headingSection" class="mb-[2rem] px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 text-gray-900 dark:text-dmWhite  container mx-auto">
-    <h3 ref="headingWrapper" class="uppercase leading-none font-medium  flex items-center justify-center gap-4 relative"
+  <section :ref="headingName" :class="headingSection" class="mb-[2rem] px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 text-gray-900 dark:text-dmWhite  container mx-auto">
+    <h3 ref="headingWrapper" class="uppercase  leading-none font-medium flex items-center pt-8 justify-center gap-4 relative"
       :class="headingWrapper"
     >
     <span ref="spanTopNum" class="bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-white dark:from-dmGray dark:to-dmBlack
-         absolute top-0 text-gray-200 z-[-1] translate-y-[-50%] font-normal inline-block p-1
+         absolute text-gray-200 z-[-1] font-normal inline-block p-1
          text-[2.4rem]
          xxs:text-[3.4rem]
          xs:text-[4.4rem] 
          sm:text-[4.9rem]
          lg:text-[6.1rem] 
-         xl:text-[7.5rem]"
+         xl:text-[7.5rem]
+         
+         top-0
+         translate-y-[-10%]
+         
+         "
          
          :class="spanNumClass"
          >{{ spanNum }}</span>
@@ -42,7 +47,7 @@ export default {
   },
   computed: {
     headingSection() {
-      return (this.headingName === 'footer') ? 'mt-[2rem]' : 'mt-[8rem]';
+      return (this.headingName === 'footer') ? 'mt-0' : 'mt-[6rem]';
     },
     headingWrapper(){
       if(this.headingName === 'about') return "text-[3.2rem] xxs:text-[4.2rem] xs:text-[5.5rem] sm:text-[7.2rem] md:text-[8.6rem] lg:text-[10.2rem] xl:text-[14.72rem] 2xl:text-[17.6rem]";
@@ -76,8 +81,10 @@ export default {
 
   methods: {
     scrollTo(){
-      this.$refs.headingWrapper.scrollIntoView({ behavior: "smooth"})
+      this.$refs[this.headingName].scrollIntoView({ behavior: "smooth"})                                    
     },
+
+
 
     animateElement() {
       gsap.registerPlugin(ScrollTrigger);
