@@ -4,9 +4,9 @@
   <!-- HERO -->
   <TheHero></TheHero>
   <!-- SCROLL BUTTON -->
-  <TheScroll></TheScroll>
+  <TheScroll @to-intro="toLinkStatus"></TheScroll>
   <!-- BRIEF INTRO -->
-  <TheIntro></TheIntro>
+  <TheIntro ref="theIntro"></TheIntro>
   <!-- HEADING PER SECTION (ABOUT) -->
   <TheHeading ref="theAbout" heading-name="about"></TheHeading>
   <!-- ABOUT -->
@@ -55,6 +55,7 @@ export default {
     toLinkStatus(section){
       this.$refs[section].scrollTo();
     },
+
   },
 
 

@@ -27,6 +27,10 @@ export default {
     }
   },
   methods: {
+    scrollTo(){
+      this.$refs.introSection.scrollIntoView({ behavior: "smooth"})                                    
+    },
+
     animateElement() {
       gsap.registerPlugin(ScrollTrigger);
 

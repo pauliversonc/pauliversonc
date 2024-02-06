@@ -141,7 +141,6 @@ export default {
     },
 
     scrollToSec(section){
-      console.log(section)
 
       // close modal
       this.isNavOpen = false;

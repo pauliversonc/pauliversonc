@@ -1,6 +1,6 @@
 <template >
     <div class="container mx-auto  px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 lg:text-center">
-    <div ref="scrollWrapper"  class="h-16 inline-block hover:cursor-pointer" role="button" >
+    <div @click="scrollToIntro()" ref="scrollWrapper"  class="h-16 inline-block hover:cursor-pointer" role="button" >
       <span class="uppercase text-sm  font-bold text-gray-500 dark:text-dmGray">scroll</span>
       
       <div class="relative down-fade">
@@ -38,6 +38,7 @@ import gsap from 'gsap';
 
 export default {
   name: 'PauliversoncTheScroll',
+  emits:['to-intro'],
   mounted() {
     this.animateElement();
   },
@@ -53,6 +54,10 @@ export default {
         rotation: 360,
         opacity: 0,
       });
+    },
+
+    scrollToIntro(){
+      this.$emit('to-intro', 'theIntro'); // Emit a custom event
     },
   },
 }
