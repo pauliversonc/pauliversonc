@@ -44,8 +44,8 @@
         <h4 class="font-semibold text-lg  text-gray-900 dark:text-dmWhite flex gap-2 items-center">
           
           <span @click="handlePlaying('set', 0)" class="mr-2 hover:cursor-pointer">Meatshoppe</span>
-          <BaseIconLink :small="true" icon="link" />
-          <BaseIconLink :small="true" icon="github" />
+          <BaseIconLink :link="`https://meatshoppe.netlify.app/`" :small="true" icon="link" />
+          <BaseIconLink :link="`https://github.com/pauliversonc/meatshoppe`" :small="true" icon="github" />
 
         </h4>
 
@@ -71,8 +71,8 @@
           
           <span @click="handlePlaying('set', 1)" class="mr-2 hover:cursor-pointer">ECO Builders</span>
 
-          <BaseIconLink :small="true" icon="link" />
-          <BaseIconLink :small="true" icon="github" />
+          <BaseIconLink :link="`https://ecobuilders.netlify.app/`" :small="true" icon="link" />
+          <BaseIconLink :link="`https://github.com/pauliversonc/ecobuilders`" :small="true" icon="github" />
 
         </h4>
 
@@ -98,8 +98,8 @@
           
           <span @click="handlePlaying('set', 2)" class="mr-2 hover:cursor-pointer">Notely</span>
 
-          <BaseIconLink :small="true" icon="link" />
-          <BaseIconLink :small="true" icon="github" />
+          <BaseIconLink :link="`https://notely-pauliversonc.netlify.app/`" :small="true" icon="link" />
+          <BaseIconLink :link="`https://github.com/pauliversonc/notely`" :small="true" icon="github" />
 
         </h4>
 
@@ -151,8 +151,8 @@
         
         <span class="mr-2">Natours</span>
 
-        <BaseIconLink :small="true" icon="link" />
-        <BaseIconLink :small="true" icon="github" />
+        <BaseIconLink :link="`https://natours-pauliversonc.netlify.app/`" :small="true" icon="link" />
+        <BaseIconLink :link="`https://github.com/pauliversonc/natours`" :small="true" icon="github" />
 
       </h4>
       <p class="container mb-4 mt-2 text-gray-600 dark:text-dmGray">A fictional company that provides adventurous nature tours. The website was built as a practice project to demonstrate Sass skills and responsive web design.</p>
@@ -196,8 +196,8 @@
       <h4 class="font-semibold text-lg text-gray-900 dark:text-dmWhite flex gap-2 items-center">
         
         <span class="mr-2">Omnifood</span>
-        <BaseIconLink :small="true" icon="link" />
-        <BaseIconLink :small="true" icon="github" />
+        <BaseIconLink :link="`https://omnifood-pauliversonc.netlify.app/`" :small="true" icon="link" />
+        <BaseIconLink :link="`https://github.com/pauliversonc/omnifood`" :small="true" icon="github" />
 
 
       </h4>
@@ -243,7 +243,7 @@
         
         <span class="mr-2">Pauliversonc</span>
         <BaseIconLink :small="true" icon="link" />
-        <BaseIconLink :small="true" icon="github" />
+        <BaseIconLink :link="`https://github.com/pauliversonc/pauliversonc`" :small="true" icon="github" />
  
 
       </h4>

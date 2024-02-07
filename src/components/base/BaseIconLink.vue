@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" :class="{'p-1':small} " class="icon-link group">
+  <a :href="link" target="_blank" :class="{'p-1':small} " class="icon-link group">
     <svg :class="(small) ? 'h-4 w-4': 'h-9 w-9'" class=" fill-gray-600 dark:fill-dmGray group-hover:fill-gray-900 dark:group-hover:fill-dmWhite ease-out duration-300">
       <use :xlink:href="`/icons/sprite.svg#icon-${icon}`"></use>
     </svg>

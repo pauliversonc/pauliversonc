@@ -197,10 +197,7 @@
 
       <BaseHeadingFive title="socials" />
       <div class="flex items-center gap-4">
-        <BaseIconLink icon="facebook" />
-        <BaseIconLink icon="instagram" />
-        <BaseIconLink icon="linkedin" />
-        <BaseIconLink icon="github" />
+        <BaseIconLink v-for="social in socials" :key="social.icon" :icon="social.icon" :link="social.link" />
       </div>
 
 
@@ -249,6 +246,13 @@ export default {
 
       isLoading: false,
       isVisible: false,
+
+      socials: [
+        {icon:'facebook', link: 'https://www.facebook.com/pauliversonc/'},
+        {icon:'instagram', link: 'https://www.instagram.com/pauliversonc/'},
+        {icon:'linkedin', link: 'https://www.linkedin.com/in/paul-iverson-cortez-557536168/'},
+        {icon:'github', link: 'https://github.com/pauliversonc/'},
+      ],
 
     };
   },
