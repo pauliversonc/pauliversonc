@@ -1,6 +1,7 @@
 <template>
   <a
-    :href="link"
+    :href="computedLink"
+    :download="isDownloadable"
     :class="{'flex-row-reverse' : iconRight}"
     class="flex items-center justify-center gap-2 relative before:ease-out before:duration-300 before:content-[''] before:absolute before:h-0.5 before:w-0 before:bg-gray-900 before:bottom-0 before:left-0 hover:before:w-full dark:before:bg-dmWhite group"
   >
@@ -17,6 +18,11 @@
       >{{ text }}</span
     >
   </a>
+
+
+
+
+  
 </template>
 <script>
 export default {
@@ -26,6 +32,11 @@ export default {
       type: String,
       required: false,
       default: '#'
+    },
+
+    type: {
+      type: String,
+      required: true,
     },
 
     text:{
@@ -44,6 +55,28 @@ export default {
       default: false,
     },
   },
+
+  computed: {
+    computedLink() {
+      if(this.type === 'file'){
+        return `/public/images/portrait/pauliversonc.jpg`
+      }
+
+      if(this.type === 'contact'){
+        return `tel:${this.link}`
+      }
+
+
+      if(this.type === 'email'){
+        return `mailto:${this.link}`
+      }
+
+    },
+
+    isDownloadable(){
+      return (this.type === 'file') ? 'pauliversonc.jpg' : false;
+    },
+  }
 };
 </script>
 <style></style>

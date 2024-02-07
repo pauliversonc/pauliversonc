@@ -221,7 +221,7 @@
 
     <!-- RESUME LINK -->
     <div class="mt-6 flex justify-center align-center">
-      <BaseLink text="View My Résumé" icon="file-text" :icon-right="true" />
+      <BaseLink type="file" text="View My Résumé" icon="file-text" :icon-right="true" />
     </div>
 
   </section>

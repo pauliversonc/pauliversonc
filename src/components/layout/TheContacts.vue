@@ -187,8 +187,8 @@
     <!-- CONTACTS -->
     <div class="flex flex-col items-start gap-2">
       <BaseHeadingFive title="contacts" />
-      <BaseLink text="09155436882" icon="phone" />
-      <BaseLink text="pauliversonc@gmail.com" icon="mail" />
+      <BaseLink type="contact" link="09155436882" text="09155436882" icon="phone" />
+      <BaseLink type="email" link="pauliversonc@gmail.com" text="pauliversonc@gmail.com" icon="mail" />
 
     </div>
 
