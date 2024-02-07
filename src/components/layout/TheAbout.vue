@@ -18,6 +18,53 @@
         <p class="">In the words of <span ref="highlight6" class="ease-out duration-300">Steve Jobs, "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."</span> This philosophy resonates deeply with my approach to web development, driving me to deliver <span ref="highlight7" class="ease-out duration-300">excellence in every project.</span> Join me on this exciting journey, and <span ref="highlight8" class="ease-out duration-300">let's create digital wonders together!</span></p>
       </div>
 
+      <!-- EDUCATION CONTAINER -->
+      <div class="flex flex-col">
+        <BaseHeadingFive title="education" :margin-custom="true" :margin-top-custom="true" />
+
+        <!-- WRAPPER -->
+        <div ref="education">
+          <div class="flex flex-col mt-2 lg:mt-0 mb-2">
+            <span class="leading-5 font-semibold text-lg text-gray-900 dark:text-dmWhite">Bachelor of Science in Information Technology (BSIT)</span>
+            <span>Lyceum of the Philippines University - Cavite</span>
+            <span class="italic">Graduated: May 2019</span>
+          </div>
+      
+
+          <span class="block text-gray-900 dark:text-dmWhite">Relevant Coursework:</span>
+
+          <ul>
+            <li class="flex gap-2">
+              <div>
+                <svg class="h-4 w-4 rotate-[270deg] translate-y-[25%] fill-gray-500 dark:fill-dmGray">
+                  <use xlink:href="/icons/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </div>
+              <span>Web Development</span>
+            </li>
+
+            <li class="flex gap-2">
+              <div>
+                <svg class="h-4 w-4 rotate-[270deg] translate-y-[25%] fill-gray-500 dark:fill-dmGray">
+                  <use xlink:href="/icons/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </div>
+              <span>Software Engineering</span>
+            </li>
+
+            <li class="flex gap-2">
+              <div>
+                <svg class="h-4 w-4 rotate-[270deg] translate-y-[25%] fill-gray-500 dark:fill-dmGray">
+                  <use xlink:href="/icons/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </div>
+              <span>Database Management Systems</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
       <!-- SKILLS CONTAINERS -->
       <div class="space-y-4 ">
         <!-- HEADING -->
@@ -265,7 +312,10 @@ export default {
       this.applyAnimation2(imageCon);
 
       const skills = this.$refs.skills;
+      const education = this.$refs.education;
+
       this.applyAnimation2(skills);
+      this.applyAnimation2(education);
 
 
       const timeline = this.$refs.timeline;

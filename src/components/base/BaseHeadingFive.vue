@@ -1,5 +1,5 @@
 <template >
-  <h5 ref="headFive" :class="{'lg:mt-0 lg:mb-4': marginCustom, 'mt-4': marginTopCustom}" class="uppercase text-2xl  italic font-bold text-gray-900 dark:text-dmWhite">{{ title }}</h5>
+  <h5 ref="headFive" :class="{'lg:mt-4 lg:mb-4': marginCustom, 'mt-4': marginTopCustom}" class="uppercase text-2xl  italic font-bold text-gray-900 dark:text-dmWhite">{{ title }}</h5>
 </template>
 <script>
 import gsap from 'gsap';
