@@ -1,7 +1,7 @@
 <template>
   <a
     :href="computedLink"
-    :download="isDownloadable"
+    target="_blank"
     :class="{'flex-row-reverse' : iconRight}"
     class="flex items-center justify-center gap-2 relative before:ease-out before:duration-300 before:content-[''] before:absolute before:h-0.5 before:w-0 before:bg-gray-900 before:bottom-0 before:left-0 hover:before:w-full dark:before:bg-dmWhite group"
   >
@@ -59,7 +59,7 @@ export default {
   computed: {
     computedLink() {
       if(this.type === 'file'){
-        return `/public/images/portrait/pauliversonc.jpg`
+        return `/public/docs/resume-paul-Iverson-cortez.pdf`
       }
 
       if(this.type === 'contact'){
@@ -73,9 +73,6 @@ export default {
 
     },
 
-    isDownloadable(){
-      return (this.type === 'file') ? 'pauliversonc.jpg' : false;
-    },
   }
 };
 </script>
