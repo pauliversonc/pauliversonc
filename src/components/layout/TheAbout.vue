@@ -25,8 +25,8 @@
         <!-- WRAPPER -->
         <div ref="education">
           <div class="flex flex-col mt-2 lg:mt-0 mb-2">
-            <span class="leading-5 font-semibold text-lg text-gray-900 dark:text-dmWhite">Bachelor of Science in Information Technology (BSIT)</span>
-            <span>Lyceum of the Philippines University - Cavite</span>
+            <span class="leading-5 font-semibold text-lg text-gray-900 dark:text-dmWhite">Lyceum of the Philippines University - Cavite</span>
+            <span>Bachelor of Science in Information Technology</span>
             <span class="italic">Graduated: May 2019</span>
           </div>
       
@@ -187,6 +187,15 @@
                   </svg>
                 </div>
                 <p>Installed and configured <strong class="text-gray-900 dark:text-dmWhite font-medium">hardware and software</strong> components for new and existing systems</p>
+              </li>
+
+              <li class="flex gap-2">
+                <div>
+                  <svg class="h-4 w-4 rotate-[270deg] translate-y-[25%] fill-gray-500 dark:fill-dmGray">
+                    <use xlink:href="/icons/sprite.svg#icon-chevron-down"></use>
+                  </svg>
+                </div>
+                <p>Leveraged in-depth knowledge to <strong class="text-gray-900 dark:text-dmWhite font-medium">repair</strong> hardware and software issues in <strong class="text-gray-900 dark:text-dmWhite font-medium">laptops and desktops</strong></p>
               </li>
 
               <li class="flex gap-2">
