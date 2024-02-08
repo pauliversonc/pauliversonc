@@ -204,7 +204,7 @@
                     <use xlink:href="/icons/sprite.svg#icon-chevron-down"></use>
                   </svg>
                 </div>
-                <p>I use <strong class="text-gray-900 dark:text-dmWhite font-medium">Oracle E-Business Suite (EBS)</strong> for efficient and integrated <strong class="text-gray-900 dark:text-dmWhite font-medium">Enterprise Resource Planning (ERP)</strong></p>
+                <p>Proven ability to navigate and utilize <strong class="text-gray-900 dark:text-dmWhite font-medium">Oracle EBS</strong>, contributing to streamlined workflows and improved communication within teams.</p>
               </li>
 
 
