@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <!-- <TheHeader ref="theHome" @to-link="toLinkStatus" ></TheHeader> -->
+  <TheHeader ref="theHome" @to-link="toLinkStatus" ></TheHeader>
   <!-- HERO -->
   <TheHero></TheHero>
   <!-- SCROLL BUTTON -->
