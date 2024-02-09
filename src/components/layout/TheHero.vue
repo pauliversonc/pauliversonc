@@ -35,12 +35,12 @@ relative
     
 
 
-    <span ref="spanHi" class="lg:hidden">hi</span>
-    <span ref="spanIam" class="sm:hidden">iam</span>
-    <span ref="spanPaul" class="sm:hidden">paul</span>
-    <span ref="spanImPaul" class="hidden sm:block lg:hidden">i'm paul</span>
+    <span ref="spanHi" class="lg:hidden lg:invisible">hi</span>
+    <span ref="spanIam" class="sm:hidden sm:invisible">iam</span>
+    <span ref="spanPaul" class="sm:hidden sm:invisible">paul</span>
+    <span ref="spanImPaul" class="hidden invisible sm:visible sm:block lg:hidden lg:invisible">i'm paul</span>
 
-    <span ref="spanHiImPaul" class="hidden  lg:block">hi i'm paul</span>
+    <span ref="spanHiImPaul" class="hidden invisible lg:visible  lg:block">hi i'm paul</span>
 </h1>
 
 </div>

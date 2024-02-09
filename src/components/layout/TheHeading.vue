@@ -1,5 +1,5 @@
 <template >
-  <section :ref="headingName" :class="headingSection" class="mb-[2rem] px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 text-gray-900 dark:text-dmWhite  container mx-auto">
+  <section :ref="headingName" :class="headingSection" class="mb-[2rem] px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16 text-gray-900 dark:text-dmWhite  container mx-auto overflow-x-clip">
     <h3 ref="headingWrapper" class="uppercase  leading-none font-medium flex items-center pt-8 justify-center gap-4 relative"
       :class="headingWrapper"
     >

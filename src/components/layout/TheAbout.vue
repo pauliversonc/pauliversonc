@@ -1,5 +1,5 @@
 <template >
-  <section class=" px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16  py-8 container mx-auto flex flex-col gap-4">
+  <section class=" px-4 xs:px-6 md:px-8 lg:px-10 xl:px-12  2xl:px-16  py-8 container mx-auto flex flex-col gap-4 overflow-x-hidden">
     
     <!-- ABOUT CONTENT WRAPPER -->
     <div class="flex flex-col gap-4 lg:flex-none lg:grid lg:grid-cols-2 " >
