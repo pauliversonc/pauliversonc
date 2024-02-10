@@ -242,7 +242,7 @@
       <h4 class="font-semibold text-lg text-gray-900 dark:text-dmWhite flex gap-2 items-center">
         
         <span class="mr-2">Pauliversonc</span>
-        <BaseIconLink :small="true" icon="link" />
+        <BaseIconLink :link="`https://pauliversonc.netlify.app/`" :small="true" icon="link" />
         <BaseIconLink :link="`https://github.com/pauliversonc/pauliversonc`" :small="true" icon="github" />
  
 
