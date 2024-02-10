@@ -20,7 +20,7 @@
 
 <!-- credits -->
 <div class="flex flex-col items-center">
-  <span class="font-secondary dark:text-dmGray ">&copy; 2014 &#x2022; Paul Iverson Cortez</span>
+  <span class="font-secondary dark:text-dmGray ">&copy; {{ yearToday }} &#x2022; Paul Iverson Cortez</span>
   <span class=" text-gray-600 dark:text-dmBlackTint2 text-sm">All RIGHTS RESERVED</span>
 </div>
 
@@ -33,6 +33,13 @@ export default {
   name: 'PauliversoncTheFooter',
   mounted() {
     this.animateElement();
+  },
+
+  computed: {
+    yearToday(){
+      const currentDate = new Date();
+      return currentDate.getFullYear();
+    },
   },
 
   methods: {
