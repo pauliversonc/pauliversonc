@@ -59,7 +59,7 @@ export default {
   computed: {
     computedLink() {
       if(this.type === 'file'){
-        return `/public/docs/resume-paul-Iverson-cortez.pdf`
+        return `/docs/resume-paul-Iverson-cortez.pdf`
       }
 
       if(this.type === 'contact'){
